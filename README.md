@@ -10,7 +10,6 @@
 </div>
 
 ## Table of Contents
-- [Table of Contents](#table-of-contents)
 - [Overview](#overview)
 - [Setup](#setup)
 - [Collect Dataset](#collect-dataset)
@@ -121,7 +120,7 @@ Finetuned models (on HF Hub):
 
 ## Citation
 ```bibtex
-@misc{gandhi2025gobrowsetrainingwebagents,
+@misc{gandhi2025gobrowse,
       title={Go-Browse: Training Web Agents with Structured Exploration}, 
       author={Apurva Gandhi and Graham Neubig},
       year={2025},
