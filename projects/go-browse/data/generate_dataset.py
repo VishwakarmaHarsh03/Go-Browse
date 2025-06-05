@@ -123,7 +123,7 @@ if __name__ == "__main__":
             
             prefixes = get_prefixes(g, netG)
                 
-            for i, node in tqdm(enumerate(g.nodes.values()), desc="Nodes", position=1, leave=False):
+            for _, node in tqdm(enumerate(g.nodes.values()), desc="Nodes", position=1, leave=False):
                 for task in tqdm(node.tasks.values(), desc="Tasks", position=2, leave=False):
                     for traj in task.positive_trajs + task.negative_trajs:
                         sampled_prefix = random.choice(prefixes[node.url]) if node.url in prefixes else []

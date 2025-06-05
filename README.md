@@ -1,5 +1,41 @@
-# Go-Browse
-Automatic, unsupervised collection of web agent training data via structured exploration of websites.
+<div align="center">
+  <h1>Go-Browse: Training Web Agents with Structured Exploration</h1>
+  <a href="https://arxiv.org/abs/2506.03533">
+    <img src="https://img.shields.io/badge/arXiv-2409.07429-b31b1b.svg" alt="arXiv">
+  </a>
+  <!-- <a href="https://img.shields.io/badge/PRs-Welcome-red">
+    <img src="https://img.shields.io/badge/PRs-Welcome-yellow" alt="PRs Welcome">
+  </a> -->
+  
+</div>
+
+## Table of Contents
+- [Table of Contents](#table-of-contents)
+- [Overview](#overview)
+- [Setup](#setup)
+- [Collect Dataset](#collect-dataset)
+  - [Process Collected Go-Browse Dataset for Training](#process-collected-go-browse-dataset-for-training)
+  - [Process NNetNav Dataset for Training](#process-nnetnav-dataset-for-training)
+- [Finetune a Model](#finetune-a-model)
+- [Benchmark a Model on WebArena](#benchmark-a-model-on-webarena)
+- [Run an Episode on a Website](#run-an-episode-on-a-website)
+- [Go-Browse-WA Dataset and Trained Models Release](#go-browse-wa-dataset-and-trained-models-release)
+- [Citation](#citation)
+
+
+## Overview
+
+Go-Browse is a method for automatic, unsupervised collection of high-quality and diverse web agent training data via structured exploration of websites. 
+
+Go-Browse has an outer loop that iteratively builds up a graph of previously visited webpages on a website (incentivizing global website coverage) and an inner loop that thoroughly explores each discovered webpage by: (1) Proposing tasks to solve on that page and tasks to discover neighboring pages; (2) Filtering these tasks to feasible ones by trying to solve them and judging successes with a strong computer-use LM + a VLM-as-a-judge and (3) Sampling additional task-solving trajectories with various other pretrained LMs.
+
+![image](figures/go-browse-main-figure-colored.png)
+
+By resetting the inner loop to previously discovered webpages, the outer loop helps Go-Browse reuse information across the multiple inner loop invocations, enabling more efficient and deeper exploration of websites.
+
+We release [Go-Browse-WA](#go-browse-wa-dataset-and-trained-models-release), a dataset collected by running Go-Browse on 100 webpages from WebArena websites, collecting ~10K successful task-solving trajectories and ~17K unsuccessful ones.
+
+Finetuning Qwen-2.5-7B-Instruct on Go-Browse-WA achieves state-of-the-art performance for sub-10B parameter models on the WebArena benchmark with a overall success rate of 21.7%, beating the previous best finetuned sub-10B model by 2.9 percentage points and beating GPT-4o-mini by 2.4 percentage points.
 
 ## Setup
 
@@ -74,7 +110,24 @@ python -m webexp.agents.run_episode -c configs/benchmark_webarena.yaml
 
 ## Go-Browse-WA Dataset and Trained Models Release
 
-Here is a link to a processed version of the dataset used for our finetuning results (output of `projects/go-browse/data/process_dataset.py`): [go-browse-wa-processed.jsonl](https://drive.google.com/file/d/1yqrFBybA6YerxlOQvHdoXOM4gC_Au7QX/view?usp=sharing).
+Processed version of the dataset used for our finetuning results (output of `projects/go-browse/data/process_dataset.py`): [go-browse-wa](https://huggingface.co/datasets/apurvaga/go-browse-wa).
 This dataset includes both successful and unsuccessful trajectories. All experiments from the paper can be reproduced with this version of the dataset by filtering to just the successful trajectories.
 
-Trained model checkpoints and full raw dataset (including alternate observations representations like screenshots and pruned html) will be released in the future.
+Raw version of the dataset with screenshots and additional observation representations will be released soon.
+
+Finetuned models (on HF Hub):
+- [go-browse-wa-qwen-7B](https://huggingface.co/apurvaga/go-browse-wa-qwen-7B)
+- [nnetnav-wa-qwen-7B](https://huggingface.co/apurvaga/nnetnav-wa-qwen-7B)
+
+## Citation
+```bibtex
+@misc{gandhi2025gobrowsetrainingwebagents,
+      title={Go-Browse: Training Web Agents with Structured Exploration}, 
+      author={Apurva Gandhi and Graham Neubig},
+      year={2025},
+      eprint={2506.03533},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2506.03533}, 
+}
+```
