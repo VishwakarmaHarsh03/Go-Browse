@@ -3,9 +3,9 @@
   <a href="https://arxiv.org/abs/2506.03533">
     <img src="https://img.shields.io/badge/arXiv-2409.07429-b31b1b.svg" alt="arXiv">
   </a>
-  <!-- <a href="https://img.shields.io/badge/PRs-Welcome-red">
+  <a href="https://img.shields.io/badge/PRs-Welcome-red">
     <img src="https://img.shields.io/badge/PRs-Welcome-yellow" alt="PRs Welcome">
-  </a> -->
+  </a>
   
 </div>
 
