@@ -109,14 +109,18 @@ python -m webexp.agents.run_episode -c configs/benchmark_webarena.yaml
 
 ## Go-Browse-WA Dataset and Trained Models Release
 
-Processed version of the dataset used for our finetuning results (output of `projects/go-browse/data/process_dataset.py`): [go-browse-wa](https://huggingface.co/datasets/apurvaga/go-browse-wa).
-This dataset includes both successful and unsuccessful trajectories. All experiments from the paper can be reproduced with this version of the dataset by filtering to just the successful trajectories.
+Datasets (on HF Hub):
+- Processed dataset (output of `projects/go-browse/data/process_dataset.py`): [apurvaga/go-browse-wa](https://huggingface.co/datasets/apurvaga/go-browse-wa).
 
-Raw version of the dataset with screenshots and additional observation representations will be released soon.
+This includes both successful and unsuccessful trajectories processed for finetuning. Page observations are represented as accessibility trees (potentially truncated for context length limits while training).
+
+- Raw dataset: [apurvaga/go-browse-wa-raw](https://huggingface.co/datasets/apurvaga/go-browse-wa-raw)
+
+Raw version includes screenshots, pruned_html, full accessibility tree text and additional metadata.
 
 Finetuned models (on HF Hub):
-- [go-browse-wa-qwen-7B](https://huggingface.co/apurvaga/go-browse-wa-qwen-7B)
-- [nnetnav-wa-qwen-7B](https://huggingface.co/apurvaga/nnetnav-wa-qwen-7B)
+- [apurvaga/go-browse-wa-qwen-7B](https://huggingface.co/apurvaga/go-browse-wa-qwen-7B)
+- [apurvaga/nnetnav-wa-qwen-7B](https://huggingface.co/apurvaga/nnetnav-wa-qwen-7B)
 
 ## Citation
 ```bibtex
