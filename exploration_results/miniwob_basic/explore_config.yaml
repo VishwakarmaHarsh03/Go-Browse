@@ -23,7 +23,7 @@ env_names:
 episodes_per_env: 10
 explorer_agent:
   agent_factory_args:
-    name: AzureGPTMiniWobAgent
+    agent_name: AzureGPTMiniWobAgent
     model_name: gpt-4o
     temperature: 0.1
     char_limit: 40000
@@ -32,7 +32,7 @@ explorer_agent:
   retries: 3
 evaluator_agent:
   agent_factory_args:
-    name: AzureGPTMiniWobAgent
+    agent_name: AzureGPTMiniWobAgent
     model_name: gpt-4o
     temperature: 0.0
     char_limit: 40000

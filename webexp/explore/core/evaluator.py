@@ -119,7 +119,7 @@ class GPT4V_Client:
                     "image_url": {"url": f"data:image/jpeg;base64,{jpg_base64_str}"},},
                 ],
         }]
-        response = client.chat.completions.create(
+        response = get_openai_client().chat.completions.create(
             model=self.model_name,
             messages=messages,
             max_tokens=self.max_tokens,

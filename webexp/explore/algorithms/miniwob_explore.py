@@ -112,12 +112,16 @@ class MiniWobExplorer:
     def create_agents(self):
         """Create explorer and evaluator agents."""
         # Create explorer agent
-        self.explorer_agent = AgentFactory.create_agent(**self.config.explorer_agent.agent_factory_args)
+        explorer_args = dict(self.config.explorer_agent.agent_factory_args)
+        agent_name = explorer_args.pop('agent_name')
+        self.explorer_agent = AgentFactory.create_agent(agent_name, **explorer_args)
         self.explorer_agent = wrap_agent_for_callback_protocol(self.explorer_agent)
         
         # Create evaluator agent if specified
         if self.config.evaluator_agent:
-            self.evaluator_agent = AgentFactory.create_agent(**self.config.evaluator_agent.agent_factory_args)
+            evaluator_args = dict(self.config.evaluator_agent.agent_factory_args)
+            evaluator_agent_name = evaluator_args.pop('agent_name')
+            self.evaluator_agent = AgentFactory.create_agent(evaluator_agent_name, **evaluator_args)
             self.evaluator_agent = wrap_agent_for_callback_protocol(self.evaluator_agent)
         else:
             self.evaluator_agent = None

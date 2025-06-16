@@ -1,0 +1,14 @@
+{
+  "env_name": "click-test",
+  "episode_idx": 0,
+  "start_time": 1750064961.8953345,
+  "max_steps": 20,
+  "seed": null,
+  "step_error": "'action_type'",
+  "step_error_traceback": "Traceback (most recent call last):\n  File \"/mnt/home-ldap/vkharsh_ldap/Research/Go-Browse/webexp/explore/algorithms/miniwob_episode.py\", line 101, in run_miniwob_episode\n    next_obs, reward, terminated, truncated, step_info = env.step(miniwob_action)\n                                                         ^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/mnt/home-ldap/vkharsh_ldap/.conda/envs/agent/lib/python3.12/site-packages/gymnasium/wrappers/order_enforcing.py\", line 56, in step\n    return self.env.step(action)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/mnt/home-ldap/vkharsh_ldap/.conda/envs/agent/lib/python3.12/site-packages/gymnasium/wrappers/env_checker.py\", line 49, in step\n    return env_step_passive_checker(self.env, action)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/mnt/home-ldap/vkharsh_ldap/.conda/envs/agent/lib/python3.12/site-packages/gymnasium/utils/passive_env_checker.py\", line 208, in env_step_passive_checker\n    result = env.step(action)\n             ^^^^^^^^^^^^^^^^\n  File \"/mnt/home-ldap/vkharsh_ldap/.conda/envs/agent/lib/python3.12/site-packages/miniwob/environment.py\", line 167, in step\n    self.instance.call(\n  File \"/mnt/home-ldap/vkharsh_ldap/.conda/envs/agent/lib/python3.12/site-packages/miniwob/selenium_instance.py\", line 173, in call\n    func(*args)\n  File \"/mnt/home-ldap/vkharsh_ldap/.conda/envs/agent/lib/python3.12/site-packages/miniwob/selenium_instance.py\", line 266, in step\n    self.perform(action, action_space_config)\n  File \"/mnt/home-ldap/vkharsh_ldap/.conda/envs/agent/lib/python3.12/site-packages/miniwob/selenium_instance.py\", line 331, in perform\n    execute_action_on_chromedriver(\n  File \"/mnt/home-ldap/vkharsh_ldap/.conda/envs/agent/lib/python3.12/site-packages/miniwob/selenium_actions.py\", line 145, in execute_action_on_chromedriver\n    action_type = config.action_types[action[\"action_type\"]]\n                                      ~~~~~~^^^^^^^^^^^^^^^\nKeyError: 'action_type'\n",
+  "end_time": 1750064965.873679,
+  "duration": 3.978344440460205,
+  "total_reward": 0.0,
+  "steps_taken": 0,
+  "final_reward": 0.0
+}

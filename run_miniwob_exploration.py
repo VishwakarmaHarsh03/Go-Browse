@@ -17,7 +17,7 @@ from omegaconf import OmegaConf as oc
 project_root = Path(__file__).parent
 sys.path.insert(0, str(project_root))
 
-from webexp.explore.algorithms.miniwob_explore import MiniWobExplorer, MiniWobExploreConfig
+from webexp.explore.algorithms.miniwob_explore import MiniWobExplorer, MiniWobExploreConfig, MiniWobExploreAgentConfig
 
 # Set up logging
 logging.basicConfig(
@@ -52,24 +52,38 @@ def setup_environment():
         logger.warning(f"Chrome setup issue: {e}")
         logger.warning("You may need to run the Chrome setup script")
 
-def validate_config(config: MiniWobExploreConfig):
+def validate_config(config):
     """Validate the exploration configuration."""
-
-    if not config.env_names:
+    try:
+        env_names = getattr(config, 'env_names', None) or config.get('env_names', [])
+        episodes_per_env = getattr(config, 'episodes_per_env', None) or config.get('episodes_per_env', 0)
+        exp_dir = getattr(config, 'exp_dir', None) or config.get('exp_dir', '')
+        explorer_agent = getattr(config, 'explorer_agent', None) or config.get('explorer_agent', {})
+    except Exception as e:
+        logger.error(f"Error accessing config attributes: {e}")
+        raise ValueError(f"Invalid configuration format: {e}")
+    
+    if not env_names:
         raise ValueError("No environments specified in config")
     
-    if config.episodes_per_env <= 0:
+    if episodes_per_env <= 0:
         raise ValueError("episodes_per_env must be positive")
     
-    if not config.exp_dir:
+    if not exp_dir:
         raise ValueError("exp_dir must be specified")
     
     # Validate agent configurations
-    if not config.explorer_agent.agent_factory_args:
+    agent_factory_args = None
+    if hasattr(explorer_agent, 'agent_factory_args'):
+        agent_factory_args = explorer_agent.agent_factory_args
+    elif isinstance(explorer_agent, dict):
+        agent_factory_args = explorer_agent.get('agent_factory_args', {})
+    
+    if not agent_factory_args:
         raise ValueError("Explorer agent configuration is missing")
     
-    logger.info(f"Configuration validated: {len(config.env_names)} environments, "
-               f"{config.episodes_per_env} episodes each")
+    logger.info(f"Configuration validated: {len(env_names)} environments, "
+               f"{episodes_per_env} episodes each")
 
 def run_exploration(config_path: str, overrides: dict = None):
     """
@@ -92,12 +106,8 @@ def run_exploration(config_path: str, overrides: dict = None):
             oc.set_struct(config_dict, True)   # Re-enable struct mode
     
     # Create structured config
-    # print(f"Exploration will save results to: {config_dict}")
     config_schema = oc.structured(MiniWobExploreConfig)
     config = oc.merge(config_schema, config_dict)
-
-    # config = oc.structured(MiniWobExploreConfig, config_dict)
-    print(f"Exploration configuration: {config}")
     
     # Validate configuration
     validate_config(config)
