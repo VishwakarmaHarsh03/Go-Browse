@@ -216,14 +216,14 @@ def _convert_to_miniwob_action(env, action_dict):
             element_ref = action_dict['ref']
             try:
                 element_id = int(element_ref)
-                return {'type': ActionTypes.CLICK_ELEMENT, 'element': element_id}
+                return {'action_type': ActionTypes.CLICK_ELEMENT, 'element': element_id}
             except ValueError:
                 # If ref is not a number, treat as coordinate [0, 0]
-                return {'type': ActionTypes.CLICK_COORDS, 'coord': [0, 0]}
+                return {'action_type': ActionTypes.CLICK_COORDS, 'coord': [0, 0]}
         else:
             # Coordinate-based click
             coordinate = action_dict.get('coordinate', [0, 0])
-            return {'type': ActionTypes.CLICK_COORDS, 'coord': coordinate}
+            return {'action_type': ActionTypes.CLICK_COORDS, 'coord': coordinate}
     elif action_type == 'type':
         # Check if it's field-based or text-based
         if 'ref' in action_dict:
@@ -232,31 +232,31 @@ def _convert_to_miniwob_action(env, action_dict):
             text = action_dict.get('text', '')
             try:
                 element_id = int(element_ref)
-                return {'type': ActionTypes.TYPE_FIELD, 'element': element_id, 'text': text}
+                return {'action_type': ActionTypes.TYPE_FIELD, 'element': element_id, 'text': text}
             except ValueError:
                 # If ref is not a number, use text-based type
-                return {'type': ActionTypes.TYPE_TEXT, 'text': text}
+                return {'action_type': ActionTypes.TYPE_TEXT, 'text': text}
         else:
             # Text-based type
             text = action_dict.get('text', '')
-            return {'type': ActionTypes.TYPE_TEXT, 'text': text}
+            return {'action_type': ActionTypes.TYPE_TEXT, 'text': text}
     elif action_type == 'key':
         key = action_dict.get('key', 'Enter')
-        return {'type': ActionTypes.PRESS_KEY, 'key': key}
+        return {'action_type': ActionTypes.PRESS_KEY, 'key': key}
     elif action_type == 'scroll':
         coordinate = action_dict.get('coordinate', [0, 0])
         direction = action_dict.get('direction', 'down')
         if direction == 'down':
-            return {'type': ActionTypes.SCROLL_DOWN_COORDS, 'coord': coordinate}
+            return {'action_type': ActionTypes.SCROLL_DOWN_COORDS, 'coord': coordinate}
         else:
-            return {'type': ActionTypes.SCROLL_UP_COORDS, 'coord': coordinate}
+            return {'action_type': ActionTypes.SCROLL_UP_COORDS, 'coord': coordinate}
     elif action_type == 'drag':
         start_coord = action_dict.get('startCoordinate', [0, 0])
         end_coord = action_dict.get('endCoordinate', [0, 0])
         # MiniWob++ doesn't have a direct drag action, use mousedown -> move -> mouseup
-        return {'type': ActionTypes.MOUSEDOWN_COORDS, 'coord': start_coord}
+        return {'action_type': ActionTypes.MOUSEDOWN_COORDS, 'coord': start_coord}
     else:
-        return {'type': ActionTypes.NONE}
+        return {'action_type': ActionTypes.NONE}
 
 def _save_episode_data(save_dir: str, trajectory: Trajectory, episode_info: Dict, config: Any):
     """Save episode data to disk."""
