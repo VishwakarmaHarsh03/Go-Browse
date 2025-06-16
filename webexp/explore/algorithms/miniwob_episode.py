@@ -1,0 +1,305 @@
+"""
+MiniWob++ Episode Management
+
+This module provides episode running capabilities for MiniWob++ environments
+during exploration and data collection.
+"""
+
+from ..core.trajectory import Trajectory, TrajectoryStep
+from ...agents.base_agent import Agent
+from dataclasses import dataclass
+from typing import Any, Dict, List, Optional, Tuple
+import gymnasium as gym
+import json
+import logging
+import os
+import time
+import traceback
+
+logger = logging.getLogger(__name__)
+
+@dataclass
+class MiniWobEpisodeResult:
+    """Result of running a MiniWob++ episode."""
+    success: bool
+    trajectory: Optional[Trajectory]
+    final_reward: float
+    steps_taken: int
+    error: Optional[str] = None
+    episode_info: Optional[Dict] = None
+
+def run_miniwob_episode(
+    env_name: str,
+    agent: Agent,
+    max_steps: int,
+    episode_idx: int,
+    config: Any,
+    save_dir: Optional[str] = None,
+    seed: Optional[int] = None
+) -> MiniWobEpisodeResult:
+    """
+    Run a single MiniWob++ episode for exploration.
+    
+    Args:
+        env_name (str): Name of the MiniWob++ environment.
+        agent (Agent): Agent to run the episode.
+        max_steps (int): Maximum number of steps.
+        episode_idx (int): Episode index for logging.
+        config (Any): Configuration object.
+        save_dir (Optional[str]): Directory to save episode data.
+        seed (Optional[int]): Random seed for reproducibility.
+        
+    Returns:
+        MiniWobEpisodeResult: Result of the episode.
+    """
+    trajectory_steps = []
+    episode_info = {
+        "env_name": env_name,
+        "episode_idx": episode_idx,
+        "start_time": time.time(),
+        "max_steps": max_steps,
+        "seed": seed
+    }
+    
+    try:
+        # Import MiniWob++ environment
+        import miniwob
+        from miniwob.action import ActionTypes
+        
+        # Create environment
+        env = gym.make(f"miniwob/{env_name}-v1", render_mode="rgb_array")
+        
+        if seed is not None:
+            env.reset(seed=seed)
+        else:
+            env.reset()
+        
+        # Get initial observation
+        obs, info = env.reset()
+        
+        # Initialize agent
+        agent.reset()
+        
+        # Process initial observation
+        processed_obs = agent.obs_preprocessor(obs)
+        
+        total_reward = 0.0
+        step_count = 0
+        
+        for step_idx in range(max_steps):
+            step_start_time = time.time()
+            
+            try:
+                # Get action from agent
+                raw_action, action_info = agent.get_action(processed_obs)
+                
+                # Process action for MiniWob++
+                action_dict = agent.action_processor(raw_action)
+                miniwob_action = _convert_to_miniwob_action(env, action_dict)
+                
+                # Execute action
+                next_obs, reward, terminated, truncated, step_info = env.step(miniwob_action)
+                
+                # Create trajectory step
+                traj_step = TrajectoryStep(
+                    observation=processed_obs,
+                    action=raw_action,
+                    reward=reward,
+                    terminated=terminated,
+                    truncated=truncated,
+                    info={
+                        "step_idx": step_idx,
+                        "action_dict": action_dict,
+                        "miniwob_action": str(miniwob_action),
+                        "step_info": step_info,
+                        "action_info": action_info,
+                        "step_time": time.time() - step_start_time
+                    }
+                )
+                trajectory_steps.append(traj_step)
+                
+                total_reward += reward
+                step_count += 1
+                
+                # Check if episode is done
+                if terminated or truncated:
+                    episode_info["terminated"] = terminated
+                    episode_info["truncated"] = truncated
+                    episode_info["success"] = terminated and reward > 0
+                    break
+                
+                # Update observation for next step
+                processed_obs = agent.obs_preprocessor(next_obs)
+                
+            except Exception as e:
+                logger.error(f"Error in step {step_idx} of episode {episode_idx} for {env_name}: {str(e)}")
+                episode_info["step_error"] = str(e)
+                episode_info["step_error_traceback"] = traceback.format_exc()
+                break
+        
+        # Finalize episode info
+        episode_info["end_time"] = time.time()
+        episode_info["duration"] = episode_info["end_time"] - episode_info["start_time"]
+        episode_info["total_reward"] = total_reward
+        episode_info["steps_taken"] = step_count
+        episode_info["final_reward"] = total_reward
+        
+        # Determine success
+        success = episode_info.get("success", False)
+        
+        # Create trajectory
+        trajectory = Trajectory(
+            steps=trajectory_steps,
+            success=success,
+            final_reward=total_reward,
+            metadata={
+                "env_name": env_name,
+                "episode_idx": episode_idx,
+                "agent_type": type(agent).__name__,
+                "config": {
+                    "max_steps": max_steps,
+                    "headless": getattr(config, 'headless', True)
+                }
+            }
+        )
+        
+        # Save episode data if requested
+        if save_dir:
+            _save_episode_data(save_dir, trajectory, episode_info, config)
+        
+        env.close()
+        
+        return MiniWobEpisodeResult(
+            success=success,
+            trajectory=trajectory,
+            final_reward=total_reward,
+            steps_taken=step_count,
+            episode_info=episode_info
+        )
+        
+    except Exception as e:
+        error_msg = f"Failed to run episode {episode_idx} for {env_name}: {str(e)}"
+        logger.error(error_msg)
+        logger.error(traceback.format_exc())
+        
+        return MiniWobEpisodeResult(
+            success=False,
+            trajectory=None,
+            final_reward=0.0,
+            steps_taken=0,
+            error=error_msg,
+            episode_info=episode_info
+        )
+
+def _convert_to_miniwob_action(env, action_dict):
+    """Convert action dictionary to MiniWob++ action object."""
+    from miniwob.action import ActionTypes
+    
+    if not isinstance(action_dict, dict):
+        return ActionTypes.NONE
+        
+    action_type = action_dict.get('type', 'none')
+    
+    if action_type == 'click':
+        coordinate = action_dict.get('coordinate', [0, 0])
+        return ActionTypes.click(coordinate[0], coordinate[1])
+    elif action_type == 'type':
+        text = action_dict.get('text', '')
+        return ActionTypes.type(text)
+    elif action_type == 'key':
+        key = action_dict.get('key', 'Enter')
+        return ActionTypes.key(key)
+    elif action_type == 'scroll':
+        coordinate = action_dict.get('coordinate', [0, 0])
+        direction = action_dict.get('direction', 'down')
+        return ActionTypes.scroll(coordinate[0], coordinate[1], direction)
+    elif action_type == 'drag':
+        start_coord = action_dict.get('startCoordinate', [0, 0])
+        end_coord = action_dict.get('endCoordinate', [0, 0])
+        return ActionTypes.drag(start_coord[0], start_coord[1], end_coord[0], end_coord[1])
+    else:
+        return ActionTypes.NONE
+
+def _save_episode_data(save_dir: str, trajectory: Trajectory, episode_info: Dict, config: Any):
+    """Save episode data to disk."""
+    os.makedirs(save_dir, exist_ok=True)
+    
+    # Save trajectory
+    trajectory.save(save_dir)
+    
+    # Save episode info
+    episode_info_path = os.path.join(save_dir, "episode_info.json")
+    with open(episode_info_path, "w") as f:
+        json.dump(episode_info, f, indent=2, default=str)
+    
+    # Save screenshots if enabled
+    if getattr(config, 'save_screenshots', True):
+        _save_screenshots(save_dir, trajectory)
+
+def _save_screenshots(save_dir: str, trajectory: Trajectory):
+    """Save screenshots from trajectory steps."""
+    screenshots_dir = os.path.join(save_dir, "screenshots")
+    os.makedirs(screenshots_dir, exist_ok=True)
+    
+    for i, step in enumerate(trajectory.steps):
+        # Extract screenshot from observation if available
+        obs = step.observation
+        if isinstance(obs, dict) and 'screenshot' in obs:
+            screenshot_path = os.path.join(screenshots_dir, f"step_{i:03d}.png")
+            try:
+                import base64
+                from PIL import Image
+                import io
+                
+                # Decode base64 screenshot
+                screenshot_data = base64.b64decode(obs['screenshot'])
+                image = Image.open(io.BytesIO(screenshot_data))
+                image.save(screenshot_path)
+            except Exception as e:
+                logger.warning(f"Failed to save screenshot for step {i}: {e}")
+
+def run_miniwob_evaluation_episode(
+    env_name: str,
+    agent: Agent,
+    max_steps: int,
+    episode_idx: int,
+    reference_trajectory: Optional[Trajectory] = None,
+    config: Any = None
+) -> MiniWobEpisodeResult:
+    """
+    Run a MiniWob++ episode for evaluation purposes.
+    
+    This function is similar to run_miniwob_episode but includes additional
+    evaluation-specific features like trajectory comparison.
+    
+    Args:
+        env_name (str): Name of the MiniWob++ environment.
+        agent (Agent): Agent to evaluate.
+        max_steps (int): Maximum number of steps.
+        episode_idx (int): Episode index.
+        reference_trajectory (Optional[Trajectory]): Reference trajectory for comparison.
+        config (Any): Configuration object.
+        
+    Returns:
+        MiniWobEpisodeResult: Result of the evaluation episode.
+    """
+    # For now, use the same implementation as exploration
+    # Can be extended with evaluation-specific features later
+    result = run_miniwob_episode(
+        env_name=env_name,
+        agent=agent,
+        max_steps=max_steps,
+        episode_idx=episode_idx,
+        config=config
+    )
+    
+    # Add evaluation-specific information
+    if reference_trajectory and result.trajectory:
+        result.episode_info["evaluation"] = {
+            "reference_steps": len(reference_trajectory.steps),
+            "actual_steps": len(result.trajectory.steps),
+            "reference_success": reference_trajectory.success,
+            "actual_success": result.trajectory.success
+        }
+    
+    return result

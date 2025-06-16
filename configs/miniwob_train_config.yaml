@@ -1,0 +1,57 @@
+# MiniWob++ Training Configuration
+# This configuration defines how to train models on collected MiniWob++ exploration data
+
+# Model configuration
+model_id: "Qwen/Qwen2.5-7B-Instruct"  # Base model to fine-tune
+output_dir: "./models/miniwob_sft"     # Directory to save trained model
+max_seq_length: 8192                   # Maximum sequence length for training
+
+# Dataset preparation
+exploration_dir: "./exploration_results/miniwob_basic"  # Directory with exploration results
+include_negative: false                # Whether to include failed trajectories
+min_success_rate: 0.1                 # Minimum success rate to include an environment
+
+# Training hyperparameters
+training:
+  num_train_epochs: 3
+  per_device_train_batch_size: 1
+  gradient_accumulation_steps: 8
+  learning_rate: 2e-5
+  warmup_steps: 100
+  weight_decay: 0.01
+  lr_scheduler_type: "linear"
+  
+# Optimization settings
+optimization:
+  optim: "paged_adamw_8bit"
+  fp16: false  # Will be auto-detected based on GPU capabilities
+  bf16: true   # Will be auto-detected based on GPU capabilities
+  gradient_checkpointing: true
+  gradient_checkpointing_kwargs:
+    use_reentrant: false
+
+# Logging and saving
+logging:
+  logging_steps: 10
+  save_strategy: "steps"
+  save_steps: 500
+  save_total_limit: 3
+  report_to: ["wandb"]  # Options: ["wandb", "tensorboard", "none"]
+
+# Weights & Biases configuration
+wandb:
+  project: "Go-Browse-MiniWob"
+  entity: null  # Your W&B entity/username
+  name: null    # Run name (auto-generated if null)
+  tags: ["miniwob", "sft", "behavioral-cloning"]
+
+# Data processing
+data_processing:
+  dataset_num_proc: 4
+  packing: false
+  dataset_text_field: "text"
+
+# Model initialization
+model_init_kwargs:
+  attn_implementation: "flash_attention_2"
+  trust_remote_code: true

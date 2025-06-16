@@ -12,6 +12,10 @@
 ## Table of Contents
 - [Overview](#overview)
 - [Setup](#setup)
+- [MiniWob++ Integration](#miniwob-integration)
+  - [Quick Start with MiniWob++](#quick-start-with-miniwob)
+  - [MiniWob++ Exploration](#miniwob-exploration)
+  - [MiniWob++ Training](#miniwob-training)
 - [Collect Dataset](#collect-dataset)
   - [Process Collected Go-Browse Dataset for Training](#process-collected-go-browse-dataset-for-training)
   - [Process NNetNav Dataset for Training](#process-nnetnav-dataset-for-training)
@@ -53,6 +57,90 @@ pip install -e .
     - `export BASE_URL=<PUBLIC URL for your instance>`
     - `fastapi run reset_server.py`
     - You can now reset a specific domain at once (e.g. map with `<RESET_SERVER_URL>/reset/map`) or all domains at once with (e.g., `<RESET_SERVER_URL>/reset/all`).
+
+## MiniWob++ Integration
+
+Go-Browse now supports MiniWob++ environments for easier setup and experimentation. MiniWob++ provides a collection of simple web interaction tasks that are perfect for developing and testing web agents.
+
+### Quick Start with MiniWob++
+
+1. **Install MiniWob++**:
+```bash
+pip install miniwob
+```
+
+2. **Set up Chrome environment**:
+```bash
+python setup_chrome.py
+```
+
+3. **Run a simple demo**:
+```bash
+python demo_miniwob_exploration.py
+```
+
+4. **Run benchmark evaluation**:
+```bash
+python -m webexp.benchmark.run_miniwob -c configs/azure_gpt_miniwob.yaml
+```
+
+### MiniWob++ Exploration
+
+Collect training data by running agents on MiniWob++ tasks:
+
+```bash
+# List available environments
+python run_miniwob_exploration.py list
+
+# Run exploration with basic configuration (21 environments, 10 episodes each)
+python run_miniwob_exploration.py run --config configs/miniwob_explore_config.yaml
+
+# Run exploration with advanced configuration (40+ environments, 20 episodes each)
+python run_miniwob_exploration.py run --config configs/miniwob_explore_advanced.yaml
+
+# Create custom configuration
+python run_miniwob_exploration.py create-config \
+    --output my_config.yaml \
+    --env_names click-test click-button text-input \
+    --episodes_per_env 15 \
+    --agent_type azure
+```
+
+### MiniWob++ Training
+
+Train models on collected MiniWob++ data:
+
+```bash
+# Analyze collected exploration data
+python run_miniwob_training.py analyze ./exploration_results/miniwob_basic
+
+# Check training requirements
+python run_miniwob_training.py check
+
+# Train model on collected data
+python run_miniwob_training.py train --config configs/miniwob_train_config.yaml
+
+# Train with custom parameters
+python run_miniwob_training.py train \
+    --config configs/miniwob_train_config.yaml \
+    --exploration_dir ./exploration_results/miniwob_advanced \
+    --output_dir ./models/my_miniwob_model \
+    --epochs 5
+```
+
+**Supported Cloud Providers**:
+- **Azure AI**: GPT-4o, GPT-4o-mini with Azure OpenAI Service
+- **Amazon Bedrock**: Claude 3.5 Sonnet and other models
+
+**Key Features**:
+- 🚀 Easy setup compared to WebArena
+- 🎯 40+ MiniWob++ environments supported
+- 📊 Automatic data collection and analysis
+- 🤖 Multi-agent exploration (different agents for exploration vs evaluation)
+- 📈 Supervised fine-tuning pipeline
+- 🔧 Comprehensive Chrome setup and troubleshooting
+
+For detailed instructions, see [MINIWOB_EXPLORE_TRAIN_GUIDE.md](MINIWOB_EXPLORE_TRAIN_GUIDE.md).
 
 ## Collect Dataset
 Example config file used for Go-Browse-WA data generation is: `configs/go_browse_config.yaml`

@@ -1,0 +1,65 @@
+# MiniWob++ Exploration Configuration
+# This configuration defines how to explore MiniWob++ environments to collect training data
+
+# List of MiniWob++ environments to explore
+env_names:
+  - "click-test"
+  - "click-button"
+  - "click-checkboxes"
+  - "click-dialog"
+  - "click-link"
+  - "click-menu"
+  - "click-option"
+  - "click-pie"
+  - "click-scroll-list"
+  - "click-shades"
+  - "click-shape"
+  - "click-tab"
+  - "click-tab-2"
+  - "click-widget"
+  - "focus-text"
+  - "focus-text-2"
+  - "identify-shape"
+  - "navigate-tree"
+  - "simple-algebra"
+  - "simple-arithmetic"
+  - "text-input"
+
+# Number of episodes to run per environment
+episodes_per_env: 10
+
+# Explorer agent configuration
+explorer_agent:
+  agent_factory_args:
+    agent_name: "AzureGPTMiniWobAgent"
+    model_name: "gpt-4o"
+    temperature: 0.1
+    char_limit: 40000
+    demo_mode: "off"
+  max_steps: 20
+  retries: 3
+
+# Evaluator agent configuration (optional)
+evaluator_agent:
+  agent_factory_args:
+    agent_name: "AzureGPTMiniWobAgent"
+    model_name: "gpt-4o"
+    temperature: 0.0
+    char_limit: 40000
+    demo_mode: "off"
+  max_steps: 20
+  retries: 3
+
+# Experiment directory
+exp_dir: "./exploration_results/miniwob_basic"
+
+# Environment settings
+headless: true
+slow_mo: 0
+viewport_size:
+  width: 1280
+  height: 720
+
+# Data collection settings
+save_screenshots: true
+save_traces: true
