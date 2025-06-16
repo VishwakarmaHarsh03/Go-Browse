@@ -178,7 +178,7 @@ class MiniWobBenchmark:
                     step_data = {
                         'step_idx': step_idx,
                         'raw_action': raw_action,
-                        'processed_action': str(processed_action),
+                        'processed_action': str(action_dict),
                         'reward': reward,
                         'terminated': terminated,
                         'truncated': truncated,
