@@ -19,7 +19,17 @@ if not logger.handlers:
     handler.setFormatter(formatter)
     logger.addHandler(handler)
 
-client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"), base_url=os.getenv("OPENAI_BASE_URL", None))
+# Initialize OpenAI client lazily to avoid requiring API key at import time
+client = None
+
+def get_openai_client():
+    global client
+    if client is None:
+        api_key = os.getenv("OPENAI_API_KEY")
+        if not api_key:
+            raise ValueError("OPENAI_API_KEY environment variable must be set")
+        client = OpenAI(api_key=api_key, base_url=os.getenv("OPENAI_BASE_URL", None))
+    return client
 
 def extract_content(text, start_tag):
     """
@@ -112,7 +122,7 @@ class GPT4V_Client:
                     "image_url": {"url": f"data:image/jpeg;base64,{jpg_base64_str}"},},
                 ],
         }]
-        response = client.chat.completions.create(
+        response = get_openai_client().chat.completions.create(
             model=self.model_name,
             messages=messages,
             max_tokens=self.max_tokens,
