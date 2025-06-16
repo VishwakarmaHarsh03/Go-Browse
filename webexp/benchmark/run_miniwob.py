@@ -7,10 +7,79 @@ import argparse
 import os
 import json
 import time
+import platform
+import subprocess
 from typing import Dict, List, Any
 import logging
 
 logger = logging.getLogger(__name__)
+
+def setup_chrome_environment():
+    """Set up Chrome environment for MiniWob++ if needed."""
+    
+    # Check if we're in a headless environment
+    if not os.environ.get('DISPLAY') and platform.system().lower() == 'linux':
+        logger.info("Headless environment detected, setting up virtual display...")
+        
+        # Try to start Xvfb
+        try:
+            subprocess.run(['Xvfb', ':99', '-screen', '0', '1024x768x24'], 
+                         stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, 
+                         timeout=5, check=False)
+            os.environ['DISPLAY'] = ':99'
+            logger.info("Virtual display started on :99")
+        except (subprocess.TimeoutExpired, FileNotFoundError):
+            logger.warning("Could not start virtual display, continuing without it")
+    
+    # Set Chrome options for better compatibility
+    chrome_options = [
+        '--no-sandbox',
+        '--disable-dev-shm-usage',
+        '--disable-gpu',
+        '--disable-extensions',
+        '--disable-plugins',
+        '--disable-images',
+        '--disable-default-apps',
+        '--disable-background-timer-throttling',
+        '--disable-backgrounding-occluded-windows',
+        '--disable-renderer-backgrounding',
+        '--disable-features=TranslateUI',
+        '--disable-ipc-flooding-protection',
+        '--remote-debugging-port=9222'
+    ]
+    
+    # Set environment variable for Chrome options
+    os.environ['CHROME_OPTIONS'] = ' '.join(chrome_options)
+    
+    return True
+
+def check_chrome_installation():
+    """Check if Chrome/Chromium is properly installed."""
+    
+    chrome_paths = [
+        '/usr/bin/google-chrome',
+        '/usr/bin/google-chrome-stable', 
+        '/usr/bin/chromium',
+        '/usr/bin/chromium-browser',
+        '/opt/google/chrome/chrome'
+    ]
+    
+    for path in chrome_paths:
+        if os.path.exists(path):
+            logger.info(f"Found Chrome/Chromium at: {path}")
+            return True
+    
+    # Try which command
+    try:
+        for cmd in ['google-chrome', 'chromium', 'chromium-browser']:
+            result = subprocess.run(['which', cmd], capture_output=True, text=True)
+            if result.returncode == 0:
+                logger.info(f"Found Chrome/Chromium: {result.stdout.strip()}")
+                return True
+    except FileNotFoundError:
+        pass
+    
+    return False
 
 @dataclass
 class RunMiniWobConfig:
@@ -38,6 +107,16 @@ class MiniWobBenchmark:
     
     def __init__(self, config: RunMiniWobConfig):
         self.config = config
+        
+        # Setup Chrome environment before creating agent
+        logger.info("Setting up Chrome environment...")
+        if not check_chrome_installation():
+            logger.error("Chrome/Chromium not found! Please install it first.")
+            logger.error("Run: python setup_chrome.py")
+            raise RuntimeError("Chrome/Chromium not installed")
+        
+        setup_chrome_environment()
+        
         self.agent = AgentFactory.create_agent(**config.agent_factory_args)
         
         # Register MiniWob++ environments

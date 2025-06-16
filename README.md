@@ -108,8 +108,14 @@ pip install miniwob browsergym omegaconf
 
 2. Install Chrome/Chromium and ChromeDriver:
 ```sh
-# On Ubuntu/Debian
-sudo apt install chromium-driver
+# Quick install (recommended)
+./install_chrome.sh
+
+# Or manual install on Ubuntu/Debian
+sudo apt install chromium-browser chromium-chromedriver xvfb
+
+# Or use the setup script
+python setup_chrome.py
 ```
 
 3. Install cloud provider dependencies (optional):
@@ -158,6 +164,16 @@ python demo_miniwob.py --list             # See available environments
 ```
 
 For detailed information about the MiniWob++ adaptation, see [MINIWOB_ADAPTATION.md](MINIWOB_ADAPTATION.md).
+
+### Troubleshooting Chrome Issues
+
+If you encounter Chrome-related errors:
+
+1. **Quick fix**: Run `./install_chrome.sh` or `python setup_chrome.py`
+2. **Manual setup**: See [CHROME_SETUP_GUIDE.md](CHROME_SETUP_GUIDE.md)
+3. **Headless environments**: Use `DISPLAY=:99 python -m webexp.benchmark.run_miniwob ...`
+
+Common error: `"Unable to obtain driver for chrome"` → Install ChromeDriver: `sudo apt install chromium-chromedriver`
 
 ## Run an Episode on a Website
 If performing inference with a finetuned model, first serve the model using an inference server like [vllm](https://docs.vllm.ai/en/latest/) or [sglang](https://docs.sglang.ai/).
