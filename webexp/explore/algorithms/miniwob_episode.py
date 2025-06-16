@@ -222,8 +222,14 @@ def _convert_to_miniwob_action(env, action_dict):
     """Convert action dictionary to MiniWob++ action object."""
     from miniwob.action import ActionTypes
     
+    # Get the index of each action type in the ActionTypes enum
+    action_types_list = list(ActionTypes)
+    
+    def get_action_index(action_type_enum):
+        return action_types_list.index(action_type_enum)
+    
     if not isinstance(action_dict, dict):
-        return {'action_type': ActionTypes.NONE.value}
+        return {'action_type': get_action_index(ActionTypes.NONE)}
         
     action_type = action_dict.get('type', 'none')
     
@@ -234,14 +240,14 @@ def _convert_to_miniwob_action(env, action_dict):
             element_ref = action_dict['ref']
             try:
                 element_id = int(element_ref)
-                return {'action_type': ActionTypes.CLICK_ELEMENT.value, 'element': element_id}
+                return {'action_type': get_action_index(ActionTypes.CLICK_ELEMENT), 'element': element_id}
             except ValueError:
                 # If ref is not a number, treat as coordinate [0, 0]
-                return {'action_type': ActionTypes.CLICK_COORDS.value, 'coord': [0, 0]}
+                return {'action_type': get_action_index(ActionTypes.CLICK_COORDS), 'coord': [0, 0]}
         else:
             # Coordinate-based click
             coordinate = action_dict.get('coordinate', [0, 0])
-            return {'action_type': ActionTypes.CLICK_COORDS.value, 'coord': coordinate}
+            return {'action_type': get_action_index(ActionTypes.CLICK_COORDS), 'coord': coordinate}
     elif action_type == 'type':
         # Check if it's field-based or text-based
         if 'ref' in action_dict:
@@ -250,31 +256,31 @@ def _convert_to_miniwob_action(env, action_dict):
             text = action_dict.get('text', '')
             try:
                 element_id = int(element_ref)
-                return {'action_type': ActionTypes.TYPE_FIELD.value, 'element': element_id, 'text': text}
+                return {'action_type': get_action_index(ActionTypes.TYPE_FIELD), 'element': element_id, 'text': text}
             except ValueError:
                 # If ref is not a number, use text-based type
-                return {'action_type': ActionTypes.TYPE_TEXT.value, 'text': text}
+                return {'action_type': get_action_index(ActionTypes.TYPE_TEXT), 'text': text}
         else:
             # Text-based type
             text = action_dict.get('text', '')
-            return {'action_type': ActionTypes.TYPE_TEXT.value, 'text': text}
+            return {'action_type': get_action_index(ActionTypes.TYPE_TEXT), 'text': text}
     elif action_type == 'key':
         key = action_dict.get('key', 'Enter')
-        return {'action_type': ActionTypes.PRESS_KEY.value, 'key': key}
+        return {'action_type': get_action_index(ActionTypes.PRESS_KEY), 'key': key}
     elif action_type == 'scroll':
         coordinate = action_dict.get('coordinate', [0, 0])
         direction = action_dict.get('direction', 'down')
         if direction == 'down':
-            return {'action_type': ActionTypes.SCROLL_DOWN_COORDS.value, 'coord': coordinate}
+            return {'action_type': get_action_index(ActionTypes.SCROLL_DOWN_COORDS), 'coord': coordinate}
         else:
-            return {'action_type': ActionTypes.SCROLL_UP_COORDS.value, 'coord': coordinate}
+            return {'action_type': get_action_index(ActionTypes.SCROLL_UP_COORDS), 'coord': coordinate}
     elif action_type == 'drag':
         start_coord = action_dict.get('startCoordinate', [0, 0])
         end_coord = action_dict.get('endCoordinate', [0, 0])
         # MiniWob++ doesn't have a direct drag action, use mousedown -> move -> mouseup
-        return {'action_type': ActionTypes.MOUSEDOWN_COORDS.value, 'coord': start_coord}
+        return {'action_type': get_action_index(ActionTypes.MOUSEDOWN_COORDS), 'coord': start_coord}
     else:
-        return {'action_type': ActionTypes.NONE.value}
+        return {'action_type': get_action_index(ActionTypes.NONE)}
 
 def _save_episode_data(save_dir: str, trajectory: Trajectory, episode_info: Dict, config: Any):
     """Save episode data to disk."""

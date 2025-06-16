@@ -28,8 +28,14 @@ def parse_action(raw_action_str):
 def _convert_to_miniwob_action(env, action_dict):
     """Convert action dictionary to MiniWob++ action object."""
     
+    # Get the index of each action type in the ActionTypes enum
+    action_types_list = list(ActionTypes)
+    
+    def get_action_index(action_type_enum):
+        return action_types_list.index(action_type_enum)
+    
     if not isinstance(action_dict, dict):
-        return {'action_type': ActionTypes.NONE.value}
+        return {'action_type': get_action_index(ActionTypes.NONE)}
         
     action_type = action_dict.get('type', 'none')
     
@@ -40,16 +46,16 @@ def _convert_to_miniwob_action(env, action_dict):
             element_ref = action_dict['ref']
             try:
                 element_id = int(element_ref)
-                return {'action_type': ActionTypes.CLICK_ELEMENT.value, 'element': element_id}
+                return {'action_type': get_action_index(ActionTypes.CLICK_ELEMENT), 'element': element_id}
             except ValueError:
                 # If ref is not a number, treat as coordinate [0, 0]
-                return {'action_type': ActionTypes.CLICK_COORDS.value, 'coord': [0, 0]}
+                return {'action_type': get_action_index(ActionTypes.CLICK_COORDS), 'coord': [0, 0]}
         else:
             # Coordinate-based click
             coordinate = action_dict.get('coordinate', [0, 0])
-            return {'action_type': ActionTypes.CLICK_COORDS.value, 'coord': coordinate}
+            return {'action_type': get_action_index(ActionTypes.CLICK_COORDS), 'coord': coordinate}
     else:
-        return {'action_type': ActionTypes.NONE.value}
+        return {'action_type': get_action_index(ActionTypes.NONE)}
 
 def test_action_flow():
     """Test the complete action flow."""
@@ -69,10 +75,10 @@ def test_action_flow():
     
     # Verify the format
     assert 'action_type' in miniwob_action
-    assert isinstance(miniwob_action['action_type'], str)
-    assert miniwob_action['action_type'] == 'CLICK_ELEMENT'
+    assert isinstance(miniwob_action['action_type'], int)
+    assert miniwob_action['action_type'] == 8  # CLICK_ELEMENT index
     assert miniwob_action['element'] == 4
-    print(f"✅ Action type is string: {miniwob_action['action_type']}")
+    print(f"✅ Action type is integer: {miniwob_action['action_type']}")
     print(f"✅ Element ID is correct: {miniwob_action['element']}")
     
     print("✅ Action flow test passed!")
