@@ -107,26 +107,30 @@ def run_miniwob_episode(
                 # Accepts click(4), click('4'), or click("4")
                 match = re.match(r"(\w+)\(['\"]?(\d+)['\"]?\)", action_str)
                 if match:
-                    return {"action_type": match.group(1), "ref": int(match.group(2))}
+                    return {"type": match.group(1), "ref": int(match.group(2))}
                 raise ValueError(f"Invalid action format: {action_str}")
 
 
 
             # Usage:
         
-            miniwob_action = parse_action(raw_action)
+            parsed_action = parse_action(raw_action)
+            logger.info(f"Parsed action: {parsed_action}")
+            # Convert to MiniWob++ action format
+            miniwob_action = _convert_to_miniwob_action(env, parsed_action)
+            logger.info(f"MiniWob++ action: {miniwob_action}")
             # Execute action
             next_obs, reward, terminated, truncated, step_info = env.step(miniwob_action)
             
             # Create trajectory step
             traj_step = TrajectoryStep(
                 action=raw_action,
-                parsed_action=str(action_dict),
+                parsed_action=str(parsed_action),
                 thought=action_info.get('thought', '') if action_info else '',
                 observation=processed_obs,
                 misc={
                     "step_idx": step_idx,
-                    "action_dict": action_dict,
+                    "parsed_action": parsed_action,
                     "miniwob_action": str(miniwob_action),
                     "step_info": step_info,
                     "action_info": action_info,
