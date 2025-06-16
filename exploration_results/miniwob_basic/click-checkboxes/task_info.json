@@ -1,0 +1,7 @@
+{
+    "env_name": "click-checkboxes",
+    "created_at": 1750063713.3337915,
+    "config": {
+        "max_steps": 20,
+        "headless": true,
+        "viewport_size": 

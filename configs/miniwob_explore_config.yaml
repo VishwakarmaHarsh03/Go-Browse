@@ -31,7 +31,7 @@ episodes_per_env: 10
 # Explorer agent configuration
 explorer_agent:
   agent_factory_args:
-    agent_name: "AzureGPTMiniWobAgent"
+    name: "AzureGPTMiniWobAgent"
     model_name: "gpt-4o"
     temperature: 0.1
     char_limit: 40000
@@ -42,7 +42,7 @@ explorer_agent:
 # Evaluator agent configuration (optional)
 evaluator_agent:
   agent_factory_args:
-    agent_name: "AzureGPTMiniWobAgent"
+    name: "AzureGPTMiniWobAgent"
     model_name: "gpt-4o"
     temperature: 0.0
     char_limit: 40000

@@ -67,7 +67,7 @@ def run_miniwob_episode(
         from miniwob.action import ActionTypes
         
         # Create environment
-        env = gym.make(f"miniwob/{env_name}-v1", render_mode="rgb_array")
+        env = gym.make(f"miniwob/{env_name}-v1")
         
         if seed is not None:
             env.reset(seed=seed)

@@ -54,6 +54,7 @@ def setup_environment():
 
 def validate_config(config: MiniWobExploreConfig):
     """Validate the exploration configuration."""
+
     if not config.env_names:
         raise ValueError("No environments specified in config")
     
@@ -91,13 +92,19 @@ def run_exploration(config_path: str, overrides: dict = None):
             oc.set_struct(config_dict, True)   # Re-enable struct mode
     
     # Create structured config
-    config = oc.structured(MiniWobExploreConfig, config_dict)
+    # print(f"Exploration will save results to: {config_dict}")
+    config_schema = oc.structured(MiniWobExploreConfig)
+    config = oc.merge(config_schema, config_dict)
+
+    # config = oc.structured(MiniWobExploreConfig, config_dict)
+    print(f"Exploration configuration: {config}")
     
     # Validate configuration
     validate_config(config)
     
     # Create and run explorer
     logger.info("Starting MiniWob++ exploration...")
+    
     explorer = MiniWobExplorer(config)
     explorer.explore()
     

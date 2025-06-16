@@ -1,0 +1,49 @@
+env_names:
+- click-test
+- click-button
+- click-checkboxes
+- click-dialog
+- click-link
+- click-menu
+- click-option
+- click-pie
+- click-scroll-list
+- click-shades
+- click-shape
+- click-tab
+- click-tab-2
+- click-widget
+- focus-text
+- focus-text-2
+- identify-shape
+- navigate-tree
+- simple-algebra
+- simple-arithmetic
+- text-input
+episodes_per_env: 10
+explorer_agent:
+  agent_factory_args:
+    name: AzureGPTMiniWobAgent
+    model_name: gpt-4o
+    temperature: 0.1
+    char_limit: 40000
+    demo_mode: 'off'
+  max_steps: 20
+  retries: 3
+evaluator_agent:
+  agent_factory_args:
+    name: AzureGPTMiniWobAgent
+    model_name: gpt-4o
+    temperature: 0.0
+    char_limit: 40000
+    demo_mode: 'off'
+  max_steps: 20
+  retries: 3
+exp_dir: ./exploration_results/miniwob_basic
+headless: true
+slow_mo: 0
+viewport_size:
+  width: 1280
+  height: 720
+save_screenshots: true
+save_traces: true

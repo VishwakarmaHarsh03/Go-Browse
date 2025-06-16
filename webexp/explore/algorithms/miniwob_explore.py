@@ -73,7 +73,7 @@ class MiniWobExploreConfig:
     exp_dir: str
     headless: bool = True
     slow_mo: int = 0
-    viewport_size: Dict = None
+    viewport_size: Optional[Dict] = None
     save_screenshots: bool = True
     save_traces: bool = True
 
@@ -259,6 +259,8 @@ def main():
     
     # Load configuration
     config_dict = oc.load(args.config)
+    config_dict = oc.to_container(config_dict, resolve=True)  # <-- Add this line
+
     
     # Apply overrides
     if args.exp_dir:
@@ -268,6 +270,7 @@ def main():
     
     # Create config object
     config = oc.structured(MiniWobExploreConfig, config_dict)
+
     
     # Run exploration
     explorer = MiniWobExplorer(config)

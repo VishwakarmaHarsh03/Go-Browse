@@ -12,6 +12,7 @@ import json
 import logging
 import os
 import time
+import omegaconf
 
 logger = logging.getLogger(__name__)
 
@@ -56,6 +57,9 @@ class MiniWobTask:
                 },
                 "misc": self.misc,
             }
+            # Before dumping:
+            if isinstance(task_info, omegaconf.DictConfig):
+                task_info = omegaconf.OmegaConf.to_container(task_info, resolve=True)
             with open(os.path.join(self.exp_dir, "task_info.json"), "w") as f:
                 json.dump(task_info, f, indent=4)
 
