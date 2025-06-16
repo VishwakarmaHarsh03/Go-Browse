@@ -1,0 +1,105 @@
+# Advanced MiniWob++ Exploration Configuration
+# This configuration includes more challenging environments and different agent setups
+
+# Extended list of MiniWob++ environments including more complex tasks
+env_names:
+  # Basic clicking tasks
+  - "click-test"
+  - "click-button"
+  - "click-checkboxes"
+  - "click-dialog"
+  - "click-link"
+  - "click-menu"
+  - "click-option"
+  - "click-pie"
+  - "click-scroll-list"
+  - "click-shades"
+  - "click-shape"
+  - "click-tab"
+  - "click-tab-2"
+  - "click-widget"
+  
+  # Text and input tasks
+  - "focus-text"
+  - "focus-text-2"
+  - "text-input"
+  - "enter-text"
+  - "enter-text-dynamic"
+  - "enter-password"
+  - "enter-time"
+  - "enter-date"
+  
+  # Form and interaction tasks
+  - "login-user"
+  - "book-flight"
+  - "choose-date"
+  - "choose-list"
+  - "count-shape"
+  - "email-inbox"
+  - "email-inbox-forward"
+  - "email-inbox-reply"
+  
+  # Navigation and search tasks
+  - "navigate-tree"
+  - "search-engine"
+  - "social-media"
+  - "social-media-some"
+  - "social-media-all"
+  
+  # Mathematical and logical tasks
+  - "simple-algebra"
+  - "simple-arithmetic"
+  - "identify-shape"
+  - "guess-number"
+  
+  # Advanced interaction tasks
+  - "drag-box"
+  - "drag-circle"
+  - "drag-cube"
+  - "drag-shapes"
+  - "resize-textarea"
+  - "scroll-text"
+  - "scroll-text-2"
+  - "use-autocomplete"
+  - "use-spinner"
+  - "use-slider"
+
+# Number of episodes to run per environment
+episodes_per_env: 20
+
+# Explorer agent configuration - using Claude for diversity
+explorer_agent:
+  agent_factory_args:
+    agent_name: "BedrockClaudeMiniWobAgent"
+    model_id: "anthropic.claude-3-5-sonnet-20240620-v1:0"
+    temperature: 0.2
+    max_tokens: 10000
+    char_limit: 50000
+    demo_mode: "off"
+  max_steps: 30
+  retries: 5
+
+# Evaluator agent configuration - using GPT for evaluation
+evaluator_agent:
+  agent_factory_args:
+    agent_name: "AzureGPTMiniWobAgent"
+    model_name: "gpt-4o"
+    temperature: 0.0
+    char_limit: 40000
+    demo_mode: "off"
+  max_steps: 30
+  retries: 3
+
+# Experiment directory
+exp_dir: "./exploration_results/miniwob_advanced"
+
+# Environment settings
+headless: true
+slow_mo: 100  # Slight delay for more stable interactions
+viewport_size:
+  width: 1280
+  height: 720
+
+# Data collection settings
+save_screenshots: true
+save_traces: true
