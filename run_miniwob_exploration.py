@@ -55,10 +55,19 @@ def setup_environment():
 def validate_config(config):
     """Validate the exploration configuration."""
     try:
-        env_names = getattr(config, 'env_names', None) or config.get('env_names', [])
-        episodes_per_env = getattr(config, 'episodes_per_env', None) or config.get('episodes_per_env', 0)
-        exp_dir = getattr(config, 'exp_dir', None) or config.get('exp_dir', '')
-        explorer_agent = getattr(config, 'explorer_agent', None) or config.get('explorer_agent', {})
+        # Handle both dict and object types
+        if hasattr(config, 'get'):
+            # Dictionary-like access
+            env_names = config.get('env_names', [])
+            episodes_per_env = config.get('episodes_per_env', 0)
+            exp_dir = config.get('exp_dir', '')
+            explorer_agent = config.get('explorer_agent', {})
+        else:
+            # Object attribute access
+            env_names = getattr(config, 'env_names', [])
+            episodes_per_env = getattr(config, 'episodes_per_env', 0)
+            exp_dir = getattr(config, 'exp_dir', '')
+            explorer_agent = getattr(config, 'explorer_agent', {})
     except Exception as e:
         logger.error(f"Error accessing config attributes: {e}")
         raise ValueError(f"Invalid configuration format: {e}")
@@ -100,10 +109,12 @@ def run_exploration(config_path: str, overrides: dict = None):
     
     # Apply overrides
     if overrides:
+        logger.info(f"Applying overrides: {overrides}")
         for key, value in overrides.items():
             oc.set_struct(config_dict, False)  # Allow new keys
             oc.update(config_dict, key, value)
             oc.set_struct(config_dict, True)   # Re-enable struct mode
+            logger.info(f"Applied override: {key} = {value}")
     
     # Validate configuration first using raw config_dict
     validate_config(config_dict)
