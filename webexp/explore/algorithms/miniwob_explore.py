@@ -169,7 +169,7 @@ class MiniWobExplorer:
                         status = "SUCCESS" if result.trajectory.success else "FAILURE"
                         logger.info(f"Episode {episode_idx + 1} completed: {status} "
                                    f"(Steps: {len(result.trajectory.steps)}, "
-                                   f"Reward: {result.trajectory.final_reward})")
+                                   f"Reward: {result.trajectory.reward})")
                     else:
                         logger.warning(f"Episode {episode_idx + 1} failed to generate trajectory")
                         
