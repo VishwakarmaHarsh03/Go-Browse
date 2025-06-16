@@ -73,7 +73,7 @@ class MiniWobExploreConfig:
     exp_dir: str
     headless: bool = True
     slow_mo: int = 0
-    viewport_size: Dict = None
+    viewport_size: Optional[Dict] = None
     save_screenshots: bool = True
     save_traces: bool = True
 

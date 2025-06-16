@@ -52,23 +52,38 @@ def setup_environment():
         logger.warning(f"Chrome setup issue: {e}")
         logger.warning("You may need to run the Chrome setup script")
 
-def validate_config(config: MiniWobExploreConfig):
+def validate_config(config):
     """Validate the exploration configuration."""
-    if not config.env_names:
+    try:
+        env_names = getattr(config, 'env_names', None) or config.get('env_names', [])
+        episodes_per_env = getattr(config, 'episodes_per_env', None) or config.get('episodes_per_env', 0)
+        exp_dir = getattr(config, 'exp_dir', None) or config.get('exp_dir', '')
+        explorer_agent = getattr(config, 'explorer_agent', None) or config.get('explorer_agent', {})
+    except Exception as e:
+        logger.error(f"Error accessing config attributes: {e}")
+        raise ValueError(f"Invalid configuration format: {e}")
+    
+    if not env_names:
         raise ValueError("No environments specified in config")
     
-    if config.episodes_per_env <= 0:
+    if episodes_per_env <= 0:
         raise ValueError("episodes_per_env must be positive")
     
-    if not config.exp_dir:
+    if not exp_dir:
         raise ValueError("exp_dir must be specified")
     
     # Validate agent configurations
-    if not config.explorer_agent.agent_factory_args:
+    agent_factory_args = None
+    if hasattr(explorer_agent, 'agent_factory_args'):
+        agent_factory_args = explorer_agent.agent_factory_args
+    elif isinstance(explorer_agent, dict):
+        agent_factory_args = explorer_agent.get('agent_factory_args', {})
+    
+    if not agent_factory_args:
         raise ValueError("Explorer agent configuration is missing")
     
-    logger.info(f"Configuration validated: {len(config.env_names)} environments, "
-               f"{config.episodes_per_env} episodes each")
+    logger.info(f"Configuration validated: {len(env_names)} environments, "
+               f"{episodes_per_env} episodes each")
 
 def run_exploration(config_path: str, overrides: dict = None):
     """
@@ -91,7 +106,25 @@ def run_exploration(config_path: str, overrides: dict = None):
             oc.set_struct(config_dict, True)   # Re-enable struct mode
     
     # Create structured config
-    config = oc.structured(MiniWobExploreConfig, config_dict)
+    try:
+        config = oc.structured(MiniWobExploreConfig, config_dict)
+    except Exception as e:
+        logger.error(f"Failed to create structured config: {e}")
+        logger.info("Trying to create config manually...")
+        
+        # Create config manually as fallback
+        config = MiniWobExploreConfig(
+            env_names=config_dict.get("env_names", []),
+            episodes_per_env=config_dict.get("episodes_per_env", 10),
+            explorer_agent=MiniWobExploreAgentConfig(**config_dict.get("explorer_agent", {})),
+            evaluator_agent=MiniWobExploreAgentConfig(**config_dict.get("evaluator_agent", {})) if config_dict.get("evaluator_agent") else None,
+            exp_dir=config_dict.get("exp_dir", "./exploration_results"),
+            headless=config_dict.get("headless", True),
+            slow_mo=config_dict.get("slow_mo", 0),
+            viewport_size=config_dict.get("viewport_size"),
+            save_screenshots=config_dict.get("save_screenshots", True),
+            save_traces=config_dict.get("save_traces", True)
+        )
     
     # Validate configuration
     validate_config(config)
