@@ -17,7 +17,7 @@ from omegaconf import OmegaConf as oc
 project_root = Path(__file__).parent
 sys.path.insert(0, str(project_root))
 
-from webexp.explore.algorithms.miniwob_explore import MiniWobExplorer, MiniWobExploreConfig
+from webexp.explore.algorithms.miniwob_explore import MiniWobExplorer, MiniWobExploreConfig, MiniWobExploreAgentConfig
 
 # Set up logging
 logging.basicConfig(
@@ -105,29 +105,23 @@ def run_exploration(config_path: str, overrides: dict = None):
             oc.update(config_dict, key, value)
             oc.set_struct(config_dict, True)   # Re-enable struct mode
     
-    # Create structured config
-    try:
-        config = oc.structured(MiniWobExploreConfig, config_dict)
-    except Exception as e:
-        logger.error(f"Failed to create structured config: {e}")
-        logger.info("Trying to create config manually...")
-        
-        # Create config manually as fallback
-        config = MiniWobExploreConfig(
-            env_names=config_dict.get("env_names", []),
-            episodes_per_env=config_dict.get("episodes_per_env", 10),
-            explorer_agent=MiniWobExploreAgentConfig(**config_dict.get("explorer_agent", {})),
-            evaluator_agent=MiniWobExploreAgentConfig(**config_dict.get("evaluator_agent", {})) if config_dict.get("evaluator_agent") else None,
-            exp_dir=config_dict.get("exp_dir", "./exploration_results"),
-            headless=config_dict.get("headless", True),
-            slow_mo=config_dict.get("slow_mo", 0),
-            viewport_size=config_dict.get("viewport_size"),
-            save_screenshots=config_dict.get("save_screenshots", True),
-            save_traces=config_dict.get("save_traces", True)
-        )
+    # Validate configuration first using raw config_dict
+    validate_config(config_dict)
     
-    # Validate configuration
-    validate_config(config)
+    # Create config manually (more reliable than OmegaConf structured)
+    logger.info("Creating configuration object...")
+    config = MiniWobExploreConfig(
+        env_names=config_dict.get("env_names", []),
+        episodes_per_env=config_dict.get("episodes_per_env", 10),
+        explorer_agent=MiniWobExploreAgentConfig(**config_dict.get("explorer_agent", {})),
+        evaluator_agent=MiniWobExploreAgentConfig(**config_dict.get("evaluator_agent", {})) if config_dict.get("evaluator_agent") else None,
+        exp_dir=config_dict.get("exp_dir", "./exploration_results"),
+        headless=config_dict.get("headless", True),
+        slow_mo=config_dict.get("slow_mo", 0),
+        viewport_size=config_dict.get("viewport_size"),
+        save_screenshots=config_dict.get("save_screenshots", True),
+        save_traces=config_dict.get("save_traces", True)
+    )
     
     # Create and run explorer
     logger.info("Starting MiniWob++ exploration...")

@@ -1,0 +1,46 @@
+2025-06-16 08:41:34,204 - __main__ - ERROR - MiniWob++ not installed: No module named 'miniwob'
+2025-06-16 08:41:34,204 - __main__ - ERROR - Please install with: pip install miniwob
+2025-06-16 08:41:49,590 - __main__ - INFO - MiniWob++ environment is available
+2025-06-16 08:41:49,594 - webexp.benchmark.run_miniwob - INFO - Headless environment detected, setting up virtual display...
+2025-06-16 08:41:54,599 - webexp.benchmark.run_miniwob - WARNING - Could not start virtual display, continuing without it
+2025-06-16 08:41:54,600 - __main__ - INFO - Chrome environment is properly set up
+2025-06-16 08:41:54,600 - __main__ - INFO - Loading configuration from: configs/miniwob_explore_config.yaml
+2025-06-16 08:41:54,609 - __main__ - ERROR - Error accessing config attributes: Missing mandatory value: env_names
+    full_key: env_names
+    object_type=MiniWobExploreConfig
+2025-06-16 08:42:18,296 - __main__ - INFO - MiniWob++ environment is available
+2025-06-16 08:42:18,297 - webexp.benchmark.run_miniwob - INFO - Headless environment detected, setting up virtual display...
+2025-06-16 08:42:23,305 - webexp.benchmark.run_miniwob - WARNING - Could not start virtual display, continuing without it
+2025-06-16 08:42:23,306 - __main__ - INFO - Chrome environment is properly set up
+2025-06-16 08:42:23,306 - __main__ - INFO - Loading configuration from: configs/miniwob_explore_config.yaml
+2025-06-16 08:42:23,313 - __main__ - INFO - Configuration validated: 1 environments, 1 episodes each
+2025-06-16 08:42:23,315 - __main__ - INFO - Starting MiniWob++ exploration...
+2025-06-16 08:42:42,763 - __main__ - INFO - MiniWob++ environment is available
+2025-06-16 08:42:42,765 - webexp.benchmark.run_miniwob - INFO - Headless environment detected, setting up virtual display...
+2025-06-16 08:42:47,770 - webexp.benchmark.run_miniwob - WARNING - Could not start virtual display, continuing without it
+2025-06-16 08:42:47,770 - __main__ - INFO - Chrome environment is properly set up
+2025-06-16 08:42:47,771 - __main__ - INFO - Loading configuration from: configs/miniwob_explore_config.yaml
+2025-06-16 08:42:47,778 - __main__ - INFO - Configuration validated: 1 environments, 1 episodes each
+2025-06-16 08:42:47,778 - __main__ - INFO - Creating configuration object...
+2025-06-16 08:43:05,066 - __main__ - INFO - MiniWob++ environment is available
+2025-06-16 08:43:05,067 - webexp.benchmark.run_miniwob - INFO - Headless environment detected, setting up virtual display...
+2025-06-16 08:43:10,072 - webexp.benchmark.run_miniwob - WARNING - Could not start virtual display, continuing without it
+2025-06-16 08:43:10,072 - __main__ - INFO - Chrome environment is properly set up
+2025-06-16 08:43:10,073 - __main__ - INFO - Loading configuration from: configs/miniwob_explore_config.yaml
+2025-06-16 08:43:10,080 - __main__ - INFO - Configuration validated: 1 environments, 1 episodes each
+2025-06-16 08:43:10,080 - __main__ - INFO - Creating configuration object...
+2025-06-16 08:43:10,081 - __main__ - INFO - Starting MiniWob++ exploration...
+2025-06-16 08:43:10,085 - webexp.explore.algorithms.miniwob_explore - INFO - MiniWob++ Explorer initialized with 1 environments
+2025-06-16 08:43:10,086 - webexp.explore.algorithms.miniwob_explore - INFO - Experiment directory: ./exploration_results/miniwob_basic
+2025-06-16 08:43:10,086 - webexp.explore.algorithms.miniwob_explore - INFO - Starting MiniWob++ exploration...
+2025-06-16 08:44:36,450 - __main__ - INFO - MiniWob++ environment is available
+2025-06-16 08:44:36,451 - webexp.benchmark.run_miniwob - INFO - Headless environment detected, setting up virtual display...
+2025-06-16 08:44:41,457 - webexp.benchmark.run_miniwob - WARNING - Could not start virtual display, continuing without it
+2025-06-16 08:44:41,457 - __main__ - INFO - Chrome environment is properly set up
+2025-06-16 08:44:41,457 - __main__ - INFO - Loading configuration from: configs/miniwob_explore_config.yaml
+2025-06-16 08:44:41,465 - __main__ - INFO - Configuration validated: 1 environments, 1 episodes each
+2025-06-16 08:44:41,465 - __main__ - INFO - Creating configuration object...
+2025-06-16 08:44:41,465 - __main__ - INFO - Starting MiniWob++ exploration...
+2025-06-16 08:44:41,470 - webexp.explore.algorithms.miniwob_explore - INFO - MiniWob++ Explorer initialized with 1 environments
+2025-06-16 08:44:41,470 - webexp.explore.algorithms.miniwob_explore - INFO - Experiment directory: ./exploration_results/miniwob_basic
+2025-06-16 08:44:41,470 - webexp.explore.algorithms.miniwob_explore - INFO - Starting MiniWob++ exploration...
