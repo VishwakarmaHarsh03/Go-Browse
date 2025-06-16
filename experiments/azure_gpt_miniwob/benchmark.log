@@ -1,0 +1,129 @@
+2025-06-16 12:36:58,813 - INFO - Starting MiniWob++ benchmark with 14 environments
+2025-06-16 12:36:58,813 - INFO - Starting benchmark for environment: click-test
+2025-06-16 12:36:58,814 - INFO - Running episode 1/5 for click-test
+2025-06-16 12:36:58,943 - INFO - Starting WebDriver Instance
+2025-06-16 12:37:02,660 - INFO - HTTP Request: POST https://api.ai-service.global.fujitsu.com/ai-foundation/chat-ai/gpt4/openai/deployments/gpt-4o/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-06-16 12:37:02,711 - ERROR - Error in step 0 of episode 0 for click-test: name 'processed_action' is not defined
+2025-06-16 12:37:02,775 - INFO - Running episode 2/5 for click-test
+2025-06-16 12:37:02,775 - INFO - Starting WebDriver Instance
+2025-06-16 12:37:06,300 - INFO - HTTP Request: POST https://api.ai-service.global.fujitsu.com/ai-foundation/chat-ai/gpt4/openai/deployments/gpt-4o/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-06-16 12:37:06,333 - ERROR - Error in step 0 of episode 1 for click-test: name 'processed_action' is not defined
+2025-06-16 12:37:06,393 - INFO - Running episode 3/5 for click-test
+2025-06-16 12:37:06,393 - INFO - Starting WebDriver Instance
+2025-06-16 12:37:09,815 - INFO - HTTP Request: POST https://api.ai-service.global.fujitsu.com/ai-foundation/chat-ai/gpt4/openai/deployments/gpt-4o/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-06-16 12:37:09,845 - ERROR - Error in step 0 of episode 2 for click-test: name 'processed_action' is not defined
+2025-06-16 12:37:09,905 - INFO - Running episode 4/5 for click-test
+2025-06-16 12:37:09,905 - INFO - Starting WebDriver Instance
+2025-06-16 12:37:12,170 - INFO - HTTP Request: POST https://api.ai-service.global.fujitsu.com/ai-foundation/chat-ai/gpt4/openai/deployments/gpt-4o/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-06-16 12:37:12,181 - ERROR - Error in step 0 of episode 3 for click-test: invalid literal for int() with base 10: 'subbtn'
+2025-06-16 12:37:12,242 - INFO - Running episode 5/5 for click-test
+2025-06-16 12:37:12,243 - INFO - Starting WebDriver Instance
+2025-06-16 12:37:14,596 - INFO - HTTP Request: POST https://api.ai-service.global.fujitsu.com/ai-foundation/chat-ai/gpt4/openai/deployments/gpt-4o/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-06-16 12:37:14,628 - ERROR - Error in step 0 of episode 4 for click-test: name 'processed_action' is not defined
+2025-06-16 12:37:14,689 - INFO - Completed click-test: Success rate = 0.00%
+2025-06-16 12:37:14,689 - INFO - Starting benchmark for environment: click-test-2
+2025-06-16 12:37:14,689 - INFO - Running episode 1/5 for click-test-2
+2025-06-16 12:37:14,690 - INFO - Starting WebDriver Instance
+2025-06-16 12:37:16,879 - INFO - HTTP Request: POST https://api.ai-service.global.fujitsu.com/ai-foundation/chat-ai/gpt4/openai/deployments/gpt-4o/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-06-16 12:37:16,910 - ERROR - Error in step 0 of episode 0 for click-test-2: name 'processed_action' is not defined
+2025-06-16 12:37:16,969 - INFO - Running episode 2/5 for click-test-2
+2025-06-16 12:37:16,969 - INFO - Starting WebDriver Instance
+2025-06-16 12:37:19,131 - INFO - HTTP Request: POST https://api.ai-service.global.fujitsu.com/ai-foundation/chat-ai/gpt4/openai/deployments/gpt-4o/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-06-16 12:37:19,162 - ERROR - Error in step 0 of episode 1 for click-test-2: name 'processed_action' is not defined
+2025-06-16 12:37:19,228 - INFO - Running episode 3/5 for click-test-2
+2025-06-16 12:37:19,228 - INFO - Starting WebDriver Instance
+2025-06-16 12:37:20,507 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectionResetError(104, 'Connection reset by peer')': /session/0e3debafc4f745b56d5ad4a38616ec5d
+2025-06-16 12:37:20,509 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x732579452090>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/0e3debafc4f745b56d5ad4a38616ec5d
+2025-06-16 12:37:20,511 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x732579452630>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/0e3debafc4f745b56d5ad4a38616ec5d
+2025-06-16 12:42:18,683 - INFO - Starting MiniWob++ benchmark with 14 environments
+2025-06-16 12:42:18,684 - INFO - Starting benchmark for environment: click-test
+2025-06-16 12:42:18,684 - INFO - Running episode 1/5 for click-test
+2025-06-16 12:42:18,796 - INFO - Starting WebDriver Instance
+2025-06-16 12:42:22,493 - INFO - HTTP Request: POST https://api.ai-service.global.fujitsu.com/ai-foundation/chat-ai/gpt4/openai/deployments/gpt-4o/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-06-16 12:42:22,612 - INFO - Running episode 2/5 for click-test
+2025-06-16 12:42:22,613 - INFO - Starting WebDriver Instance
+2025-06-16 12:42:25,003 - INFO - HTTP Request: POST https://api.ai-service.global.fujitsu.com/ai-foundation/chat-ai/gpt4/openai/deployments/gpt-4o/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-06-16 12:42:25,094 - INFO - Running episode 3/5 for click-test
+2025-06-16 12:42:25,094 - INFO - Starting WebDriver Instance
+2025-06-16 12:42:28,548 - INFO - HTTP Request: POST https://api.ai-service.global.fujitsu.com/ai-foundation/chat-ai/gpt4/openai/deployments/gpt-4o/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-06-16 12:42:28,648 - INFO - Running episode 4/5 for click-test
+2025-06-16 12:42:28,649 - INFO - Starting WebDriver Instance
+2025-06-16 12:42:31,931 - INFO - HTTP Request: POST https://api.ai-service.global.fujitsu.com/ai-foundation/chat-ai/gpt4/openai/deployments/gpt-4o/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-06-16 12:42:32,021 - INFO - Running episode 5/5 for click-test
+2025-06-16 12:42:32,022 - INFO - Starting WebDriver Instance
+2025-06-16 12:42:34,903 - INFO - HTTP Request: POST https://api.ai-service.global.fujitsu.com/ai-foundation/chat-ai/gpt4/openai/deployments/gpt-4o/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-06-16 12:42:35,004 - INFO - Completed click-test: Success rate = 100.00%
+2025-06-16 12:42:35,004 - INFO - Starting benchmark for environment: click-test-2
+2025-06-16 12:42:35,004 - INFO - Running episode 1/5 for click-test-2
+2025-06-16 12:42:35,004 - INFO - Starting WebDriver Instance
+2025-06-16 12:42:37,106 - INFO - HTTP Request: POST https://api.ai-service.global.fujitsu.com/ai-foundation/chat-ai/gpt4/openai/deployments/gpt-4o/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-06-16 12:42:37,202 - INFO - Running episode 2/5 for click-test-2
+2025-06-16 12:42:37,202 - INFO - Starting WebDriver Instance
+2025-06-16 12:42:39,388 - INFO - HTTP Request: POST https://api.ai-service.global.fujitsu.com/ai-foundation/chat-ai/gpt4/openai/deployments/gpt-4o/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-06-16 12:42:39,481 - INFO - Running episode 3/5 for click-test-2
+2025-06-16 12:42:39,482 - INFO - Starting WebDriver Instance
+2025-06-16 12:42:41,672 - INFO - HTTP Request: POST https://api.ai-service.global.fujitsu.com/ai-foundation/chat-ai/gpt4/openai/deployments/gpt-4o/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-06-16 12:42:41,771 - INFO - Running episode 4/5 for click-test-2
+2025-06-16 12:42:41,771 - INFO - Starting WebDriver Instance
+2025-06-16 12:42:43,931 - INFO - HTTP Request: POST https://api.ai-service.global.fujitsu.com/ai-foundation/chat-ai/gpt4/openai/deployments/gpt-4o/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-06-16 12:42:44,028 - INFO - Running episode 5/5 for click-test-2
+2025-06-16 12:42:44,029 - INFO - Starting WebDriver Instance
+2025-06-16 12:42:47,323 - INFO - HTTP Request: POST https://api.ai-service.global.fujitsu.com/ai-foundation/chat-ai/gpt4/openai/deployments/gpt-4o/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-06-16 12:42:47,420 - INFO - Completed click-test-2: Success rate = 100.00%
+2025-06-16 12:42:47,420 - INFO - Starting benchmark for environment: click-button
+2025-06-16 12:42:47,420 - INFO - Running episode 1/5 for click-button
+2025-06-16 12:42:47,421 - INFO - Starting WebDriver Instance
+2025-06-16 12:42:49,880 - INFO - HTTP Request: POST https://api.ai-service.global.fujitsu.com/ai-foundation/chat-ai/gpt4/openai/deployments/gpt-4o/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-06-16 12:42:49,973 - INFO - Running episode 2/5 for click-button
+2025-06-16 12:42:49,974 - INFO - Starting WebDriver Instance
+2025-06-16 12:42:52,133 - INFO - HTTP Request: POST https://api.ai-service.global.fujitsu.com/ai-foundation/chat-ai/gpt4/openai/deployments/gpt-4o/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-06-16 12:42:52,233 - INFO - Running episode 3/5 for click-button
+2025-06-16 12:42:52,233 - INFO - Starting WebDriver Instance
+2025-06-16 12:42:54,413 - INFO - HTTP Request: POST https://api.ai-service.global.fujitsu.com/ai-foundation/chat-ai/gpt4/openai/deployments/gpt-4o/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-06-16 12:42:54,505 - INFO - Running episode 4/5 for click-button
+2025-06-16 12:42:54,505 - INFO - Starting WebDriver Instance
+2025-06-16 12:42:56,969 - INFO - HTTP Request: POST https://api.ai-service.global.fujitsu.com/ai-foundation/chat-ai/gpt4/openai/deployments/gpt-4o/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-06-16 12:42:57,083 - INFO - Running episode 5/5 for click-button
+2025-06-16 12:42:57,084 - INFO - Starting WebDriver Instance
+2025-06-16 12:42:59,307 - INFO - HTTP Request: POST https://api.ai-service.global.fujitsu.com/ai-foundation/chat-ai/gpt4/openai/deployments/gpt-4o/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-06-16 12:42:59,407 - INFO - Completed click-button: Success rate = 100.00%
+2025-06-16 12:42:59,407 - INFO - Starting benchmark for environment: click-checkboxes
+2025-06-16 12:42:59,409 - INFO - Running episode 1/5 for click-checkboxes
+2025-06-16 12:42:59,409 - INFO - Starting WebDriver Instance
+2025-06-16 12:43:01,795 - INFO - HTTP Request: POST https://api.ai-service.global.fujitsu.com/ai-foundation/chat-ai/gpt4/openai/deployments/gpt-4o/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-06-16 12:43:01,806 - ERROR - Error in step 0 of episode 0 for click-checkboxes: invalid literal for int() with base 10: 'ch0'
+2025-06-16 12:43:01,871 - INFO - Running episode 2/5 for click-checkboxes
+2025-06-16 12:43:01,872 - INFO - Starting WebDriver Instance
+2025-06-16 12:43:04,554 - INFO - HTTP Request: POST https://api.ai-service.global.fujitsu.com/ai-foundation/chat-ai/gpt4/openai/deployments/gpt-4o/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-06-16 12:43:04,567 - ERROR - Error in step 0 of episode 1 for click-checkboxes: invalid literal for int() with base 10: 'ch2'
+2025-06-16 12:43:04,637 - INFO - Running episode 3/5 for click-checkboxes
+2025-06-16 12:43:04,638 - INFO - Starting WebDriver Instance
+2025-06-16 12:43:07,153 - INFO - HTTP Request: POST https://api.ai-service.global.fujitsu.com/ai-foundation/chat-ai/gpt4/openai/deployments/gpt-4o/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-06-16 12:43:09,113 - INFO - HTTP Request: POST https://api.ai-service.global.fujitsu.com/ai-foundation/chat-ai/gpt4/openai/deployments/gpt-4o/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-06-16 12:43:09,202 - INFO - Running episode 4/5 for click-checkboxes
+2025-06-16 12:43:09,202 - INFO - Starting WebDriver Instance
+2025-06-16 12:43:11,704 - INFO - HTTP Request: POST https://api.ai-service.global.fujitsu.com/ai-foundation/chat-ai/gpt4/openai/deployments/gpt-4o/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-06-16 12:43:13,067 - INFO - HTTP Request: POST https://api.ai-service.global.fujitsu.com/ai-foundation/chat-ai/gpt4/openai/deployments/gpt-4o/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-06-16 12:43:13,163 - INFO - Running episode 5/5 for click-checkboxes
+2025-06-16 12:43:13,163 - INFO - Starting WebDriver Instance
+2025-06-16 12:43:15,616 - INFO - HTTP Request: POST https://api.ai-service.global.fujitsu.com/ai-foundation/chat-ai/gpt4/openai/deployments/gpt-4o/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-06-16 12:43:17,173 - INFO - HTTP Request: POST https://api.ai-service.global.fujitsu.com/ai-foundation/chat-ai/gpt4/openai/deployments/gpt-4o/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-06-16 12:43:17,273 - INFO - Completed click-checkboxes: Success rate = 40.00%
+2025-06-16 12:43:17,273 - INFO - Starting benchmark for environment: enter-text
+2025-06-16 12:43:17,273 - INFO - Running episode 1/5 for enter-text
+2025-06-16 12:43:17,276 - INFO - Starting WebDriver Instance
+2025-06-16 12:43:19,530 - INFO - HTTP Request: POST https://api.ai-service.global.fujitsu.com/ai-foundation/chat-ai/gpt4/openai/deployments/gpt-4o/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-06-16 12:43:19,532 - ERROR - Error in step 0 of episode 0 for enter-text: type object 'ActionTypes' has no attribute 'TYPE'
+2025-06-16 12:43:19,597 - INFO - Running episode 2/5 for enter-text
+2025-06-16 12:43:19,597 - INFO - Starting WebDriver Instance
+2025-06-16 12:43:21,892 - INFO - HTTP Request: POST https://api.ai-service.global.fujitsu.com/ai-foundation/chat-ai/gpt4/openai/deployments/gpt-4o/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-06-16 12:43:21,895 - ERROR - Error in step 0 of episode 1 for enter-text: type object 'ActionTypes' has no attribute 'TYPE'
+2025-06-16 12:43:21,963 - INFO - Running episode 3/5 for enter-text
+2025-06-16 12:43:21,964 - INFO - Starting WebDriver Instance
+2025-06-16 12:43:24,010 - INFO - HTTP Request: POST https://api.ai-service.global.fujitsu.com/ai-foundation/chat-ai/gpt4/openai/deployments/gpt-4o/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-06-16 12:43:24,014 - ERROR - Error in step 0 of episode 2 for enter-text: type object 'ActionTypes' has no attribute 'TYPE'
+2025-06-16 12:43:24,078 - INFO - Running episode 4/5 for enter-text
+2025-06-16 12:43:24,079 - INFO - Starting WebDriver Instance
+2025-06-16 12:43:25,231 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7d2a63462ea0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/f16c3f57a3ac95ea36f9d9e8ad16ae87
+2025-06-16 12:43:25,233 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7d2a634348f0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/f16c3f57a3ac95ea36f9d9e8ad16ae87
+2025-06-16 12:43:25,235 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7d2a63484080>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/f16c3f57a3ac95ea36f9d9e8ad16ae87

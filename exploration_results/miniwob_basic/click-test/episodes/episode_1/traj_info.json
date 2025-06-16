@@ -1,0 +1,19 @@
+{
+    "goal": "click-test",
+    "reward": 0.0,
+    "success": false,
+    "response": "",
+    "agent_info": {
+        "agent_type": "CallbackProtocolAgentWrapper",
+        "config": {
+            "max_steps": 20,
+            "headless": true
+        }
+    },
+    "misc": {
+        "env_name": "click-test",
+        "episode_idx": 1,
+        "duration": 3.7288527488708496,
+        "total_steps": 0
+    }
+}

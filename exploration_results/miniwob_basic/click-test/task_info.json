@@ -1,0 +1,7 @@
+{
+    "env_name": "click-test",
+    "created_at": 1750063568.2291253,
+    "config": {
+        "max_steps": 20,
+        "headless": true,
+        "viewport_size": 

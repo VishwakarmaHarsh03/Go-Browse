@@ -116,26 +116,16 @@ def run_exploration(config_path: str, overrides: dict = None):
             oc.set_struct(config_dict, True)   # Re-enable struct mode
             logger.info(f"Applied override: {key} = {value}")
     
-    # Validate configuration first using raw config_dict
-    validate_config(config_dict)
+    # Create structured config
+    config_schema = oc.structured(MiniWobExploreConfig)
+    config = oc.merge(config_schema, config_dict)
     
-    # Create config manually (more reliable than OmegaConf structured)
-    logger.info("Creating configuration object...")
-    config = MiniWobExploreConfig(
-        env_names=config_dict.get("env_names", []),
-        episodes_per_env=config_dict.get("episodes_per_env", 10),
-        explorer_agent=MiniWobExploreAgentConfig(**config_dict.get("explorer_agent", {})),
-        evaluator_agent=MiniWobExploreAgentConfig(**config_dict.get("evaluator_agent", {})) if config_dict.get("evaluator_agent") else None,
-        exp_dir=config_dict.get("exp_dir", "./exploration_results"),
-        headless=config_dict.get("headless", True),
-        slow_mo=config_dict.get("slow_mo", 0),
-        viewport_size=config_dict.get("viewport_size"),
-        save_screenshots=config_dict.get("save_screenshots", True),
-        save_traces=config_dict.get("save_traces", True)
-    )
+    # Validate configuration
+    validate_config(config)
     
     # Create and run explorer
     logger.info("Starting MiniWob++ exploration...")
+    
     explorer = MiniWobExplorer(config)
     explorer.explore()
     

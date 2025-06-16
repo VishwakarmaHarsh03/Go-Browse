@@ -1,6 +1,26 @@
 env_names:
 - click-test
-episodes_per_env: 1
+- click-button
+- click-checkboxes
+- click-dialog
+- click-link
+- click-menu
+- click-option
+- click-pie
+- click-scroll-list
+- click-shades
+- click-shape
+- click-tab
+- click-tab-2
+- click-widget
+- focus-text
+- focus-text-2
+- identify-shape
+- navigate-tree
+- simple-algebra
+- simple-arithmetic
+- text-input
+episodes_per_env: 10
 explorer_agent:
   agent_factory_args:
     agent_name: AzureGPTMiniWobAgent

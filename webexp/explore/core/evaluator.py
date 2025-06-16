@@ -2,6 +2,7 @@ from .trajectory import Trajectory
 from PIL import Image
 from typing import Union, Optional
 from openai import OpenAI
+from langchain_openai import AzureChatOpenAI
 from openai.types.chat import ChatCompletion
 from textwrap import dedent
 import base64
@@ -19,18 +20,14 @@ if not logger.handlers:
     handler.setFormatter(formatter)
     logger.addHandler(handler)
 
-# Initialize OpenAI client lazily to avoid requiring API key at import time
-client = None
-
-def get_openai_client():
-    global client
-    if client is None:
-        api_key = os.getenv("OPENAI_API_KEY")
-        if not api_key:
-            raise ValueError("OPENAI_API_KEY environment variable must be set")
-        client = OpenAI(api_key=api_key, base_url=os.getenv("OPENAI_BASE_URL", None))
-    return client
-
+# client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"), base_url=os.getenv("OPENAI_BASE_URL", None))
+client  = AzureChatOpenAI(
+                temperature=0,
+                api_key=os.getenv("api_key_azure"),  # Replace with your actual API key
+                api_version="2024-08-01-preview",
+                azure_endpoint=os.getenv("api_base_azure_ai"),
+                model_name="gpt-4o",
+            )
 def extract_content(text, start_tag):
     """
     Extract the content that follows 'Info:' in a given string.

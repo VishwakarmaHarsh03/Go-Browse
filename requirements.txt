@@ -6,7 +6,7 @@ kaleido
 scikit-learn
 bitsandbytes
 deepspeed
-flash-attn
+# flash-attn
 liger-kernel
 omegaconf
 pillow

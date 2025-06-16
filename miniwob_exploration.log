@@ -1,3 +1,592 @@
+<<<<<<< HEAD
+2025-06-16 13:55:42,161 - __main__ - INFO - MiniWob++ environment is available
+2025-06-16 13:55:42,163 - webexp.benchmark.run_miniwob - INFO - Headless environment detected, setting up virtual display...
+2025-06-16 13:55:42,165 - webexp.benchmark.run_miniwob - WARNING - Could not start virtual display, continuing without it
+2025-06-16 13:55:42,165 - __main__ - INFO - Chrome environment is properly set up
+2025-06-16 13:55:42,165 - __main__ - INFO - Loading configuration from: configs/miniwob_explore_config.yaml
+2025-06-16 13:58:08,427 - __main__ - INFO - MiniWob++ environment is available
+2025-06-16 13:58:08,429 - webexp.benchmark.run_miniwob - INFO - Headless environment detected, setting up virtual display...
+2025-06-16 13:58:08,431 - webexp.benchmark.run_miniwob - WARNING - Could not start virtual display, continuing without it
+2025-06-16 13:58:08,431 - __main__ - INFO - Chrome environment is properly set up
+2025-06-16 13:58:08,432 - __main__ - INFO - Loading configuration from: configs/miniwob_explore_config.yaml
+2025-06-16 13:58:31,003 - __main__ - INFO - MiniWob++ environment is available
+2025-06-16 13:58:31,004 - webexp.benchmark.run_miniwob - INFO - Headless environment detected, setting up virtual display...
+2025-06-16 13:58:31,005 - webexp.benchmark.run_miniwob - WARNING - Could not start virtual display, continuing without it
+2025-06-16 13:58:31,005 - __main__ - INFO - Chrome environment is properly set up
+2025-06-16 13:58:31,005 - __main__ - INFO - Loading configuration from: configs/miniwob_explore_config.yaml
+2025-06-16 13:58:47,760 - __main__ - INFO - MiniWob++ environment is available
+2025-06-16 13:58:47,761 - webexp.benchmark.run_miniwob - INFO - Headless environment detected, setting up virtual display...
+2025-06-16 13:58:47,762 - webexp.benchmark.run_miniwob - WARNING - Could not start virtual display, continuing without it
+2025-06-16 13:58:47,762 - __main__ - INFO - Chrome environment is properly set up
+2025-06-16 13:58:47,762 - __main__ - INFO - Loading configuration from: configs/miniwob_explore_config.yaml
+2025-06-16 13:59:05,161 - __main__ - INFO - MiniWob++ environment is available
+2025-06-16 13:59:05,162 - webexp.benchmark.run_miniwob - INFO - Headless environment detected, setting up virtual display...
+2025-06-16 13:59:05,167 - webexp.benchmark.run_miniwob - WARNING - Could not start virtual display, continuing without it
+2025-06-16 13:59:05,167 - __main__ - INFO - Chrome environment is properly set up
+2025-06-16 13:59:05,167 - __main__ - INFO - Loading configuration from: configs/miniwob_explore_config.yaml
+2025-06-16 13:59:38,069 - __main__ - INFO - MiniWob++ environment is available
+2025-06-16 13:59:38,071 - webexp.benchmark.run_miniwob - INFO - Headless environment detected, setting up virtual display...
+2025-06-16 13:59:38,073 - webexp.benchmark.run_miniwob - WARNING - Could not start virtual display, continuing without it
+2025-06-16 13:59:38,073 - __main__ - INFO - Chrome environment is properly set up
+2025-06-16 13:59:38,073 - __main__ - INFO - Loading configuration from: configs/miniwob_explore_config.yaml
+2025-06-16 14:02:54,291 - __main__ - INFO - MiniWob++ environment is available
+2025-06-16 14:02:54,293 - webexp.benchmark.run_miniwob - INFO - Headless environment detected, setting up virtual display...
+2025-06-16 14:02:54,294 - webexp.benchmark.run_miniwob - WARNING - Could not start virtual display, continuing without it
+2025-06-16 14:02:54,294 - __main__ - INFO - Chrome environment is properly set up
+2025-06-16 14:02:54,294 - __main__ - INFO - Loading configuration from: configs/miniwob_explore_config.yaml
+2025-06-16 14:04:24,146 - __main__ - INFO - MiniWob++ environment is available
+2025-06-16 14:04:24,149 - webexp.benchmark.run_miniwob - INFO - Headless environment detected, setting up virtual display...
+2025-06-16 14:04:24,150 - webexp.benchmark.run_miniwob - WARNING - Could not start virtual display, continuing without it
+2025-06-16 14:04:24,150 - __main__ - INFO - Chrome environment is properly set up
+2025-06-16 14:04:24,151 - __main__ - INFO - Loading configuration from: configs/miniwob_explore_config.yaml
+2025-06-16 14:06:27,664 - __main__ - INFO - MiniWob++ environment is available
+2025-06-16 14:06:27,666 - webexp.benchmark.run_miniwob - INFO - Headless environment detected, setting up virtual display...
+2025-06-16 14:06:27,667 - webexp.benchmark.run_miniwob - WARNING - Could not start virtual display, continuing without it
+2025-06-16 14:06:27,667 - __main__ - INFO - Chrome environment is properly set up
+2025-06-16 14:06:27,668 - __main__ - INFO - Loading configuration from: configs/miniwob_explore_config.yaml
+2025-06-16 14:07:42,604 - __main__ - INFO - MiniWob++ environment is available
+2025-06-16 14:07:42,606 - webexp.benchmark.run_miniwob - INFO - Headless environment detected, setting up virtual display...
+2025-06-16 14:07:42,608 - webexp.benchmark.run_miniwob - WARNING - Could not start virtual display, continuing without it
+2025-06-16 14:07:42,608 - __main__ - INFO - Chrome environment is properly set up
+2025-06-16 14:07:42,608 - __main__ - INFO - Loading configuration from: configs/miniwob_explore_config.yaml
+2025-06-16 14:08:16,017 - __main__ - INFO - MiniWob++ environment is available
+2025-06-16 14:08:16,019 - webexp.benchmark.run_miniwob - INFO - Headless environment detected, setting up virtual display...
+2025-06-16 14:08:16,020 - webexp.benchmark.run_miniwob - WARNING - Could not start virtual display, continuing without it
+2025-06-16 14:08:16,020 - __main__ - INFO - Chrome environment is properly set up
+2025-06-16 14:08:16,020 - __main__ - INFO - Loading configuration from: configs/miniwob_explore_config.yaml
+2025-06-16 14:09:58,255 - __main__ - INFO - MiniWob++ environment is available
+2025-06-16 14:09:58,258 - webexp.benchmark.run_miniwob - INFO - Headless environment detected, setting up virtual display...
+2025-06-16 14:09:58,259 - webexp.benchmark.run_miniwob - WARNING - Could not start virtual display, continuing without it
+2025-06-16 14:09:58,259 - __main__ - INFO - Chrome environment is properly set up
+2025-06-16 14:09:58,259 - __main__ - INFO - Loading configuration from: configs/miniwob_explore_config.yaml
+2025-06-16 14:10:39,929 - __main__ - INFO - MiniWob++ environment is available
+2025-06-16 14:10:39,931 - webexp.benchmark.run_miniwob - INFO - Headless environment detected, setting up virtual display...
+2025-06-16 14:10:39,932 - webexp.benchmark.run_miniwob - WARNING - Could not start virtual display, continuing without it
+2025-06-16 14:10:39,932 - __main__ - INFO - Chrome environment is properly set up
+2025-06-16 14:10:39,932 - __main__ - INFO - Loading configuration from: configs/miniwob_explore_config.yaml
+2025-06-16 14:12:21,052 - __main__ - INFO - MiniWob++ environment is available
+2025-06-16 14:12:21,054 - webexp.benchmark.run_miniwob - INFO - Headless environment detected, setting up virtual display...
+2025-06-16 14:12:21,055 - webexp.benchmark.run_miniwob - WARNING - Could not start virtual display, continuing without it
+2025-06-16 14:12:21,055 - __main__ - INFO - Chrome environment is properly set up
+2025-06-16 14:12:21,055 - __main__ - INFO - Loading configuration from: configs/miniwob_explore_config.yaml
+2025-06-16 14:14:16,864 - __main__ - INFO - MiniWob++ environment is available
+2025-06-16 14:14:16,866 - webexp.benchmark.run_miniwob - INFO - Headless environment detected, setting up virtual display...
+2025-06-16 14:14:16,867 - webexp.benchmark.run_miniwob - WARNING - Could not start virtual display, continuing without it
+2025-06-16 14:14:16,867 - __main__ - INFO - Chrome environment is properly set up
+2025-06-16 14:14:16,867 - __main__ - INFO - Loading configuration from: configs/miniwob_explore_config.yaml
+2025-06-16 14:14:16,880 - __main__ - INFO - Configuration validated: 21 environments, 10 episodes each
+2025-06-16 14:14:16,880 - __main__ - INFO - Starting MiniWob++ exploration...
+2025-06-16 14:14:16,887 - webexp.explore.algorithms.miniwob_explore - INFO - MiniWob++ Explorer initialized with 21 environments
+2025-06-16 14:14:16,887 - webexp.explore.algorithms.miniwob_explore - INFO - Experiment directory: ./exploration_results/miniwob_basic
+2025-06-16 14:14:16,887 - webexp.explore.algorithms.miniwob_explore - INFO - Starting MiniWob++ exploration...
+2025-06-16 14:15:52,679 - __main__ - INFO - MiniWob++ environment is available
+2025-06-16 14:15:52,681 - webexp.benchmark.run_miniwob - INFO - Headless environment detected, setting up virtual display...
+2025-06-16 14:15:52,683 - webexp.benchmark.run_miniwob - WARNING - Could not start virtual display, continuing without it
+2025-06-16 14:15:52,683 - __main__ - INFO - Chrome environment is properly set up
+2025-06-16 14:15:52,683 - __main__ - INFO - Loading configuration from: configs/miniwob_explore_config.yaml
+2025-06-16 14:15:52,695 - __main__ - INFO - Configuration validated: 21 environments, 10 episodes each
+2025-06-16 14:15:52,695 - __main__ - INFO - Starting MiniWob++ exploration...
+2025-06-16 14:15:52,701 - webexp.explore.algorithms.miniwob_explore - INFO - MiniWob++ Explorer initialized with 21 environments
+2025-06-16 14:15:52,701 - webexp.explore.algorithms.miniwob_explore - INFO - Experiment directory: ./exploration_results/miniwob_basic
+2025-06-16 14:15:52,701 - webexp.explore.algorithms.miniwob_explore - INFO - Starting MiniWob++ exploration...
+2025-06-16 14:16:08,171 - __main__ - INFO - MiniWob++ environment is available
+2025-06-16 14:16:08,173 - webexp.benchmark.run_miniwob - INFO - Headless environment detected, setting up virtual display...
+2025-06-16 14:16:08,175 - webexp.benchmark.run_miniwob - WARNING - Could not start virtual display, continuing without it
+2025-06-16 14:16:08,175 - __main__ - INFO - Chrome environment is properly set up
+2025-06-16 14:16:08,175 - __main__ - INFO - Loading configuration from: configs/miniwob_explore_config.yaml
+2025-06-16 14:16:08,189 - __main__ - INFO - Configuration validated: 21 environments, 10 episodes each
+2025-06-16 14:16:08,189 - __main__ - INFO - Starting MiniWob++ exploration...
+2025-06-16 14:16:08,195 - webexp.explore.algorithms.miniwob_explore - INFO - MiniWob++ Explorer initialized with 21 environments
+2025-06-16 14:16:08,195 - webexp.explore.algorithms.miniwob_explore - INFO - Experiment directory: ./exploration_results/miniwob_basic
+2025-06-16 14:16:08,195 - webexp.explore.algorithms.miniwob_explore - INFO - Starting MiniWob++ exploration...
+2025-06-16 14:16:08,225 - webexp.explore.algorithms.miniwob_explore - INFO - Agents created successfully
+2025-06-16 14:16:08,225 - webexp.explore.algorithms.miniwob_explore - INFO - Exploring environment: click-test
+2025-06-16 14:18:17,547 - __main__ - INFO - MiniWob++ environment is available
+2025-06-16 14:18:17,548 - webexp.benchmark.run_miniwob - INFO - Headless environment detected, setting up virtual display...
+2025-06-16 14:18:17,550 - webexp.benchmark.run_miniwob - WARNING - Could not start virtual display, continuing without it
+2025-06-16 14:18:17,550 - __main__ - INFO - Chrome environment is properly set up
+2025-06-16 14:18:17,550 - __main__ - INFO - Loading configuration from: configs/miniwob_explore_config.yaml
+2025-06-16 14:18:17,562 - __main__ - INFO - Configuration validated: 21 environments, 10 episodes each
+2025-06-16 14:18:17,562 - __main__ - INFO - Starting MiniWob++ exploration...
+2025-06-16 14:18:17,568 - webexp.explore.algorithms.miniwob_explore - INFO - MiniWob++ Explorer initialized with 21 environments
+2025-06-16 14:18:17,568 - webexp.explore.algorithms.miniwob_explore - INFO - Experiment directory: ./exploration_results/miniwob_basic
+2025-06-16 14:18:17,568 - webexp.explore.algorithms.miniwob_explore - INFO - Starting MiniWob++ exploration...
+2025-06-16 14:18:17,597 - webexp.explore.algorithms.miniwob_explore - INFO - Agents created successfully
+2025-06-16 14:18:17,597 - webexp.explore.algorithms.miniwob_explore - INFO - Exploring environment: click-test
+2025-06-16 14:18:17,598 - webexp.explore.algorithms.miniwob_explore - INFO - Running episode 1/10 for click-test (Total: 1/210)
+2025-06-16 14:18:17,719 - webexp.explore.algorithms.miniwob_episode - ERROR - Failed to run episode 0 for click-test: Invalid render mode: rgb_array
+2025-06-16 14:18:17,720 - webexp.explore.algorithms.miniwob_episode - ERROR - Traceback (most recent call last):
+  File "/mnt/home-ldap/vkharsh_ldap/Research/Go-Browse/webexp/explore/algorithms/miniwob_episode.py", line 70, in run_miniwob_episode
+    env = gym.make(f"miniwob/{env_name}-v1", render_mode="rgb_array")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/home-ldap/vkharsh_ldap/.conda/envs/agent/lib/python3.12/site-packages/gymnasium/envs/registration.py", line 802, in make
+    env = env_creator(**env_spec_kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/home-ldap/vkharsh_ldap/.conda/envs/agent/lib/python3.12/site-packages/miniwob/environment.py", line 73, in __init__
+    raise ValueError(f"Invalid render mode: {render_mode}")
+ValueError: Invalid render mode: rgb_array
+
+2025-06-16 14:18:17,720 - webexp.explore.algorithms.miniwob_explore - WARNING - Episode 1 failed to generate trajectory
+2025-06-16 14:18:17,720 - webexp.explore.algorithms.miniwob_explore - INFO - Running episode 2/10 for click-test (Total: 2/210)
+2025-06-16 14:18:17,720 - webexp.explore.algorithms.miniwob_episode - ERROR - Failed to run episode 1 for click-test: Invalid render mode: rgb_array
+2025-06-16 14:18:17,721 - webexp.explore.algorithms.miniwob_episode - ERROR - Traceback (most recent call last):
+  File "/mnt/home-ldap/vkharsh_ldap/Research/Go-Browse/webexp/explore/algorithms/miniwob_episode.py", line 70, in run_miniwob_episode
+    env = gym.make(f"miniwob/{env_name}-v1", render_mode="rgb_array")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/home-ldap/vkharsh_ldap/.conda/envs/agent/lib/python3.12/site-packages/gymnasium/envs/registration.py", line 802, in make
+    env = env_creator(**env_spec_kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/home-ldap/vkharsh_ldap/.conda/envs/agent/lib/python3.12/site-packages/miniwob/environment.py", line 73, in __init__
+    raise ValueError(f"Invalid render mode: {render_mode}")
+ValueError: Invalid render mode: rgb_array
+
+2025-06-16 14:18:17,722 - webexp.explore.algorithms.miniwob_explore - WARNING - Episode 2 failed to generate trajectory
+2025-06-16 14:18:17,722 - webexp.explore.algorithms.miniwob_explore - INFO - Running episode 3/10 for click-test (Total: 3/210)
+2025-06-16 14:18:17,722 - webexp.explore.algorithms.miniwob_episode - ERROR - Failed to run episode 2 for click-test: Invalid render mode: rgb_array
+2025-06-16 14:18:17,723 - webexp.explore.algorithms.miniwob_episode - ERROR - Traceback (most recent call last):
+  File "/mnt/home-ldap/vkharsh_ldap/Research/Go-Browse/webexp/explore/algorithms/miniwob_episode.py", line 70, in run_miniwob_episode
+    env = gym.make(f"miniwob/{env_name}-v1", render_mode="rgb_array")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/home-ldap/vkharsh_ldap/.conda/envs/agent/lib/python3.12/site-packages/gymnasium/envs/registration.py", line 802, in make
+    env = env_creator(**env_spec_kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/home-ldap/vkharsh_ldap/.conda/envs/agent/lib/python3.12/site-packages/miniwob/environment.py", line 73, in __init__
+    raise ValueError(f"Invalid render mode: {render_mode}")
+ValueError: Invalid render mode: rgb_array
+
+2025-06-16 14:18:17,723 - webexp.explore.algorithms.miniwob_explore - WARNING - Episode 3 failed to generate trajectory
+2025-06-16 14:18:17,724 - webexp.explore.algorithms.miniwob_explore - INFO - Running episode 4/10 for click-test (Total: 4/210)
+2025-06-16 14:18:17,724 - webexp.explore.algorithms.miniwob_episode - ERROR - Failed to run episode 3 for click-test: Invalid render mode: rgb_array
+2025-06-16 14:18:17,725 - webexp.explore.algorithms.miniwob_episode - ERROR - Traceback (most recent call last):
+  File "/mnt/home-ldap/vkharsh_ldap/Research/Go-Browse/webexp/explore/algorithms/miniwob_episode.py", line 70, in run_miniwob_episode
+    env = gym.make(f"miniwob/{env_name}-v1", render_mode="rgb_array")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/home-ldap/vkharsh_ldap/.conda/envs/agent/lib/python3.12/site-packages/gymnasium/envs/registration.py", line 802, in make
+    env = env_creator(**env_spec_kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/home-ldap/vkharsh_ldap/.conda/envs/agent/lib/python3.12/site-packages/miniwob/environment.py", line 73, in __init__
+    raise ValueError(f"Invalid render mode: {render_mode}")
+ValueError: Invalid render mode: rgb_array
+
+2025-06-16 14:18:17,726 - webexp.explore.algorithms.miniwob_explore - WARNING - Episode 4 failed to generate trajectory
+2025-06-16 14:18:17,726 - webexp.explore.algorithms.miniwob_explore - INFO - Running episode 5/10 for click-test (Total: 5/210)
+2025-06-16 14:18:17,726 - webexp.explore.algorithms.miniwob_episode - ERROR - Failed to run episode 4 for click-test: Invalid render mode: rgb_array
+2025-06-16 14:18:17,727 - webexp.explore.algorithms.miniwob_episode - ERROR - Traceback (most recent call last):
+  File "/mnt/home-ldap/vkharsh_ldap/Research/Go-Browse/webexp/explore/algorithms/miniwob_episode.py", line 70, in run_miniwob_episode
+    env = gym.make(f"miniwob/{env_name}-v1", render_mode="rgb_array")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/home-ldap/vkharsh_ldap/.conda/envs/agent/lib/python3.12/site-packages/gymnasium/envs/registration.py", line 802, in make
+    env = env_creator(**env_spec_kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/home-ldap/vkharsh_ldap/.conda/envs/agent/lib/python3.12/site-packages/miniwob/environment.py", line 73, in __init__
+    raise ValueError(f"Invalid render mode: {render_mode}")
+ValueError: Invalid render mode: rgb_array
+
+2025-06-16 14:18:17,728 - webexp.explore.algorithms.miniwob_explore - WARNING - Episode 5 failed to generate trajectory
+2025-06-16 14:18:17,728 - webexp.explore.algorithms.miniwob_explore - INFO - Running episode 6/10 for click-test (Total: 6/210)
+2025-06-16 14:18:17,729 - webexp.explore.algorithms.miniwob_episode - ERROR - Failed to run episode 5 for click-test: Invalid render mode: rgb_array
+2025-06-16 14:18:17,730 - webexp.explore.algorithms.miniwob_episode - ERROR - Traceback (most recent call last):
+  File "/mnt/home-ldap/vkharsh_ldap/Research/Go-Browse/webexp/explore/algorithms/miniwob_episode.py", line 70, in run_miniwob_episode
+    env = gym.make(f"miniwob/{env_name}-v1", render_mode="rgb_array")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/home-ldap/vkharsh_ldap/.conda/envs/agent/lib/python3.12/site-packages/gymnasium/envs/registration.py", line 802, in make
+    env = env_creator(**env_spec_kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/home-ldap/vkharsh_ldap/.conda/envs/agent/lib/python3.12/site-packages/miniwob/environment.py", line 73, in __init__
+    raise ValueError(f"Invalid render mode: {render_mode}")
+ValueError: Invalid render mode: rgb_array
+
+2025-06-16 14:18:17,731 - webexp.explore.algorithms.miniwob_explore - WARNING - Episode 6 failed to generate trajectory
+2025-06-16 14:18:17,731 - webexp.explore.algorithms.miniwob_explore - INFO - Running episode 7/10 for click-test (Total: 7/210)
+2025-06-16 14:18:17,731 - webexp.explore.algorithms.miniwob_episode - ERROR - Failed to run episode 6 for click-test: Invalid render mode: rgb_array
+2025-06-16 14:18:17,733 - webexp.explore.algorithms.miniwob_episode - ERROR - Traceback (most recent call last):
+  File "/mnt/home-ldap/vkharsh_ldap/Research/Go-Browse/webexp/explore/algorithms/miniwob_episode.py", line 70, in run_miniwob_episode
+    env = gym.make(f"miniwob/{env_name}-v1", render_mode="rgb_array")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/home-ldap/vkharsh_ldap/.conda/envs/agent/lib/python3.12/site-packages/gymnasium/envs/registration.py", line 802, in make
+    env = env_creator(**env_spec_kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/home-ldap/vkharsh_ldap/.conda/envs/agent/lib/python3.12/site-packages/miniwob/environment.py", line 73, in __init__
+    raise ValueError(f"Invalid render mode: {render_mode}")
+ValueError: Invalid render mode: rgb_array
+
+2025-06-16 14:18:17,733 - webexp.explore.algorithms.miniwob_explore - WARNING - Episode 7 failed to generate trajectory
+2025-06-16 14:18:17,733 - webexp.explore.algorithms.miniwob_explore - INFO - Running episode 8/10 for click-test (Total: 8/210)
+2025-06-16 14:18:17,734 - webexp.explore.algorithms.miniwob_episode - ERROR - Failed to run episode 7 for click-test: Invalid render mode: rgb_array
+2025-06-16 14:18:17,735 - webexp.explore.algorithms.miniwob_episode - ERROR - Traceback (most recent call last):
+  File "/mnt/home-ldap/vkharsh_ldap/Research/Go-Browse/webexp/explore/algorithms/miniwob_episode.py", line 70, in run_miniwob_episode
+    env = gym.make(f"miniwob/{env_name}-v1", render_mode="rgb_array")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/home-ldap/vkharsh_ldap/.conda/envs/agent/lib/python3.12/site-packages/gymnasium/envs/registration.py", line 802, in make
+    env = env_creator(**env_spec_kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/home-ldap/vkharsh_ldap/.conda/envs/agent/lib/python3.12/site-packages/miniwob/environment.py", line 73, in __init__
+    raise ValueError(f"Invalid render mode: {render_mode}")
+ValueError: Invalid render mode: rgb_array
+
+2025-06-16 14:18:17,735 - webexp.explore.algorithms.miniwob_explore - WARNING - Episode 8 failed to generate trajectory
+2025-06-16 14:18:17,735 - webexp.explore.algorithms.miniwob_explore - INFO - Running episode 9/10 for click-test (Total: 9/210)
+2025-06-16 14:18:17,736 - webexp.explore.algorithms.miniwob_episode - ERROR - Failed to run episode 8 for click-test: Invalid render mode: rgb_array
+2025-06-16 14:18:17,736 - webexp.explore.algorithms.miniwob_episode - ERROR - Traceback (most recent call last):
+  File "/mnt/home-ldap/vkharsh_ldap/Research/Go-Browse/webexp/explore/algorithms/miniwob_episode.py", line 70, in run_miniwob_episode
+    env = gym.make(f"miniwob/{env_name}-v1", render_mode="rgb_array")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/home-ldap/vkharsh_ldap/.conda/envs/agent/lib/python3.12/site-packages/gymnasium/envs/registration.py", line 802, in make
+    env = env_creator(**env_spec_kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/home-ldap/vkharsh_ldap/.conda/envs/agent/lib/python3.12/site-packages/miniwob/environment.py", line 73, in __init__
+    raise ValueError(f"Invalid render mode: {render_mode}")
+ValueError: Invalid render mode: rgb_array
+
+2025-06-16 14:18:17,737 - webexp.explore.algorithms.miniwob_explore - WARNING - Episode 9 failed to generate trajectory
+2025-06-16 14:18:17,737 - webexp.explore.algorithms.miniwob_explore - INFO - Running episode 10/10 for click-test (Total: 10/210)
+2025-06-16 14:18:17,737 - webexp.explore.algorithms.miniwob_episode - ERROR - Failed to run episode 9 for click-test: Invalid render mode: rgb_array
+2025-06-16 14:18:17,738 - webexp.explore.algorithms.miniwob_episode - ERROR - Traceback (most recent call last):
+  File "/mnt/home-ldap/vkharsh_ldap/Research/Go-Browse/webexp/explore/algorithms/miniwob_episode.py", line 70, in run_miniwob_episode
+    env = gym.make(f"miniwob/{env_name}-v1", render_mode="rgb_array")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/home-ldap/vkharsh_ldap/.conda/envs/agent/lib/python3.12/site-packages/gymnasium/envs/registration.py", line 802, in make
+    env = env_creator(**env_spec_kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/home-ldap/vkharsh_ldap/.conda/envs/agent/lib/python3.12/site-packages/miniwob/environment.py", line 73, in __init__
+    raise ValueError(f"Invalid render mode: {render_mode}")
+ValueError: Invalid render mode: rgb_array
+
+2025-06-16 14:18:17,739 - webexp.explore.algorithms.miniwob_explore - WARNING - Episode 10 failed to generate trajectory
+2025-06-16 14:18:17,739 - webexp.explore.algorithms.miniwob_explore - INFO - Exploring environment: click-button
+2025-06-16 14:18:33,138 - __main__ - INFO - MiniWob++ environment is available
+2025-06-16 14:18:33,140 - webexp.benchmark.run_miniwob - INFO - Headless environment detected, setting up virtual display...
+2025-06-16 14:18:33,141 - webexp.benchmark.run_miniwob - WARNING - Could not start virtual display, continuing without it
+2025-06-16 14:18:33,141 - __main__ - INFO - Chrome environment is properly set up
+2025-06-16 14:18:33,141 - __main__ - INFO - Loading configuration from: configs/miniwob_explore_config.yaml
+2025-06-16 14:18:33,156 - __main__ - INFO - Configuration validated: 21 environments, 10 episodes each
+2025-06-16 14:18:33,156 - __main__ - INFO - Starting MiniWob++ exploration...
+2025-06-16 14:18:33,162 - webexp.explore.algorithms.miniwob_explore - INFO - MiniWob++ Explorer initialized with 21 environments
+2025-06-16 14:18:33,162 - webexp.explore.algorithms.miniwob_explore - INFO - Experiment directory: ./exploration_results/miniwob_basic
+2025-06-16 14:18:33,162 - webexp.explore.algorithms.miniwob_explore - INFO - Starting MiniWob++ exploration...
+2025-06-16 14:18:33,193 - webexp.explore.algorithms.miniwob_explore - INFO - Agents created successfully
+2025-06-16 14:18:33,193 - webexp.explore.algorithms.miniwob_explore - INFO - Exploring environment: click-test
+2025-06-16 14:18:33,194 - webexp.explore.algorithms.miniwob_explore - INFO - Running episode 1/10 for click-test (Total: 1/210)
+2025-06-16 14:18:33,290 - webexp.explore.algorithms.miniwob_episode - ERROR - Failed to run episode 0 for click-test: Invalid render mode: rgb_array
+2025-06-16 14:18:33,292 - webexp.explore.algorithms.miniwob_episode - ERROR - Traceback (most recent call last):
+  File "/mnt/home-ldap/vkharsh_ldap/Research/Go-Browse/webexp/explore/algorithms/miniwob_episode.py", line 70, in run_miniwob_episode
+    env = gym.make(f"miniwob/{env_name}-v1", render_mode="rgb_array")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/home-ldap/vkharsh_ldap/.conda/envs/agent/lib/python3.12/site-packages/gymnasium/envs/registration.py", line 802, in make
+    env = env_creator(**env_spec_kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/home-ldap/vkharsh_ldap/.conda/envs/agent/lib/python3.12/site-packages/miniwob/environment.py", line 73, in __init__
+    raise ValueError(f"Invalid render mode: {render_mode}")
+ValueError: Invalid render mode: rgb_array
+
+2025-06-16 14:18:33,292 - webexp.explore.algorithms.miniwob_explore - WARNING - Episode 1 failed to generate trajectory
+2025-06-16 14:18:33,292 - webexp.explore.algorithms.miniwob_explore - INFO - Running episode 2/10 for click-test (Total: 2/210)
+2025-06-16 14:18:33,292 - webexp.explore.algorithms.miniwob_episode - ERROR - Failed to run episode 1 for click-test: Invalid render mode: rgb_array
+2025-06-16 14:18:33,293 - webexp.explore.algorithms.miniwob_episode - ERROR - Traceback (most recent call last):
+  File "/mnt/home-ldap/vkharsh_ldap/Research/Go-Browse/webexp/explore/algorithms/miniwob_episode.py", line 70, in run_miniwob_episode
+    env = gym.make(f"miniwob/{env_name}-v1", render_mode="rgb_array")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/home-ldap/vkharsh_ldap/.conda/envs/agent/lib/python3.12/site-packages/gymnasium/envs/registration.py", line 802, in make
+    env = env_creator(**env_spec_kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/home-ldap/vkharsh_ldap/.conda/envs/agent/lib/python3.12/site-packages/miniwob/environment.py", line 73, in __init__
+    raise ValueError(f"Invalid render mode: {render_mode}")
+ValueError: Invalid render mode: rgb_array
+
+2025-06-16 14:18:33,294 - webexp.explore.algorithms.miniwob_explore - WARNING - Episode 2 failed to generate trajectory
+2025-06-16 14:18:33,294 - webexp.explore.algorithms.miniwob_explore - INFO - Running episode 3/10 for click-test (Total: 3/210)
+2025-06-16 14:18:33,294 - webexp.explore.algorithms.miniwob_episode - ERROR - Failed to run episode 2 for click-test: Invalid render mode: rgb_array
+2025-06-16 14:18:33,295 - webexp.explore.algorithms.miniwob_episode - ERROR - Traceback (most recent call last):
+  File "/mnt/home-ldap/vkharsh_ldap/Research/Go-Browse/webexp/explore/algorithms/miniwob_episode.py", line 70, in run_miniwob_episode
+    env = gym.make(f"miniwob/{env_name}-v1", render_mode="rgb_array")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/home-ldap/vkharsh_ldap/.conda/envs/agent/lib/python3.12/site-packages/gymnasium/envs/registration.py", line 802, in make
+    env = env_creator(**env_spec_kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/home-ldap/vkharsh_ldap/.conda/envs/agent/lib/python3.12/site-packages/miniwob/environment.py", line 73, in __init__
+    raise ValueError(f"Invalid render mode: {render_mode}")
+ValueError: Invalid render mode: rgb_array
+
+2025-06-16 14:18:33,295 - webexp.explore.algorithms.miniwob_explore - WARNING - Episode 3 failed to generate trajectory
+2025-06-16 14:18:33,296 - webexp.explore.algorithms.miniwob_explore - INFO - Running episode 4/10 for click-test (Total: 4/210)
+2025-06-16 14:18:33,296 - webexp.explore.algorithms.miniwob_episode - ERROR - Failed to run episode 3 for click-test: Invalid render mode: rgb_array
+2025-06-16 14:18:33,297 - webexp.explore.algorithms.miniwob_episode - ERROR - Traceback (most recent call last):
+  File "/mnt/home-ldap/vkharsh_ldap/Research/Go-Browse/webexp/explore/algorithms/miniwob_episode.py", line 70, in run_miniwob_episode
+    env = gym.make(f"miniwob/{env_name}-v1", render_mode="rgb_array")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/home-ldap/vkharsh_ldap/.conda/envs/agent/lib/python3.12/site-packages/gymnasium/envs/registration.py", line 802, in make
+    env = env_creator(**env_spec_kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/home-ldap/vkharsh_ldap/.conda/envs/agent/lib/python3.12/site-packages/miniwob/environment.py", line 73, in __init__
+    raise ValueError(f"Invalid render mode: {render_mode}")
+ValueError: Invalid render mode: rgb_array
+
+2025-06-16 14:18:33,298 - webexp.explore.algorithms.miniwob_explore - WARNING - Episode 4 failed to generate trajectory
+2025-06-16 14:18:33,298 - webexp.explore.algorithms.miniwob_explore - INFO - Running episode 5/10 for click-test (Total: 5/210)
+2025-06-16 14:18:33,298 - webexp.explore.algorithms.miniwob_episode - ERROR - Failed to run episode 4 for click-test: Invalid render mode: rgb_array
+2025-06-16 14:18:33,299 - webexp.explore.algorithms.miniwob_episode - ERROR - Traceback (most recent call last):
+  File "/mnt/home-ldap/vkharsh_ldap/Research/Go-Browse/webexp/explore/algorithms/miniwob_episode.py", line 70, in run_miniwob_episode
+    env = gym.make(f"miniwob/{env_name}-v1", render_mode="rgb_array")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/home-ldap/vkharsh_ldap/.conda/envs/agent/lib/python3.12/site-packages/gymnasium/envs/registration.py", line 802, in make
+    env = env_creator(**env_spec_kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/home-ldap/vkharsh_ldap/.conda/envs/agent/lib/python3.12/site-packages/miniwob/environment.py", line 73, in __init__
+    raise ValueError(f"Invalid render mode: {render_mode}")
+ValueError: Invalid render mode: rgb_array
+
+2025-06-16 14:18:33,300 - webexp.explore.algorithms.miniwob_explore - WARNING - Episode 5 failed to generate trajectory
+2025-06-16 14:18:33,300 - webexp.explore.algorithms.miniwob_explore - INFO - Running episode 6/10 for click-test (Total: 6/210)
+2025-06-16 14:18:33,300 - webexp.explore.algorithms.miniwob_episode - ERROR - Failed to run episode 5 for click-test: Invalid render mode: rgb_array
+2025-06-16 14:18:33,301 - webexp.explore.algorithms.miniwob_episode - ERROR - Traceback (most recent call last):
+  File "/mnt/home-ldap/vkharsh_ldap/Research/Go-Browse/webexp/explore/algorithms/miniwob_episode.py", line 70, in run_miniwob_episode
+    env = gym.make(f"miniwob/{env_name}-v1", render_mode="rgb_array")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/home-ldap/vkharsh_ldap/.conda/envs/agent/lib/python3.12/site-packages/gymnasium/envs/registration.py", line 802, in make
+    env = env_creator(**env_spec_kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/home-ldap/vkharsh_ldap/.conda/envs/agent/lib/python3.12/site-packages/miniwob/environment.py", line 73, in __init__
+    raise ValueError(f"Invalid render mode: {render_mode}")
+ValueError: Invalid render mode: rgb_array
+
+2025-06-16 14:18:33,302 - webexp.explore.algorithms.miniwob_explore - WARNING - Episode 6 failed to generate trajectory
+2025-06-16 14:18:33,302 - webexp.explore.algorithms.miniwob_explore - INFO - Running episode 7/10 for click-test (Total: 7/210)
+2025-06-16 14:18:33,302 - webexp.explore.algorithms.miniwob_episode - ERROR - Failed to run episode 6 for click-test: Invalid render mode: rgb_array
+2025-06-16 14:18:33,304 - webexp.explore.algorithms.miniwob_episode - ERROR - Traceback (most recent call last):
+  File "/mnt/home-ldap/vkharsh_ldap/Research/Go-Browse/webexp/explore/algorithms/miniwob_episode.py", line 70, in run_miniwob_episode
+    env = gym.make(f"miniwob/{env_name}-v1", render_mode="rgb_array")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/home-ldap/vkharsh_ldap/.conda/envs/agent/lib/python3.12/site-packages/gymnasium/envs/registration.py", line 802, in make
+    env = env_creator(**env_spec_kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/home-ldap/vkharsh_ldap/.conda/envs/agent/lib/python3.12/site-packages/miniwob/environment.py", line 73, in __init__
+    raise ValueError(f"Invalid render mode: {render_mode}")
+ValueError: Invalid render mode: rgb_array
+
+2025-06-16 14:18:33,304 - webexp.explore.algorithms.miniwob_explore - WARNING - Episode 7 failed to generate trajectory
+2025-06-16 14:18:33,304 - webexp.explore.algorithms.miniwob_explore - INFO - Running episode 8/10 for click-test (Total: 8/210)
+2025-06-16 14:18:33,305 - webexp.explore.algorithms.miniwob_episode - ERROR - Failed to run episode 7 for click-test: Invalid render mode: rgb_array
+2025-06-16 14:18:33,306 - webexp.explore.algorithms.miniwob_episode - ERROR - Traceback (most recent call last):
+  File "/mnt/home-ldap/vkharsh_ldap/Research/Go-Browse/webexp/explore/algorithms/miniwob_episode.py", line 70, in run_miniwob_episode
+    env = gym.make(f"miniwob/{env_name}-v1", render_mode="rgb_array")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/home-ldap/vkharsh_ldap/.conda/envs/agent/lib/python3.12/site-packages/gymnasium/envs/registration.py", line 802, in make
+    env = env_creator(**env_spec_kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/home-ldap/vkharsh_ldap/.conda/envs/agent/lib/python3.12/site-packages/miniwob/environment.py", line 73, in __init__
+    raise ValueError(f"Invalid render mode: {render_mode}")
+ValueError: Invalid render mode: rgb_array
+
+2025-06-16 14:18:33,306 - webexp.explore.algorithms.miniwob_explore - WARNING - Episode 8 failed to generate trajectory
+2025-06-16 14:18:33,307 - webexp.explore.algorithms.miniwob_explore - INFO - Running episode 9/10 for click-test (Total: 9/210)
+2025-06-16 14:18:33,307 - webexp.explore.algorithms.miniwob_episode - ERROR - Failed to run episode 8 for click-test: Invalid render mode: rgb_array
+2025-06-16 14:18:33,308 - webexp.explore.algorithms.miniwob_episode - ERROR - Traceback (most recent call last):
+  File "/mnt/home-ldap/vkharsh_ldap/Research/Go-Browse/webexp/explore/algorithms/miniwob_episode.py", line 70, in run_miniwob_episode
+    env = gym.make(f"miniwob/{env_name}-v1", render_mode="rgb_array")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/home-ldap/vkharsh_ldap/.conda/envs/agent/lib/python3.12/site-packages/gymnasium/envs/registration.py", line 802, in make
+    env = env_creator(**env_spec_kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/home-ldap/vkharsh_ldap/.conda/envs/agent/lib/python3.12/site-packages/miniwob/environment.py", line 73, in __init__
+    raise ValueError(f"Invalid render mode: {render_mode}")
+ValueError: Invalid render mode: rgb_array
+
+2025-06-16 14:18:33,308 - webexp.explore.algorithms.miniwob_explore - WARNING - Episode 9 failed to generate trajectory
+2025-06-16 14:18:33,309 - webexp.explore.algorithms.miniwob_explore - INFO - Running episode 10/10 for click-test (Total: 10/210)
+2025-06-16 14:18:33,309 - webexp.explore.algorithms.miniwob_episode - ERROR - Failed to run episode 9 for click-test: Invalid render mode: rgb_array
+2025-06-16 14:18:33,309 - webexp.explore.algorithms.miniwob_episode - ERROR - Traceback (most recent call last):
+  File "/mnt/home-ldap/vkharsh_ldap/Research/Go-Browse/webexp/explore/algorithms/miniwob_episode.py", line 70, in run_miniwob_episode
+    env = gym.make(f"miniwob/{env_name}-v1", render_mode="rgb_array")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/home-ldap/vkharsh_ldap/.conda/envs/agent/lib/python3.12/site-packages/gymnasium/envs/registration.py", line 802, in make
+    env = env_creator(**env_spec_kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/home-ldap/vkharsh_ldap/.conda/envs/agent/lib/python3.12/site-packages/miniwob/environment.py", line 73, in __init__
+    raise ValueError(f"Invalid render mode: {render_mode}")
+ValueError: Invalid render mode: rgb_array
+
+2025-06-16 14:18:33,310 - webexp.explore.algorithms.miniwob_explore - WARNING - Episode 10 failed to generate trajectory
+2025-06-16 14:18:33,310 - webexp.explore.algorithms.miniwob_explore - INFO - Exploring environment: click-button
+2025-06-16 14:18:33,310 - webexp.explore.algorithms.miniwob_explore - INFO - Running episode 1/10 for click-button (Total: 11/210)
+2025-06-16 14:18:33,311 - webexp.explore.algorithms.miniwob_episode - ERROR - Failed to run episode 0 for click-button: Invalid render mode: rgb_array
+2025-06-16 14:18:33,312 - webexp.explore.algorithms.miniwob_episode - ERROR - Traceback (most recent call last):
+  File "/mnt/home-ldap/vkharsh_ldap/Research/Go-Browse/webexp/explore/algorithms/miniwob_episode.py", line 70, in run_miniwob_episode
+    env = gym.make(f"miniwob/{env_name}-v1", render_mode="rgb_array")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/home-ldap/vkharsh_ldap/.conda/envs/agent/lib/python3.12/site-packages/gymnasium/envs/registration.py", line 802, in make
+    env = env_creator(**env_spec_kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/home-ldap/vkharsh_ldap/.conda/envs/agent/lib/python3.12/site-packages/miniwob/environment.py", line 73, in __init__
+    raise ValueError(f"Invalid render mode: {render_mode}")
+ValueError: Invalid render mode: rgb_array
+
+2025-06-16 14:18:33,312 - webexp.explore.algorithms.miniwob_explore - WARNING - Episode 1 failed to generate trajectory
+2025-06-16 14:18:33,312 - webexp.explore.algorithms.miniwob_explore - INFO - Running episode 2/10 for click-button (Total: 12/210)
+2025-06-16 14:18:33,313 - webexp.explore.algorithms.miniwob_episode - ERROR - Failed to run episode 1 for click-button: Invalid render mode: rgb_array
+2025-06-16 14:18:33,313 - webexp.explore.algorithms.miniwob_episode - ERROR - Traceback (most recent call last):
+  File "/mnt/home-ldap/vkharsh_ldap/Research/Go-Browse/webexp/explore/algorithms/miniwob_episode.py", line 70, in run_miniwob_episode
+    env = gym.make(f"miniwob/{env_name}-v1", render_mode="rgb_array")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/home-ldap/vkharsh_ldap/.conda/envs/agent/lib/python3.12/site-packages/gymnasium/envs/registration.py", line 802, in make
+    env = env_creator(**env_spec_kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/home-ldap/vkharsh_ldap/.conda/envs/agent/lib/python3.12/site-packages/miniwob/environment.py", line 73, in __init__
+    raise ValueError(f"Invalid render mode: {render_mode}")
+ValueError: Invalid render mode: rgb_array
+
+2025-06-16 14:18:33,314 - webexp.explore.algorithms.miniwob_explore - WARNING - Episode 2 failed to generate trajectory
+2025-06-16 14:18:33,314 - webexp.explore.algorithms.miniwob_explore - INFO - Running episode 3/10 for click-button (Total: 13/210)
+2025-06-16 14:18:33,314 - webexp.explore.algorithms.miniwob_episode - ERROR - Failed to run episode 2 for click-button: Invalid render mode: rgb_array
+2025-06-16 14:18:33,315 - webexp.explore.algorithms.miniwob_episode - ERROR - Traceback (most recent call last):
+  File "/mnt/home-ldap/vkharsh_ldap/Research/Go-Browse/webexp/explore/algorithms/miniwob_episode.py", line 70, in run_miniwob_episode
+    env = gym.make(f"miniwob/{env_name}-v1", render_mode="rgb_array")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/home-ldap/vkharsh_ldap/.conda/envs/agent/lib/python3.12/site-packages/gymnasium/envs/registration.py", line 802, in make
+    env = env_creator(**env_spec_kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/home-ldap/vkharsh_ldap/.conda/envs/agent/lib/python3.12/site-packages/miniwob/environment.py", line 73, in __init__
+    raise ValueError(f"Invalid render mode: {render_mode}")
+ValueError: Invalid render mode: rgb_array
+
+2025-06-16 14:18:33,316 - webexp.explore.algorithms.miniwob_explore - WARNING - Episode 3 failed to generate trajectory
+2025-06-16 14:18:33,316 - webexp.explore.algorithms.miniwob_explore - INFO - Running episode 4/10 for click-button (Total: 14/210)
+2025-06-16 14:18:33,316 - webexp.explore.algorithms.miniwob_episode - ERROR - Failed to run episode 3 for click-button: Invalid render mode: rgb_array
+2025-06-16 14:18:33,317 - webexp.explore.algorithms.miniwob_episode - ERROR - Traceback (most recent call last):
+  File "/mnt/home-ldap/vkharsh_ldap/Research/Go-Browse/webexp/explore/algorithms/miniwob_episode.py", line 70, in run_miniwob_episode
+    env = gym.make(f"miniwob/{env_name}-v1", render_mode="rgb_array")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/home-ldap/vkharsh_ldap/.conda/envs/agent/lib/python3.12/site-packages/gymnasium/envs/registration.py", line 802, in make
+    env = env_creator(**env_spec_kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/home-ldap/vkharsh_ldap/.conda/envs/agent/lib/python3.12/site-packages/miniwob/environment.py", line 73, in __init__
+    raise ValueError(f"Invalid render mode: {render_mode}")
+ValueError: Invalid render mode: rgb_array
+
+2025-06-16 14:18:33,318 - webexp.explore.algorithms.miniwob_explore - WARNING - Episode 4 failed to generate trajectory
+2025-06-16 14:18:33,318 - webexp.explore.algorithms.miniwob_explore - INFO - Running episode 5/10 for click-button (Total: 15/210)
+2025-06-16 14:18:33,318 - webexp.explore.algorithms.miniwob_episode - ERROR - Failed to run episode 4 for click-button: Invalid render mode: rgb_array
+2025-06-16 14:18:33,319 - webexp.explore.algorithms.miniwob_episode - ERROR - Traceback (most recent call last):
+  File "/mnt/home-ldap/vkharsh_ldap/Research/Go-Browse/webexp/explore/algorithms/miniwob_episode.py", line 70, in run_miniwob_episode
+    env = gym.make(f"miniwob/{env_name}-v1", render_mode="rgb_array")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/home-ldap/vkharsh_ldap/.conda/envs/agent/lib/python3.12/site-packages/gymnasium/envs/registration.py", line 802, in make
+    env = env_creator(**env_spec_kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/home-ldap/vkharsh_ldap/.conda/envs/agent/lib/python3.12/site-packages/miniwob/environment.py", line 73, in __init__
+    raise ValueError(f"Invalid render mode: {render_mode}")
+ValueError: Invalid render mode: rgb_array
+
+2025-06-16 14:18:33,320 - webexp.explore.algorithms.miniwob_explore - WARNING - Episode 5 failed to generate trajectory
+2025-06-16 14:18:33,320 - webexp.explore.algorithms.miniwob_explore - INFO - Running episode 6/10 for click-button (Total: 16/210)
+2025-06-16 14:18:33,320 - webexp.explore.algorithms.miniwob_episode - ERROR - Failed to run episode 5 for click-button: Invalid render mode: rgb_array
+2025-06-16 14:18:33,321 - webexp.explore.algorithms.miniwob_episode - ERROR - Traceback (most recent call last):
+  File "/mnt/home-ldap/vkharsh_ldap/Research/Go-Browse/webexp/explore/algorithms/miniwob_episode.py", line 70, in run_miniwob_episode
+    env = gym.make(f"miniwob/{env_name}-v1", render_mode="rgb_array")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/home-ldap/vkharsh_ldap/.conda/envs/agent/lib/python3.12/site-packages/gymnasium/envs/registration.py", line 802, in make
+    env = env_creator(**env_spec_kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/home-ldap/vkharsh_ldap/.conda/envs/agent/lib/python3.12/site-packages/miniwob/environment.py", line 73, in __init__
+    raise ValueError(f"Invalid render mode: {render_mode}")
+ValueError: Invalid render mode: rgb_array
+
+2025-06-16 14:18:33,321 - webexp.explore.algorithms.miniwob_explore - WARNING - Episode 6 failed to generate trajectory
+2025-06-16 14:18:33,322 - webexp.explore.algorithms.miniwob_explore - INFO - Running episode 7/10 for click-button (Total: 17/210)
+2025-06-16 14:18:33,322 - webexp.explore.algorithms.miniwob_episode - ERROR - Failed to run episode 6 for click-button: Invalid render mode: rgb_array
+2025-06-16 14:18:33,323 - webexp.explore.algorithms.miniwob_episode - ERROR - Traceback (most recent call last):
+  File "/mnt/home-ldap/vkharsh_ldap/Research/Go-Browse/webexp/explore/algorithms/miniwob_episode.py", line 70, in run_miniwob_episode
+    env = gym.make(f"miniwob/{env_name}-v1", render_mode="rgb_array")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/home-ldap/vkharsh_ldap/.conda/envs/agent/lib/python3.12/site-packages/gymnasium/envs/registration.py", line 802, in make
+    env = env_creator(**env_spec_kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/home-ldap/vkharsh_ldap/.conda/envs/agent/lib/python3.12/site-packages/miniwob/environment.py", line 73, in __init__
+    raise ValueError(f"Invalid render mode: {render_mode}")
+ValueError: Invalid render mode: rgb_array
+
+2025-06-16 14:18:33,323 - webexp.explore.algorithms.miniwob_explore - WARNING - Episode 7 failed to generate trajectory
+2025-06-16 14:18:33,323 - webexp.explore.algorithms.miniwob_explore - INFO - Running episode 8/10 for click-button (Total: 18/210)
+2025-06-16 14:18:33,324 - webexp.explore.algorithms.miniwob_episode - ERROR - Failed to run episode 7 for click-button: Invalid render mode: rgb_array
+2025-06-16 14:18:33,324 - webexp.explore.algorithms.miniwob_episode - ERROR - Traceback (most recent call last):
+  File "/mnt/home-ldap/vkharsh_ldap/Research/Go-Browse/webexp/explore/algorithms/miniwob_episode.py", line 70, in run_miniwob_episode
+    env = gym.make(f"miniwob/{env_name}-v1", render_mode="rgb_array")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/home-ldap/vkharsh_ldap/.conda/envs/agent/lib/python3.12/site-packages/gymnasium/envs/registration.py", line 802, in make
+    env = env_creator(**env_spec_kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/home-ldap/vkharsh_ldap/.conda/envs/agent/lib/python3.12/site-packages/miniwob/environment.py", line 73, in __init__
+    raise ValueError(f"Invalid render mode: {render_mode}")
+ValueError: Invalid render mode: rgb_array
+
+2025-06-16 14:18:33,325 - webexp.explore.algorithms.miniwob_explore - WARNING - Episode 8 failed to generate trajectory
+2025-06-16 14:18:33,325 - webexp.explore.algorithms.miniwob_explore - INFO - Running episode 9/10 for click-button (Total: 19/210)
+2025-06-16 14:18:33,325 - webexp.explore.algorithms.miniwob_episode - ERROR - Failed to run episode 8 for click-button: Invalid render mode: rgb_array
+2025-06-16 14:18:33,326 - webexp.explore.algorithms.miniwob_episode - ERROR - Traceback (most recent call last):
+  File "/mnt/home-ldap/vkharsh_ldap/Research/Go-Browse/webexp/explore/algorithms/miniwob_episode.py", line 70, in run_miniwob_episode
+    env = gym.make(f"miniwob/{env_name}-v1", render_mode="rgb_array")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/home-ldap/vkharsh_ldap/.conda/envs/agent/lib/python3.12/site-packages/gymnasium/envs/registration.py", line 802, in make
+    env = env_creator(**env_spec_kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/home-ldap/vkharsh_ldap/.conda/envs/agent/lib/python3.12/site-packages/miniwob/environment.py", line 73, in __init__
+    raise ValueError(f"Invalid render mode: {render_mode}")
+ValueError: Invalid render mode: rgb_array
+
+2025-06-16 14:18:33,327 - webexp.explore.algorithms.miniwob_explore - WARNING - Episode 9 failed to generate trajectory
+2025-06-16 14:18:33,327 - webexp.explore.algorithms.miniwob_explore - INFO - Running episode 10/10 for click-button (Total: 20/210)
+2025-06-16 14:18:33,328 - webexp.explore.algorithms.miniwob_episode - ERROR - Failed to run episode 9 for click-button: Invalid render mode: rgb_array
+2025-06-16 14:18:33,329 - webexp.explore.algorithms.miniwob_episode - ERROR - Traceback (most recent call last):
+  File "/mnt/home-ldap/vkharsh_ldap/Research/Go-Browse/webexp/explore/algorithms/miniwob_episode.py", line 70, in run_miniwob_episode
+    env = gym.make(f"miniwob/{env_name}-v1", render_mode="rgb_array")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/home-ldap/vkharsh_ldap/.conda/envs/agent/lib/python3.12/site-packages/gymnasium/envs/registration.py", line 802, in make
+    env = env_creator(**env_spec_kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/home-ldap/vkharsh_ldap/.conda/envs/agent/lib/python3.12/site-packages/miniwob/environment.py", line 73, in __init__
+    raise ValueError(f"Invalid render mode: {render_mode}")
+ValueError: Invalid render mode: rgb_array
+
+2025-06-16 14:18:33,330 - webexp.explore.algorithms.miniwob_explore - WARNING - Episode 10 failed to generate trajectory
+2025-06-16 14:18:33,330 - webexp.explore.algorithms.miniwob_explore - INFO - Exploring environment: click-checkboxes
+2025-06-16 14:19:49,782 - __main__ - INFO - MiniWob++ environment is available
+2025-06-16 14:19:49,784 - webexp.benchmark.run_miniwob - INFO - Headless environment detected, setting up virtual display...
+2025-06-16 14:19:49,785 - webexp.benchmark.run_miniwob - WARNING - Could not start virtual display, continuing without it
+2025-06-16 14:19:49,785 - __main__ - INFO - Chrome environment is properly set up
+2025-06-16 14:19:49,785 - __main__ - INFO - Loading configuration from: configs/miniwob_explore_config.yaml
+2025-06-16 14:19:49,799 - __main__ - INFO - Configuration validated: 21 environments, 10 episodes each
+2025-06-16 14:19:49,799 - __main__ - INFO - Starting MiniWob++ exploration...
+2025-06-16 14:19:49,805 - webexp.explore.algorithms.miniwob_explore - INFO - MiniWob++ Explorer initialized with 21 environments
+2025-06-16 14:19:49,805 - webexp.explore.algorithms.miniwob_explore - INFO - Experiment directory: ./exploration_results/miniwob_basic
+2025-06-16 14:19:49,806 - webexp.explore.algorithms.miniwob_explore - INFO - Starting MiniWob++ exploration...
+2025-06-16 14:19:49,835 - webexp.explore.algorithms.miniwob_explore - INFO - Agents created successfully
+2025-06-16 14:19:49,835 - webexp.explore.algorithms.miniwob_explore - INFO - Exploring environment: click-test
+2025-06-16 14:19:49,835 - webexp.explore.algorithms.miniwob_explore - INFO - Running episode 1/10 for click-test (Total: 1/210)
+2025-06-16 14:19:49,954 - root - INFO - Starting WebDriver Instance
+2025-06-16 14:19:54,316 - httpx - INFO - HTTP Request: POST https://api.ai-service.global.fujitsu.com/ai-foundation/chat-ai/gpt4/openai/deployments/gpt-4o/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-06-16 14:19:54,336 - webexp.explore.algorithms.miniwob_episode - ERROR - Error in step 0 of episode 0 for click-test: type object 'ActionTypes' has no attribute 'click'
+2025-06-16 14:19:54,339 - webexp.explore.algorithms.miniwob_episode - ERROR - Failed to run episode 0 for click-test: Trajectory.__init__() got an unexpected keyword argument 'final_reward'
+2025-06-16 14:19:54,340 - webexp.explore.algorithms.miniwob_episode - ERROR - Traceback (most recent call last):
+  File "/mnt/home-ldap/vkharsh_ldap/Research/Go-Browse/webexp/explore/algorithms/miniwob_episode.py", line 151, in run_miniwob_episode
+    trajectory = Trajectory(
+                 ^^^^^^^^^^^
+TypeError: Trajectory.__init__() got an unexpected keyword argument 'final_reward'
+
+2025-06-16 14:19:54,341 - webexp.explore.algorithms.miniwob_explore - WARNING - Episode 1 failed to generate trajectory
+2025-06-16 14:19:54,342 - webexp.explore.algorithms.miniwob_explore - INFO - Running episode 2/10 for click-test (Total: 2/210)
+2025-06-16 14:19:54,343 - root - INFO - Starting WebDriver Instance
+2025-06-16 14:19:57,860 - httpx - INFO - HTTP Request: POST https://api.ai-service.global.fujitsu.com/ai-foundation/chat-ai/gpt4/openai/deployments/gpt-4o/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-06-16 14:19:57,863 - webexp.explore.algorithms.miniwob_episode - ERROR - Error in step 0 of episode 1 for click-test: type object 'ActionTypes' has no attribute 'click'
+2025-06-16 14:19:57,866 - webexp.explore.algorithms.miniwob_episode - ERROR - Failed to run episode 1 for click-test: Trajectory.__init__() got an unexpected keyword argument 'final_reward'
+2025-06-16 14:19:57,867 - webexp.explore.algorithms.miniwob_episode - ERROR - Traceback (most recent call last):
+  File "/mnt/home-ldap/vkharsh_ldap/Research/Go-Browse/webexp/explore/algorithms/miniwob_episode.py", line 151, in run_miniwob_episode
+    trajectory = Trajectory(
+                 ^^^^^^^^^^^
+TypeError: Trajectory.__init__() got an unexpected keyword argument 'final_reward'
+
+2025-06-16 14:19:57,867 - webexp.explore.algorithms.miniwob_explore - WARNING - Episode 2 failed to generate trajectory
+2025-06-16 14:19:57,868 - webexp.explore.algorithms.miniwob_explore - INFO - Running episode 3/10 for click-test (Total: 3/210)
+2025-06-16 14:19:57,869 - root - INFO - Starting WebDriver Instance
+=======
 2025-06-16 08:41:34,204 - __main__ - ERROR - MiniWob++ not installed: No module named 'miniwob'
 2025-06-16 08:41:34,204 - __main__ - ERROR - Please install with: pip install miniwob
 2025-06-16 08:41:49,590 - __main__ - INFO - MiniWob++ environment is available
@@ -55,17 +644,535 @@
 2025-06-16 08:56:33,276 - webexp.explore.algorithms.miniwob_explore - INFO - MiniWob++ Explorer initialized with 1 environments
 2025-06-16 08:56:33,276 - webexp.explore.algorithms.miniwob_explore - INFO - Experiment directory: ./exploration_results/miniwob_basic
 2025-06-16 08:56:33,276 - webexp.explore.algorithms.miniwob_explore - INFO - Starting MiniWob++ exploration...
-2025-06-16 09:06:16,865 - __main__ - INFO - MiniWob++ environment is available
-2025-06-16 09:06:16,866 - webexp.benchmark.run_miniwob - INFO - Headless environment detected, setting up virtual display...
-2025-06-16 09:06:21,872 - webexp.benchmark.run_miniwob - WARNING - Could not start virtual display, continuing without it
-2025-06-16 09:06:21,872 - __main__ - INFO - Chrome environment is properly set up
-2025-06-16 09:06:21,873 - __main__ - INFO - Loading configuration from: configs/miniwob_explore_config.yaml
-2025-06-16 09:06:21,880 - __main__ - INFO - Applying overrides: {'episodes_per_env': 1, 'env_names': ['click-test']}
-2025-06-16 09:06:21,880 - __main__ - INFO - Applied override: episodes_per_env = 1
-2025-06-16 09:06:21,880 - __main__ - INFO - Applied override: env_names = ['click-test']
-2025-06-16 09:06:21,881 - __main__ - INFO - Configuration validated: 1 environments, 1 episodes each
-2025-06-16 09:06:21,881 - __main__ - INFO - Creating configuration object...
-2025-06-16 09:06:21,881 - __main__ - INFO - Starting MiniWob++ exploration...
-2025-06-16 09:06:21,886 - webexp.explore.algorithms.miniwob_explore - INFO - MiniWob++ Explorer initialized with 1 environments
-2025-06-16 09:06:21,886 - webexp.explore.algorithms.miniwob_explore - INFO - Experiment directory: ./exploration_results/miniwob_basic
-2025-06-16 09:06:21,886 - webexp.explore.algorithms.miniwob_explore - INFO - Starting MiniWob++ exploration...
+>>>>>>> eeaf25f98df7b6ae1999e3ec1c57b3989977b66b
+2025-06-16 14:36:04,081 - __main__ - INFO - MiniWob++ environment is available
+2025-06-16 14:36:04,083 - __main__ - INFO - Chrome environment is properly set up
+2025-06-16 14:36:04,083 - __main__ - INFO - Loading configuration from: configs/miniwob_explore_config.yaml
+2025-06-16 14:36:04,090 - __main__ - ERROR - Error accessing config attributes: Missing mandatory value: env_names
+    full_key: env_names
+    object_type=MiniWobExploreConfig
+2025-06-16 14:38:38,803 - __main__ - INFO - MiniWob++ environment is available
+2025-06-16 14:38:38,805 - __main__ - INFO - Chrome environment is properly set up
+2025-06-16 14:38:38,805 - __main__ - INFO - Loading configuration from: configs/miniwob_explore_config.yaml
+2025-06-16 14:38:38,817 - __main__ - INFO - Configuration validated: 21 environments, 10 episodes each
+2025-06-16 14:38:38,817 - __main__ - INFO - Starting MiniWob++ exploration...
+2025-06-16 14:38:38,822 - webexp.explore.algorithms.miniwob_explore - INFO - MiniWob++ Explorer initialized with 21 environments
+2025-06-16 14:38:38,823 - webexp.explore.algorithms.miniwob_explore - INFO - Experiment directory: ./exploration_results/miniwob_basic
+2025-06-16 14:38:38,823 - webexp.explore.algorithms.miniwob_explore - INFO - Starting MiniWob++ exploration...
+2025-06-16 14:39:21,843 - __main__ - INFO - MiniWob++ environment is available
+2025-06-16 14:39:21,845 - __main__ - INFO - Chrome environment is properly set up
+2025-06-16 14:39:21,845 - __main__ - INFO - Loading configuration from: configs/miniwob_explore_config.yaml
+2025-06-16 14:39:21,858 - __main__ - INFO - Configuration validated: 21 environments, 10 episodes each
+2025-06-16 14:39:21,858 - __main__ - INFO - Starting MiniWob++ exploration...
+2025-06-16 14:39:21,864 - webexp.explore.algorithms.miniwob_explore - INFO - MiniWob++ Explorer initialized with 21 environments
+2025-06-16 14:39:21,864 - webexp.explore.algorithms.miniwob_explore - INFO - Experiment directory: ./exploration_results/miniwob_basic
+2025-06-16 14:39:21,864 - webexp.explore.algorithms.miniwob_explore - INFO - Starting MiniWob++ exploration...
+2025-06-16 14:39:21,894 - webexp.explore.algorithms.miniwob_explore - INFO - Agents created successfully
+2025-06-16 14:39:21,894 - webexp.explore.algorithms.miniwob_explore - INFO - Exploring environment: click-test
+2025-06-16 14:39:21,894 - webexp.explore.algorithms.miniwob_explore - INFO - Running episode 1/10 for click-test (Total: 1/210)
+2025-06-16 14:39:22,015 - root - INFO - Starting WebDriver Instance
+2025-06-16 14:39:25,839 - httpx - INFO - HTTP Request: POST https://api.ai-service.global.fujitsu.com/ai-foundation/chat-ai/gpt4/openai/deployments/gpt-4o/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-06-16 14:39:25,867 - webexp.explore.algorithms.miniwob_episode - ERROR - Error in step 0 of episode 0 for click-test: 'action_type'
+2025-06-16 14:39:25,962 - webexp.explore.algorithms.miniwob_explore - WARNING - Episode 1 failed to generate trajectory
+2025-06-16 14:39:25,962 - webexp.explore.algorithms.miniwob_explore - INFO - Running episode 2/10 for click-test (Total: 2/210)
+2025-06-16 14:39:25,964 - root - INFO - Starting WebDriver Instance
+2025-06-16 14:39:29,681 - httpx - INFO - HTTP Request: POST https://api.ai-service.global.fujitsu.com/ai-foundation/chat-ai/gpt4/openai/deployments/gpt-4o/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-06-16 14:39:29,691 - webexp.explore.algorithms.miniwob_episode - ERROR - Error in step 0 of episode 1 for click-test: 'action_type'
+2025-06-16 14:39:29,762 - webexp.explore.algorithms.miniwob_explore - WARNING - Episode 2 failed to generate trajectory
+2025-06-16 14:39:29,762 - webexp.explore.algorithms.miniwob_explore - INFO - Running episode 3/10 for click-test (Total: 3/210)
+2025-06-16 14:39:29,764 - root - INFO - Starting WebDriver Instance
+2025-06-16 14:41:04,251 - __main__ - INFO - MiniWob++ environment is available
+2025-06-16 14:41:04,253 - __main__ - INFO - Chrome environment is properly set up
+2025-06-16 14:41:04,253 - __main__ - INFO - Loading configuration from: configs/miniwob_explore_config.yaml
+2025-06-16 14:41:04,269 - __main__ - INFO - Configuration validated: 21 environments, 10 episodes each
+2025-06-16 14:41:04,269 - __main__ - INFO - Starting MiniWob++ exploration...
+2025-06-16 14:41:04,276 - webexp.explore.algorithms.miniwob_explore - INFO - MiniWob++ Explorer initialized with 21 environments
+2025-06-16 14:41:04,276 - webexp.explore.algorithms.miniwob_explore - INFO - Experiment directory: ./exploration_results/miniwob_basic
+2025-06-16 14:41:04,276 - webexp.explore.algorithms.miniwob_explore - INFO - Starting MiniWob++ exploration...
+2025-06-16 14:41:04,308 - webexp.explore.algorithms.miniwob_explore - INFO - Agents created successfully
+2025-06-16 14:41:04,308 - webexp.explore.algorithms.miniwob_explore - INFO - Exploring environment: click-test
+2025-06-16 14:41:04,308 - webexp.explore.algorithms.miniwob_explore - INFO - Running episode 1/10 for click-test (Total: 1/210)
+2025-06-16 14:41:04,425 - root - INFO - Starting WebDriver Instance
+2025-06-16 14:41:08,487 - httpx - INFO - HTTP Request: POST https://api.ai-service.global.fujitsu.com/ai-foundation/chat-ai/gpt4/openai/deployments/gpt-4o/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-06-16 14:41:08,501 - webexp.explore.algorithms.miniwob_episode - ERROR - Failed to run episode 0 for click-test: 'action_type'
+2025-06-16 14:41:08,505 - webexp.explore.algorithms.miniwob_episode - ERROR - Traceback (most recent call last):
+  File "/mnt/home-ldap/vkharsh_ldap/Research/Go-Browse/webexp/explore/algorithms/miniwob_episode.py", line 101, in run_miniwob_episode
+    next_obs, reward, terminated, truncated, step_info = env.step(miniwob_action)
+                                                         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/home-ldap/vkharsh_ldap/.conda/envs/agent/lib/python3.12/site-packages/gymnasium/wrappers/order_enforcing.py", line 56, in step
+    return self.env.step(action)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/home-ldap/vkharsh_ldap/.conda/envs/agent/lib/python3.12/site-packages/gymnasium/wrappers/env_checker.py", line 49, in step
+    return env_step_passive_checker(self.env, action)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/home-ldap/vkharsh_ldap/.conda/envs/agent/lib/python3.12/site-packages/gymnasium/utils/passive_env_checker.py", line 208, in env_step_passive_checker
+    result = env.step(action)
+             ^^^^^^^^^^^^^^^^
+  File "/mnt/home-ldap/vkharsh_ldap/.conda/envs/agent/lib/python3.12/site-packages/miniwob/environment.py", line 167, in step
+    self.instance.call(
+  File "/mnt/home-ldap/vkharsh_ldap/.conda/envs/agent/lib/python3.12/site-packages/miniwob/selenium_instance.py", line 173, in call
+    func(*args)
+  File "/mnt/home-ldap/vkharsh_ldap/.conda/envs/agent/lib/python3.12/site-packages/miniwob/selenium_instance.py", line 266, in step
+    self.perform(action, action_space_config)
+  File "/mnt/home-ldap/vkharsh_ldap/.conda/envs/agent/lib/python3.12/site-packages/miniwob/selenium_instance.py", line 331, in perform
+    execute_action_on_chromedriver(
+  File "/mnt/home-ldap/vkharsh_ldap/.conda/envs/agent/lib/python3.12/site-packages/miniwob/selenium_actions.py", line 145, in execute_action_on_chromedriver
+    action_type = config.action_types[action["action_type"]]
+                                      ~~~~~~^^^^^^^^^^^^^^^
+KeyError: 'action_type'
+
+2025-06-16 14:41:08,505 - webexp.explore.algorithms.miniwob_explore - WARNING - Episode 1 failed to generate trajectory
+2025-06-16 14:41:08,506 - webexp.explore.algorithms.miniwob_explore - INFO - Running episode 2/10 for click-test (Total: 2/210)
+2025-06-16 14:41:08,507 - root - INFO - Starting WebDriver Instance
+2025-06-16 14:42:25,117 - __main__ - INFO - MiniWob++ environment is available
+2025-06-16 14:42:25,119 - __main__ - INFO - Chrome environment is properly set up
+2025-06-16 14:42:25,119 - __main__ - INFO - Loading configuration from: configs/miniwob_explore_config.yaml
+2025-06-16 14:42:25,131 - __main__ - INFO - Configuration validated: 21 environments, 10 episodes each
+2025-06-16 14:42:25,131 - __main__ - INFO - Starting MiniWob++ exploration...
+2025-06-16 14:42:25,136 - webexp.explore.algorithms.miniwob_explore - INFO - MiniWob++ Explorer initialized with 21 environments
+2025-06-16 14:42:25,136 - webexp.explore.algorithms.miniwob_explore - INFO - Experiment directory: ./exploration_results/miniwob_basic
+2025-06-16 14:42:25,136 - webexp.explore.algorithms.miniwob_explore - INFO - Starting MiniWob++ exploration...
+2025-06-16 14:42:25,165 - webexp.explore.algorithms.miniwob_explore - INFO - Agents created successfully
+2025-06-16 14:42:25,166 - webexp.explore.algorithms.miniwob_explore - INFO - Exploring environment: click-test
+2025-06-16 14:42:25,167 - webexp.explore.algorithms.miniwob_explore - INFO - Running episode 1/10 for click-test (Total: 1/210)
+2025-06-16 14:42:25,287 - root - INFO - Starting WebDriver Instance
+2025-06-16 14:42:29,130 - httpx - INFO - HTTP Request: POST https://api.ai-service.global.fujitsu.com/ai-foundation/chat-ai/gpt4/openai/deployments/gpt-4o/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-06-16 14:42:29,156 - webexp.explore.algorithms.miniwob_episode - ERROR - Failed to run episode 0 for click-test: 'action_type'
+2025-06-16 14:42:29,163 - webexp.explore.algorithms.miniwob_episode - ERROR - Traceback (most recent call last):
+  File "/mnt/home-ldap/vkharsh_ldap/Research/Go-Browse/webexp/explore/algorithms/miniwob_episode.py", line 102, in run_miniwob_episode
+    next_obs, reward, terminated, truncated, step_info = env.step(miniwob_action)
+                                                         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/home-ldap/vkharsh_ldap/.conda/envs/agent/lib/python3.12/site-packages/gymnasium/wrappers/order_enforcing.py", line 56, in step
+    return self.env.step(action)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/home-ldap/vkharsh_ldap/.conda/envs/agent/lib/python3.12/site-packages/gymnasium/wrappers/env_checker.py", line 49, in step
+    return env_step_passive_checker(self.env, action)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/home-ldap/vkharsh_ldap/.conda/envs/agent/lib/python3.12/site-packages/gymnasium/utils/passive_env_checker.py", line 208, in env_step_passive_checker
+    result = env.step(action)
+             ^^^^^^^^^^^^^^^^
+  File "/mnt/home-ldap/vkharsh_ldap/.conda/envs/agent/lib/python3.12/site-packages/miniwob/environment.py", line 167, in step
+    self.instance.call(
+  File "/mnt/home-ldap/vkharsh_ldap/.conda/envs/agent/lib/python3.12/site-packages/miniwob/selenium_instance.py", line 173, in call
+    func(*args)
+  File "/mnt/home-ldap/vkharsh_ldap/.conda/envs/agent/lib/python3.12/site-packages/miniwob/selenium_instance.py", line 266, in step
+    self.perform(action, action_space_config)
+  File "/mnt/home-ldap/vkharsh_ldap/.conda/envs/agent/lib/python3.12/site-packages/miniwob/selenium_instance.py", line 331, in perform
+    execute_action_on_chromedriver(
+  File "/mnt/home-ldap/vkharsh_ldap/.conda/envs/agent/lib/python3.12/site-packages/miniwob/selenium_actions.py", line 145, in execute_action_on_chromedriver
+    action_type = config.action_types[action["action_type"]]
+                                      ~~~~~~^^^^^^^^^^^^^^^
+KeyError: 'action_type'
+
+2025-06-16 14:42:29,163 - webexp.explore.algorithms.miniwob_explore - WARNING - Episode 1 failed to generate trajectory
+2025-06-16 14:42:29,164 - webexp.explore.algorithms.miniwob_explore - INFO - Running episode 2/10 for click-test (Total: 2/210)
+2025-06-16 14:42:29,167 - root - INFO - Starting WebDriver Instance
+2025-06-16 14:43:07,329 - __main__ - INFO - MiniWob++ environment is available
+2025-06-16 14:43:07,331 - __main__ - INFO - Chrome environment is properly set up
+2025-06-16 14:43:07,331 - __main__ - INFO - Loading configuration from: configs/miniwob_explore_config.yaml
+2025-06-16 14:43:07,345 - __main__ - INFO - Configuration validated: 21 environments, 10 episodes each
+2025-06-16 14:43:07,345 - __main__ - INFO - Starting MiniWob++ exploration...
+2025-06-16 14:43:07,351 - webexp.explore.algorithms.miniwob_explore - INFO - MiniWob++ Explorer initialized with 21 environments
+2025-06-16 14:43:07,351 - webexp.explore.algorithms.miniwob_explore - INFO - Experiment directory: ./exploration_results/miniwob_basic
+2025-06-16 14:43:07,352 - webexp.explore.algorithms.miniwob_explore - INFO - Starting MiniWob++ exploration...
+2025-06-16 14:43:07,382 - webexp.explore.algorithms.miniwob_explore - INFO - Agents created successfully
+2025-06-16 14:43:07,382 - webexp.explore.algorithms.miniwob_explore - INFO - Exploring environment: click-test
+2025-06-16 14:43:07,382 - webexp.explore.algorithms.miniwob_explore - INFO - Running episode 1/10 for click-test (Total: 1/210)
+2025-06-16 14:43:07,474 - root - INFO - Starting WebDriver Instance
+2025-06-16 14:43:11,339 - httpx - INFO - HTTP Request: POST https://api.ai-service.global.fujitsu.com/ai-foundation/chat-ai/gpt4/openai/deployments/gpt-4o/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-06-16 14:43:11,359 - webexp.explore.algorithms.miniwob_episode - ERROR - Failed to run episode 0 for click-test: 'dict' object has no attribute 'to_dict'
+2025-06-16 14:43:11,362 - webexp.explore.algorithms.miniwob_episode - ERROR - Traceback (most recent call last):
+  File "/mnt/home-ldap/vkharsh_ldap/Research/Go-Browse/webexp/explore/algorithms/miniwob_episode.py", line 100, in run_miniwob_episode
+    print(miniwob_action.to_dict())
+          ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'dict' object has no attribute 'to_dict'
+
+2025-06-16 14:43:11,362 - webexp.explore.algorithms.miniwob_explore - WARNING - Episode 1 failed to generate trajectory
+2025-06-16 14:43:11,364 - webexp.explore.algorithms.miniwob_explore - INFO - Running episode 2/10 for click-test (Total: 2/210)
+2025-06-16 14:43:11,365 - root - INFO - Starting WebDriver Instance
+2025-06-16 14:44:08,112 - __main__ - INFO - MiniWob++ environment is available
+2025-06-16 14:44:08,114 - __main__ - INFO - Chrome environment is properly set up
+2025-06-16 14:44:08,115 - __main__ - INFO - Loading configuration from: configs/miniwob_explore_config.yaml
+2025-06-16 14:44:08,133 - __main__ - INFO - Configuration validated: 21 environments, 10 episodes each
+2025-06-16 14:44:08,133 - __main__ - INFO - Starting MiniWob++ exploration...
+2025-06-16 14:44:08,140 - webexp.explore.algorithms.miniwob_explore - INFO - MiniWob++ Explorer initialized with 21 environments
+2025-06-16 14:44:08,140 - webexp.explore.algorithms.miniwob_explore - INFO - Experiment directory: ./exploration_results/miniwob_basic
+2025-06-16 14:44:08,140 - webexp.explore.algorithms.miniwob_explore - INFO - Starting MiniWob++ exploration...
+2025-06-16 14:44:08,175 - webexp.explore.algorithms.miniwob_explore - INFO - Agents created successfully
+2025-06-16 14:44:08,176 - webexp.explore.algorithms.miniwob_explore - INFO - Exploring environment: click-test
+2025-06-16 14:44:08,176 - webexp.explore.algorithms.miniwob_explore - INFO - Running episode 1/10 for click-test (Total: 1/210)
+2025-06-16 14:44:08,300 - root - INFO - Starting WebDriver Instance
+2025-06-16 14:45:15,953 - __main__ - INFO - MiniWob++ environment is available
+2025-06-16 14:45:15,954 - __main__ - INFO - Chrome environment is properly set up
+2025-06-16 14:45:15,954 - __main__ - INFO - Loading configuration from: configs/miniwob_explore_config.yaml
+2025-06-16 14:45:15,965 - __main__ - INFO - Configuration validated: 21 environments, 10 episodes each
+2025-06-16 14:45:15,965 - __main__ - INFO - Starting MiniWob++ exploration...
+2025-06-16 14:45:15,973 - webexp.explore.algorithms.miniwob_explore - INFO - MiniWob++ Explorer initialized with 21 environments
+2025-06-16 14:45:15,973 - webexp.explore.algorithms.miniwob_explore - INFO - Experiment directory: ./exploration_results/miniwob_basic
+2025-06-16 14:45:15,973 - webexp.explore.algorithms.miniwob_explore - INFO - Starting MiniWob++ exploration...
+2025-06-16 14:45:16,002 - webexp.explore.algorithms.miniwob_explore - INFO - Agents created successfully
+2025-06-16 14:45:16,002 - webexp.explore.algorithms.miniwob_explore - INFO - Exploring environment: click-test
+2025-06-16 14:45:16,002 - webexp.explore.algorithms.miniwob_explore - INFO - Running episode 1/10 for click-test (Total: 1/210)
+2025-06-16 14:45:16,121 - root - INFO - Starting WebDriver Instance
+2025-06-16 14:45:23,361 - httpx - INFO - HTTP Request: POST https://api.ai-service.global.fujitsu.com/ai-foundation/chat-ai/gpt4/openai/deployments/gpt-4o/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-06-16 14:45:23,387 - webexp.explore.algorithms.miniwob_episode - ERROR - Failed to run episode 0 for click-test: list indices must be integers or slices, not ActionTypes
+2025-06-16 14:45:23,394 - webexp.explore.algorithms.miniwob_episode - ERROR - Traceback (most recent call last):
+  File "/mnt/home-ldap/vkharsh_ldap/Research/Go-Browse/webexp/explore/algorithms/miniwob_episode.py", line 102, in run_miniwob_episode
+    next_obs, reward, terminated, truncated, step_info = env.step(miniwob_action)
+                                                         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/home-ldap/vkharsh_ldap/.conda/envs/agent/lib/python3.12/site-packages/gymnasium/wrappers/order_enforcing.py", line 56, in step
+    return self.env.step(action)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/home-ldap/vkharsh_ldap/.conda/envs/agent/lib/python3.12/site-packages/gymnasium/wrappers/env_checker.py", line 49, in step
+    return env_step_passive_checker(self.env, action)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/home-ldap/vkharsh_ldap/.conda/envs/agent/lib/python3.12/site-packages/gymnasium/utils/passive_env_checker.py", line 208, in env_step_passive_checker
+    result = env.step(action)
+             ^^^^^^^^^^^^^^^^
+  File "/mnt/home-ldap/vkharsh_ldap/.conda/envs/agent/lib/python3.12/site-packages/miniwob/environment.py", line 167, in step
+    self.instance.call(
+  File "/mnt/home-ldap/vkharsh_ldap/.conda/envs/agent/lib/python3.12/site-packages/miniwob/selenium_instance.py", line 173, in call
+    func(*args)
+  File "/mnt/home-ldap/vkharsh_ldap/.conda/envs/agent/lib/python3.12/site-packages/miniwob/selenium_instance.py", line 266, in step
+    self.perform(action, action_space_config)
+  File "/mnt/home-ldap/vkharsh_ldap/.conda/envs/agent/lib/python3.12/site-packages/miniwob/selenium_instance.py", line 331, in perform
+    execute_action_on_chromedriver(
+  File "/mnt/home-ldap/vkharsh_ldap/.conda/envs/agent/lib/python3.12/site-packages/miniwob/selenium_actions.py", line 145, in execute_action_on_chromedriver
+    action_type = config.action_types[action["action_type"]]
+                  ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: list indices must be integers or slices, not ActionTypes
+
+2025-06-16 14:45:23,394 - webexp.explore.algorithms.miniwob_explore - WARNING - Episode 1 failed to generate trajectory
+2025-06-16 14:45:23,395 - webexp.explore.algorithms.miniwob_explore - INFO - Running episode 2/10 for click-test (Total: 2/210)
+2025-06-16 14:45:23,397 - root - INFO - Starting WebDriver Instance
+2025-06-16 14:46:10,845 - __main__ - INFO - MiniWob++ environment is available
+2025-06-16 14:46:10,847 - __main__ - INFO - Chrome environment is properly set up
+2025-06-16 14:46:10,847 - __main__ - INFO - Loading configuration from: configs/miniwob_explore_config.yaml
+2025-06-16 14:46:10,860 - __main__ - INFO - Configuration validated: 21 environments, 10 episodes each
+2025-06-16 14:46:10,860 - __main__ - INFO - Starting MiniWob++ exploration...
+2025-06-16 14:46:10,866 - webexp.explore.algorithms.miniwob_explore - INFO - MiniWob++ Explorer initialized with 21 environments
+2025-06-16 14:46:10,866 - webexp.explore.algorithms.miniwob_explore - INFO - Experiment directory: ./exploration_results/miniwob_basic
+2025-06-16 14:46:10,866 - webexp.explore.algorithms.miniwob_explore - INFO - Starting MiniWob++ exploration...
+2025-06-16 14:46:10,895 - webexp.explore.algorithms.miniwob_explore - INFO - Agents created successfully
+2025-06-16 14:46:10,895 - webexp.explore.algorithms.miniwob_explore - INFO - Exploring environment: click-test
+2025-06-16 14:46:10,895 - webexp.explore.algorithms.miniwob_explore - INFO - Running episode 1/10 for click-test (Total: 1/210)
+2025-06-16 14:46:10,990 - root - INFO - Starting WebDriver Instance
+2025-06-16 14:46:14,861 - httpx - INFO - HTTP Request: POST https://api.ai-service.global.fujitsu.com/ai-foundation/chat-ai/gpt4/openai/deployments/gpt-4o/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-06-16 14:46:14,889 - webexp.explore.algorithms.miniwob_episode - ERROR - Failed to run episode 0 for click-test: list indices must be integers or slices, not ActionTypes
+2025-06-16 14:46:14,895 - webexp.explore.algorithms.miniwob_episode - ERROR - Traceback (most recent call last):
+  File "/mnt/home-ldap/vkharsh_ldap/Research/Go-Browse/webexp/explore/algorithms/miniwob_episode.py", line 102, in run_miniwob_episode
+    next_obs, reward, terminated, truncated, step_info = env.step(miniwob_action)
+                                                         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/home-ldap/vkharsh_ldap/.conda/envs/agent/lib/python3.12/site-packages/gymnasium/wrappers/order_enforcing.py", line 56, in step
+    return self.env.step(action)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/home-ldap/vkharsh_ldap/.conda/envs/agent/lib/python3.12/site-packages/gymnasium/wrappers/env_checker.py", line 49, in step
+    return env_step_passive_checker(self.env, action)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/home-ldap/vkharsh_ldap/.conda/envs/agent/lib/python3.12/site-packages/gymnasium/utils/passive_env_checker.py", line 208, in env_step_passive_checker
+    result = env.step(action)
+             ^^^^^^^^^^^^^^^^
+  File "/mnt/home-ldap/vkharsh_ldap/.conda/envs/agent/lib/python3.12/site-packages/miniwob/environment.py", line 167, in step
+    self.instance.call(
+  File "/mnt/home-ldap/vkharsh_ldap/.conda/envs/agent/lib/python3.12/site-packages/miniwob/selenium_instance.py", line 173, in call
+    func(*args)
+  File "/mnt/home-ldap/vkharsh_ldap/.conda/envs/agent/lib/python3.12/site-packages/miniwob/selenium_instance.py", line 266, in step
+    self.perform(action, action_space_config)
+  File "/mnt/home-ldap/vkharsh_ldap/.conda/envs/agent/lib/python3.12/site-packages/miniwob/selenium_instance.py", line 331, in perform
+    execute_action_on_chromedriver(
+  File "/mnt/home-ldap/vkharsh_ldap/.conda/envs/agent/lib/python3.12/site-packages/miniwob/selenium_actions.py", line 145, in execute_action_on_chromedriver
+    action_type = config.action_types[action["action_type"]]
+                  ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: list indices must be integers or slices, not ActionTypes
+
+2025-06-16 14:46:14,895 - webexp.explore.algorithms.miniwob_explore - WARNING - Episode 1 failed to generate trajectory
+2025-06-16 14:46:14,897 - webexp.explore.algorithms.miniwob_explore - INFO - Running episode 2/10 for click-test (Total: 2/210)
+2025-06-16 14:46:14,898 - root - INFO - Starting WebDriver Instance
+2025-06-16 14:47:45,939 - __main__ - INFO - MiniWob++ environment is available
+2025-06-16 14:47:45,941 - __main__ - INFO - Chrome environment is properly set up
+2025-06-16 14:47:45,941 - __main__ - INFO - Loading configuration from: configs/miniwob_explore_config.yaml
+2025-06-16 14:47:45,954 - __main__ - INFO - Configuration validated: 21 environments, 10 episodes each
+2025-06-16 14:47:45,954 - __main__ - INFO - Starting MiniWob++ exploration...
+2025-06-16 14:47:45,960 - webexp.explore.algorithms.miniwob_explore - INFO - MiniWob++ Explorer initialized with 21 environments
+2025-06-16 14:47:45,960 - webexp.explore.algorithms.miniwob_explore - INFO - Experiment directory: ./exploration_results/miniwob_basic
+2025-06-16 14:47:45,960 - webexp.explore.algorithms.miniwob_explore - INFO - Starting MiniWob++ exploration...
+2025-06-16 14:47:45,991 - webexp.explore.algorithms.miniwob_explore - INFO - Agents created successfully
+2025-06-16 14:47:45,992 - webexp.explore.algorithms.miniwob_explore - INFO - Exploring environment: click-test
+2025-06-16 14:47:45,993 - webexp.explore.algorithms.miniwob_explore - INFO - Running episode 1/10 for click-test (Total: 1/210)
+2025-06-16 14:47:46,115 - root - INFO - Starting WebDriver Instance
+2025-06-16 14:47:49,962 - httpx - INFO - HTTP Request: POST https://api.ai-service.global.fujitsu.com/ai-foundation/chat-ai/gpt4/openai/deployments/gpt-4o/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-06-16 14:47:49,989 - webexp.explore.algorithms.miniwob_episode - ERROR - Failed to run episode 0 for click-test: 'action_type'
+2025-06-16 14:47:49,995 - webexp.explore.algorithms.miniwob_episode - ERROR - Traceback (most recent call last):
+  File "/mnt/home-ldap/vkharsh_ldap/Research/Go-Browse/webexp/explore/algorithms/miniwob_episode.py", line 101, in run_miniwob_episode
+    next_obs, reward, terminated, truncated, step_info = env.step(miniwob_action)
+                                                         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/home-ldap/vkharsh_ldap/.conda/envs/agent/lib/python3.12/site-packages/gymnasium/wrappers/order_enforcing.py", line 56, in step
+    return self.env.step(action)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/home-ldap/vkharsh_ldap/.conda/envs/agent/lib/python3.12/site-packages/gymnasium/wrappers/env_checker.py", line 49, in step
+    return env_step_passive_checker(self.env, action)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/home-ldap/vkharsh_ldap/.conda/envs/agent/lib/python3.12/site-packages/gymnasium/utils/passive_env_checker.py", line 208, in env_step_passive_checker
+    result = env.step(action)
+             ^^^^^^^^^^^^^^^^
+  File "/mnt/home-ldap/vkharsh_ldap/.conda/envs/agent/lib/python3.12/site-packages/miniwob/environment.py", line 167, in step
+    self.instance.call(
+  File "/mnt/home-ldap/vkharsh_ldap/.conda/envs/agent/lib/python3.12/site-packages/miniwob/selenium_instance.py", line 173, in call
+    func(*args)
+  File "/mnt/home-ldap/vkharsh_ldap/.conda/envs/agent/lib/python3.12/site-packages/miniwob/selenium_instance.py", line 266, in step
+    self.perform(action, action_space_config)
+  File "/mnt/home-ldap/vkharsh_ldap/.conda/envs/agent/lib/python3.12/site-packages/miniwob/selenium_instance.py", line 331, in perform
+    execute_action_on_chromedriver(
+  File "/mnt/home-ldap/vkharsh_ldap/.conda/envs/agent/lib/python3.12/site-packages/miniwob/selenium_actions.py", line 145, in execute_action_on_chromedriver
+    action_type = config.action_types[action["action_type"]]
+                                      ~~~~~~^^^^^^^^^^^^^^^
+KeyError: 'action_type'
+
+2025-06-16 14:47:49,995 - webexp.explore.algorithms.miniwob_explore - WARNING - Episode 1 failed to generate trajectory
+2025-06-16 14:47:49,996 - webexp.explore.algorithms.miniwob_explore - INFO - Running episode 2/10 for click-test (Total: 2/210)
+2025-06-16 14:47:49,998 - root - INFO - Starting WebDriver Instance
+2025-06-16 14:50:29,905 - __main__ - INFO - MiniWob++ environment is available
+2025-06-16 14:50:29,907 - __main__ - INFO - Chrome environment is properly set up
+2025-06-16 14:50:29,907 - __main__ - INFO - Loading configuration from: configs/miniwob_explore_config.yaml
+2025-06-16 14:50:29,920 - __main__ - INFO - Configuration validated: 21 environments, 10 episodes each
+2025-06-16 14:50:29,920 - __main__ - INFO - Starting MiniWob++ exploration...
+2025-06-16 14:50:29,926 - webexp.explore.algorithms.miniwob_explore - INFO - MiniWob++ Explorer initialized with 21 environments
+2025-06-16 14:50:29,926 - webexp.explore.algorithms.miniwob_explore - INFO - Experiment directory: ./exploration_results/miniwob_basic
+2025-06-16 14:50:29,926 - webexp.explore.algorithms.miniwob_explore - INFO - Starting MiniWob++ exploration...
+2025-06-16 14:50:29,956 - webexp.explore.algorithms.miniwob_explore - INFO - Agents created successfully
+2025-06-16 14:50:29,956 - webexp.explore.algorithms.miniwob_explore - INFO - Exploring environment: click-test
+2025-06-16 14:50:29,956 - webexp.explore.algorithms.miniwob_explore - INFO - Running episode 1/10 for click-test (Total: 1/210)
+2025-06-16 14:50:30,069 - root - INFO - Starting WebDriver Instance
+2025-06-16 14:50:32,926 - httpx - INFO - HTTP Request: POST https://api.ai-service.global.fujitsu.com/ai-foundation/chat-ai/gpt4/openai/deployments/gpt-4o/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-06-16 14:50:32,946 - webexp.explore.algorithms.miniwob_episode - ERROR - Failed to run episode 0 for click-test: string indices must be integers, not 'str'
+2025-06-16 14:50:32,947 - webexp.explore.algorithms.miniwob_episode - ERROR - Traceback (most recent call last):
+  File "/mnt/home-ldap/vkharsh_ldap/Research/Go-Browse/webexp/explore/algorithms/miniwob_episode.py", line 103, in run_miniwob_episode
+    miniwob_action = parse_action(raw_action["action"])
+                                  ~~~~~~~~~~^^^^^^^^^^
+TypeError: string indices must be integers, not 'str'
+
+2025-06-16 14:50:32,948 - webexp.explore.algorithms.miniwob_explore - WARNING - Episode 1 failed to generate trajectory
+2025-06-16 14:50:32,949 - webexp.explore.algorithms.miniwob_explore - INFO - Running episode 2/10 for click-test (Total: 2/210)
+2025-06-16 14:50:32,951 - root - INFO - Starting WebDriver Instance
+2025-06-16 14:50:57,336 - __main__ - INFO - MiniWob++ environment is available
+2025-06-16 14:50:57,337 - __main__ - INFO - Chrome environment is properly set up
+2025-06-16 14:50:57,337 - __main__ - INFO - Loading configuration from: configs/miniwob_explore_config.yaml
+2025-06-16 14:50:57,348 - __main__ - INFO - Configuration validated: 21 environments, 10 episodes each
+2025-06-16 14:50:57,348 - __main__ - INFO - Starting MiniWob++ exploration...
+2025-06-16 14:50:57,356 - webexp.explore.algorithms.miniwob_explore - INFO - MiniWob++ Explorer initialized with 21 environments
+2025-06-16 14:50:57,356 - webexp.explore.algorithms.miniwob_explore - INFO - Experiment directory: ./exploration_results/miniwob_basic
+2025-06-16 14:50:57,356 - webexp.explore.algorithms.miniwob_explore - INFO - Starting MiniWob++ exploration...
+2025-06-16 14:50:57,385 - webexp.explore.algorithms.miniwob_explore - INFO - Agents created successfully
+2025-06-16 14:50:57,385 - webexp.explore.algorithms.miniwob_explore - INFO - Exploring environment: click-test
+2025-06-16 14:50:57,385 - webexp.explore.algorithms.miniwob_explore - INFO - Running episode 1/10 for click-test (Total: 1/210)
+2025-06-16 14:50:57,483 - root - INFO - Starting WebDriver Instance
+2025-06-16 14:51:01,516 - httpx - INFO - HTTP Request: POST https://api.ai-service.global.fujitsu.com/ai-foundation/chat-ai/gpt4/openai/deployments/gpt-4o/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-06-16 14:51:01,536 - webexp.explore.algorithms.miniwob_episode - ERROR - Failed to run episode 0 for click-test: string indices must be integers, not 'str'
+2025-06-16 14:51:01,538 - webexp.explore.algorithms.miniwob_episode - ERROR - Traceback (most recent call last):
+  File "/mnt/home-ldap/vkharsh_ldap/Research/Go-Browse/webexp/explore/algorithms/miniwob_episode.py", line 103, in run_miniwob_episode
+    miniwob_action = parse_action(raw_action["action"])
+                                  ~~~~~~~~~~^^^^^^^^^^
+TypeError: string indices must be integers, not 'str'
+
+2025-06-16 14:51:01,538 - webexp.explore.algorithms.miniwob_explore - WARNING - Episode 1 failed to generate trajectory
+2025-06-16 14:51:01,539 - webexp.explore.algorithms.miniwob_explore - INFO - Running episode 2/10 for click-test (Total: 2/210)
+2025-06-16 14:51:01,541 - root - INFO - Starting WebDriver Instance
+2025-06-16 14:51:11,156 - __main__ - INFO - MiniWob++ environment is available
+2025-06-16 14:51:11,157 - __main__ - INFO - Chrome environment is properly set up
+2025-06-16 14:51:11,157 - __main__ - INFO - Loading configuration from: configs/miniwob_explore_config.yaml
+2025-06-16 14:51:11,169 - __main__ - INFO - Configuration validated: 21 environments, 10 episodes each
+2025-06-16 14:51:11,169 - __main__ - INFO - Starting MiniWob++ exploration...
+2025-06-16 14:51:11,174 - webexp.explore.algorithms.miniwob_explore - INFO - MiniWob++ Explorer initialized with 21 environments
+2025-06-16 14:51:11,174 - webexp.explore.algorithms.miniwob_explore - INFO - Experiment directory: ./exploration_results/miniwob_basic
+2025-06-16 14:51:11,174 - webexp.explore.algorithms.miniwob_explore - INFO - Starting MiniWob++ exploration...
+2025-06-16 14:51:11,203 - webexp.explore.algorithms.miniwob_explore - INFO - Agents created successfully
+2025-06-16 14:51:11,204 - webexp.explore.algorithms.miniwob_explore - INFO - Exploring environment: click-test
+2025-06-16 14:51:11,204 - webexp.explore.algorithms.miniwob_explore - INFO - Running episode 1/10 for click-test (Total: 1/210)
+2025-06-16 14:51:11,269 - root - INFO - Starting WebDriver Instance
+2025-06-16 14:51:15,348 - httpx - INFO - HTTP Request: POST https://api.ai-service.global.fujitsu.com/ai-foundation/chat-ai/gpt4/openai/deployments/gpt-4o/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-06-16 14:51:15,368 - webexp.explore.algorithms.miniwob_episode - ERROR - Failed to run episode 0 for click-test: name 're' is not defined
+2025-06-16 14:51:15,370 - webexp.explore.algorithms.miniwob_episode - ERROR - Traceback (most recent call last):
+  File "/mnt/home-ldap/vkharsh_ldap/Research/Go-Browse/webexp/explore/algorithms/miniwob_episode.py", line 106, in run_miniwob_episode
+    miniwob_action = parse_action(raw_action)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/home-ldap/vkharsh_ldap/Research/Go-Browse/webexp/explore/algorithms/miniwob_episode.py", line 96, in parse_action
+    match = re.match(r"(\w+)\((\d+)\)", action_str)
+            ^^
+NameError: name 're' is not defined. Did you forget to import 're'
+
+2025-06-16 14:51:15,370 - webexp.explore.algorithms.miniwob_explore - WARNING - Episode 1 failed to generate trajectory
+2025-06-16 14:51:15,371 - webexp.explore.algorithms.miniwob_explore - INFO - Running episode 2/10 for click-test (Total: 2/210)
+2025-06-16 14:51:15,373 - root - INFO - Starting WebDriver Instance
+2025-06-16 14:51:27,414 - __main__ - INFO - MiniWob++ environment is available
+2025-06-16 14:51:27,415 - __main__ - INFO - Chrome environment is properly set up
+2025-06-16 14:51:27,415 - __main__ - INFO - Loading configuration from: configs/miniwob_explore_config.yaml
+2025-06-16 14:51:27,426 - __main__ - INFO - Configuration validated: 21 environments, 10 episodes each
+2025-06-16 14:51:27,426 - __main__ - INFO - Starting MiniWob++ exploration...
+2025-06-16 14:51:27,432 - webexp.explore.algorithms.miniwob_explore - INFO - MiniWob++ Explorer initialized with 21 environments
+2025-06-16 14:51:27,432 - webexp.explore.algorithms.miniwob_explore - INFO - Experiment directory: ./exploration_results/miniwob_basic
+2025-06-16 14:51:27,432 - webexp.explore.algorithms.miniwob_explore - INFO - Starting MiniWob++ exploration...
+2025-06-16 14:51:27,461 - webexp.explore.algorithms.miniwob_explore - INFO - Agents created successfully
+2025-06-16 14:51:27,461 - webexp.explore.algorithms.miniwob_explore - INFO - Exploring environment: click-test
+2025-06-16 14:51:27,462 - webexp.explore.algorithms.miniwob_explore - INFO - Running episode 1/10 for click-test (Total: 1/210)
+2025-06-16 14:51:27,507 - root - INFO - Starting WebDriver Instance
+2025-06-16 14:51:31,478 - httpx - INFO - HTTP Request: POST https://api.ai-service.global.fujitsu.com/ai-foundation/chat-ai/gpt4/openai/deployments/gpt-4o/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-06-16 14:51:31,498 - webexp.explore.algorithms.miniwob_episode - ERROR - Failed to run episode 0 for click-test: Invalid action format: ```json
+{
+  "thought": "The task requires clicking a button. Among the elements listed, Element 4 is a button with the text 'Click Me!' and has the reference ID 'subbtn'. This is the button I need to click to complete the task.",
+  "action": "click('subbtn')"
+}
+```
+2025-06-16 14:51:31,500 - webexp.explore.algorithms.miniwob_episode - ERROR - Traceback (most recent call last):
+  File "/mnt/home-ldap/vkharsh_ldap/Research/Go-Browse/webexp/explore/algorithms/miniwob_episode.py", line 106, in run_miniwob_episode
+    miniwob_action = parse_action(raw_action)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/home-ldap/vkharsh_ldap/Research/Go-Browse/webexp/explore/algorithms/miniwob_episode.py", line 99, in parse_action
+    raise ValueError(f"Invalid action format: {action_str}")
+ValueError: Invalid action format: ```json
+{
+  "thought": "The task requires clicking a button. Among the elements listed, Element 4 is a button with the text 'Click Me!' and has the reference ID 'subbtn'. This is the button I need to click to complete the task.",
+  "action": "click('subbtn')"
+}
+```
+
+2025-06-16 14:51:31,500 - webexp.explore.algorithms.miniwob_explore - WARNING - Episode 1 failed to generate trajectory
+2025-06-16 14:51:31,501 - webexp.explore.algorithms.miniwob_explore - INFO - Running episode 2/10 for click-test (Total: 2/210)
+2025-06-16 14:51:31,503 - root - INFO - Starting WebDriver Instance
+2025-06-16 14:52:20,469 - __main__ - INFO - MiniWob++ environment is available
+2025-06-16 14:52:20,471 - __main__ - INFO - Chrome environment is properly set up
+2025-06-16 14:52:20,471 - __main__ - INFO - Loading configuration from: configs/miniwob_explore_config.yaml
+2025-06-16 14:52:20,483 - __main__ - INFO - Configuration validated: 21 environments, 10 episodes each
+2025-06-16 14:52:20,483 - __main__ - INFO - Starting MiniWob++ exploration...
+2025-06-16 14:52:20,489 - webexp.explore.algorithms.miniwob_explore - INFO - MiniWob++ Explorer initialized with 21 environments
+2025-06-16 14:52:20,489 - webexp.explore.algorithms.miniwob_explore - INFO - Experiment directory: ./exploration_results/miniwob_basic
+2025-06-16 14:52:20,489 - webexp.explore.algorithms.miniwob_explore - INFO - Starting MiniWob++ exploration...
+2025-06-16 14:52:20,518 - webexp.explore.algorithms.miniwob_explore - INFO - Agents created successfully
+2025-06-16 14:52:20,518 - webexp.explore.algorithms.miniwob_explore - INFO - Exploring environment: click-test
+2025-06-16 14:52:20,519 - webexp.explore.algorithms.miniwob_explore - INFO - Running episode 1/10 for click-test (Total: 1/210)
+2025-06-16 14:52:20,631 - root - INFO - Starting WebDriver Instance
+2025-06-16 14:52:24,334 - httpx - INFO - HTTP Request: POST https://api.ai-service.global.fujitsu.com/ai-foundation/chat-ai/gpt4/openai/deployments/gpt-4o/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-06-16 14:52:24,354 - webexp.explore.algorithms.miniwob_episode - ERROR - Failed to run episode 0 for click-test: Invalid action format: ```json
+{
+  "thought": "The task requires clicking a button. The element with ref: 4 is a button with the text 'Click Me!', which matches the task description. Therefore, I should click this button.",
+  "action": "click(4)"
+}
+```
+2025-06-16 14:52:24,356 - webexp.explore.algorithms.miniwob_episode - ERROR - Traceback (most recent call last):
+  File "/mnt/home-ldap/vkharsh_ldap/Research/Go-Browse/webexp/explore/algorithms/miniwob_episode.py", line 106, in run_miniwob_episode
+    miniwob_action = parse_action(raw_action)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/home-ldap/vkharsh_ldap/Research/Go-Browse/webexp/explore/algorithms/miniwob_episode.py", line 99, in parse_action
+    raise ValueError(f"Invalid action format: {action_str}")
+ValueError: Invalid action format: ```json
+{
+  "thought": "The task requires clicking a button. The element with ref: 4 is a button with the text 'Click Me!', which matches the task description. Therefore, I should click this button.",
+  "action": "click(4)"
+}
+```
+
+2025-06-16 14:52:24,356 - webexp.explore.algorithms.miniwob_explore - WARNING - Episode 1 failed to generate trajectory
+2025-06-16 14:52:24,357 - webexp.explore.algorithms.miniwob_explore - INFO - Running episode 2/10 for click-test (Total: 2/210)
+2025-06-16 14:52:24,359 - root - INFO - Starting WebDriver Instance
+2025-06-16 14:53:59,550 - __main__ - INFO - MiniWob++ environment is available
+2025-06-16 14:53:59,551 - __main__ - INFO - Chrome environment is properly set up
+2025-06-16 14:53:59,552 - __main__ - INFO - Loading configuration from: configs/miniwob_explore_config.yaml
+2025-06-16 14:53:59,563 - __main__ - INFO - Configuration validated: 21 environments, 10 episodes each
+2025-06-16 14:53:59,563 - __main__ - INFO - Starting MiniWob++ exploration...
+2025-06-16 14:53:59,569 - webexp.explore.algorithms.miniwob_explore - INFO - MiniWob++ Explorer initialized with 21 environments
+2025-06-16 14:53:59,569 - webexp.explore.algorithms.miniwob_explore - INFO - Experiment directory: ./exploration_results/miniwob_basic
+2025-06-16 14:53:59,569 - webexp.explore.algorithms.miniwob_explore - INFO - Starting MiniWob++ exploration...
+2025-06-16 14:53:59,598 - webexp.explore.algorithms.miniwob_explore - INFO - Agents created successfully
+2025-06-16 14:53:59,598 - webexp.explore.algorithms.miniwob_explore - INFO - Exploring environment: click-test
+2025-06-16 14:53:59,599 - webexp.explore.algorithms.miniwob_explore - INFO - Running episode 1/10 for click-test (Total: 1/210)
+2025-06-16 14:53:59,719 - root - INFO - Starting WebDriver Instance
+2025-06-16 14:54:03,649 - httpx - INFO - HTTP Request: POST https://api.ai-service.global.fujitsu.com/ai-foundation/chat-ai/gpt4/openai/deployments/gpt-4o/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-06-16 14:54:03,669 - webexp.explore.algorithms.miniwob_episode - ERROR - Failed to run episode 0 for click-test: Invalid action format: click('4')
+2025-06-16 14:54:03,671 - webexp.explore.algorithms.miniwob_episode - ERROR - Traceback (most recent call last):
+  File "/mnt/home-ldap/vkharsh_ldap/Research/Go-Browse/webexp/explore/algorithms/miniwob_episode.py", line 117, in run_miniwob_episode
+    miniwob_action = parse_action(raw_action)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/home-ldap/vkharsh_ldap/Research/Go-Browse/webexp/explore/algorithms/miniwob_episode.py", line 109, in parse_action
+    raise ValueError(f"Invalid action format: {action_str}")
+ValueError: Invalid action format: click('4')
+
+2025-06-16 14:54:03,671 - webexp.explore.algorithms.miniwob_explore - WARNING - Episode 1 failed to generate trajectory
+2025-06-16 14:54:03,672 - webexp.explore.algorithms.miniwob_explore - INFO - Running episode 2/10 for click-test (Total: 2/210)
+2025-06-16 14:54:03,674 - root - INFO - Starting WebDriver Instance
+2025-06-16 14:55:10,344 - __main__ - INFO - MiniWob++ environment is available
+2025-06-16 14:55:10,345 - __main__ - INFO - Chrome environment is properly set up
+2025-06-16 14:55:10,346 - __main__ - INFO - Loading configuration from: configs/miniwob_explore_config.yaml
+2025-06-16 14:55:10,358 - __main__ - INFO - Configuration validated: 21 environments, 10 episodes each
+2025-06-16 14:55:10,358 - __main__ - INFO - Starting MiniWob++ exploration...
+2025-06-16 14:55:10,364 - webexp.explore.algorithms.miniwob_explore - INFO - MiniWob++ Explorer initialized with 21 environments
+2025-06-16 14:55:10,365 - webexp.explore.algorithms.miniwob_explore - INFO - Experiment directory: ./exploration_results/miniwob_basic
+2025-06-16 14:55:10,365 - webexp.explore.algorithms.miniwob_explore - INFO - Starting MiniWob++ exploration...
+2025-06-16 14:55:10,396 - webexp.explore.algorithms.miniwob_explore - INFO - Agents created successfully
+2025-06-16 14:55:10,396 - webexp.explore.algorithms.miniwob_explore - INFO - Exploring environment: click-test
+2025-06-16 14:55:10,396 - webexp.explore.algorithms.miniwob_explore - INFO - Running episode 1/10 for click-test (Total: 1/210)
+2025-06-16 14:55:10,525 - root - INFO - Starting WebDriver Instance
+2025-06-16 14:55:14,424 - httpx - INFO - HTTP Request: POST https://api.ai-service.global.fujitsu.com/ai-foundation/chat-ai/gpt4/openai/deployments/gpt-4o/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-06-16 14:55:14,444 - webexp.explore.algorithms.miniwob_episode - ERROR - Failed to run episode 0 for click-test: Invalid action format: ```json
+{
+  "thought": "The task is to click the button. The button element is identified by its tag 'button' and has the text 'Click Me!'. It is associated with the reference ID 4. Therefore, I should click this button.",
+  "action": "click(4)"
+}
+```
+2025-06-16 14:55:14,445 - webexp.explore.algorithms.miniwob_episode - ERROR - Traceback (most recent call last):
+  File "/mnt/home-ldap/vkharsh_ldap/Research/Go-Browse/webexp/explore/algorithms/miniwob_episode.py", line 108, in run_miniwob_episode
+    miniwob_action = parse_action(raw_action)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/home-ldap/vkharsh_ldap/Research/Go-Browse/webexp/explore/algorithms/miniwob_episode.py", line 100, in parse_action
+    raise ValueError(f"Invalid action format: {action_str}")
+ValueError: Invalid action format: ```json
+{
+  "thought": "The task is to click the button. The button element is identified by its tag 'button' and has the text 'Click Me!'. It is associated with the reference ID 4. Therefore, I should click this button.",
+  "action": "click(4)"
+}
+```
+
+2025-06-16 14:55:14,446 - webexp.explore.algorithms.miniwob_explore - WARNING - Episode 1 failed to generate trajectory
+2025-06-16 14:55:14,447 - webexp.explore.algorithms.miniwob_explore - INFO - Running episode 2/10 for click-test (Total: 2/210)
+2025-06-16 14:55:14,448 - root - INFO - Starting WebDriver Instance
+2025-06-16 14:57:35,951 - __main__ - INFO - MiniWob++ environment is available
+2025-06-16 14:57:35,953 - __main__ - INFO - Chrome environment is properly set up
+2025-06-16 14:57:35,961 - __main__ - INFO - Loading configuration from: configs/miniwob_explore_config.yaml
+2025-06-16 14:57:35,976 - __main__ - INFO - Configuration validated: 21 environments, 10 episodes each
+2025-06-16 14:57:35,976 - __main__ - INFO - Starting MiniWob++ exploration...
+2025-06-16 14:57:35,983 - webexp.explore.algorithms.miniwob_explore - INFO - MiniWob++ Explorer initialized with 21 environments
+2025-06-16 14:57:35,983 - webexp.explore.algorithms.miniwob_explore - INFO - Experiment directory: ./exploration_results/miniwob_basic
+2025-06-16 14:57:35,983 - webexp.explore.algorithms.miniwob_explore - INFO - Starting MiniWob++ exploration...
+2025-06-16 14:57:36,019 - webexp.explore.algorithms.miniwob_explore - INFO - Agents created successfully
+2025-06-16 14:57:36,019 - webexp.explore.algorithms.miniwob_explore - INFO - Exploring environment: click-test
+2025-06-16 14:57:36,020 - webexp.explore.algorithms.miniwob_explore - INFO - Running episode 1/10 for click-test (Total: 1/210)
+2025-06-16 14:57:36,158 - root - INFO - Starting WebDriver Instance
+2025-06-16 14:57:40,782 - httpx - INFO - HTTP Request: POST https://api.ai-service.global.fujitsu.com/ai-foundation/chat-ai/gpt4/openai/deployments/gpt-4o/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-06-16 14:57:40,810 - webexp.explore.algorithms.miniwob_episode - ERROR - Failed to run episode 0 for click-test: list indices must be integers or slices, not str
+2025-06-16 14:57:40,816 - webexp.explore.algorithms.miniwob_episode - ERROR - Traceback (most recent call last):
+  File "/mnt/home-ldap/vkharsh_ldap/Research/Go-Browse/webexp/explore/algorithms/miniwob_episode.py", line 123, in run_miniwob_episode
+    next_obs, reward, terminated, truncated, step_info = env.step(miniwob_action)
+                                                         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/home-ldap/vkharsh_ldap/.conda/envs/agent/lib/python3.12/site-packages/gymnasium/wrappers/order_enforcing.py", line 56, in step
+    return self.env.step(action)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/home-ldap/vkharsh_ldap/.conda/envs/agent/lib/python3.12/site-packages/gymnasium/wrappers/env_checker.py", line 49, in step
+    return env_step_passive_checker(self.env, action)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/home-ldap/vkharsh_ldap/.conda/envs/agent/lib/python3.12/site-packages/gymnasium/utils/passive_env_checker.py", line 208, in env_step_passive_checker
+    result = env.step(action)
+             ^^^^^^^^^^^^^^^^
+  File "/mnt/home-ldap/vkharsh_ldap/.conda/envs/agent/lib/python3.12/site-packages/miniwob/environment.py", line 167, in step
+    self.instance.call(
+  File "/mnt/home-ldap/vkharsh_ldap/.conda/envs/agent/lib/python3.12/site-packages/miniwob/selenium_instance.py", line 173, in call
+    func(*args)
+  File "/mnt/home-ldap/vkharsh_ldap/.conda/envs/agent/lib/python3.12/site-packages/miniwob/selenium_instance.py", line 266, in step
+    self.perform(action, action_space_config)
+  File "/mnt/home-ldap/vkharsh_ldap/.conda/envs/agent/lib/python3.12/site-packages/miniwob/selenium_instance.py", line 331, in perform
+    execute_action_on_chromedriver(
+  File "/mnt/home-ldap/vkharsh_ldap/.conda/envs/agent/lib/python3.12/site-packages/miniwob/selenium_actions.py", line 145, in execute_action_on_chromedriver
+    action_type = config.action_types[action["action_type"]]
+                  ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: list indices must be integers or slices, not str
+
+2025-06-16 14:57:40,816 - webexp.explore.algorithms.miniwob_explore - WARNING - Episode 1 failed to generate trajectory
+2025-06-16 14:57:40,817 - webexp.explore.algorithms.miniwob_explore - INFO - Running episode 2/10 for click-test (Total: 2/210)
+2025-06-16 14:57:40,818 - root - INFO - Starting WebDriver Instance

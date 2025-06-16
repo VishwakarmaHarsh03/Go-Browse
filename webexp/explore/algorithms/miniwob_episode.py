@@ -15,7 +15,7 @@ import logging
 import os
 import time
 import traceback
-
+import re
 logger = logging.getLogger(__name__)
 
 @dataclass
@@ -67,7 +67,7 @@ def run_miniwob_episode(
         from miniwob.action import ActionTypes
         
         # Create environment
-        env = gym.make(f"miniwob/{env_name}-v1", render_mode="rgb_array")
+        env = gym.make(f"miniwob/{env_name}-v1")
         
         if seed is not None:
             env.reset(seed=seed)
@@ -89,55 +89,69 @@ def run_miniwob_episode(
         for step_idx in range(max_steps):
             step_start_time = time.time()
             
-            try:
-                # Get action from agent
-                raw_action, action_info = agent.get_action(processed_obs)
-                
-                # Process action for MiniWob++
-                action_dict = agent.action_processor(raw_action)
-                miniwob_action = _convert_to_miniwob_action(env, action_dict)
-                
-                # Execute action
-                next_obs, reward, terminated, truncated, step_info = env.step(miniwob_action)
-                
-                # Create trajectory step
-                traj_step = TrajectoryStep(
-                    action=raw_action,
-                    parsed_action=str(action_dict),
-                    thought=action_info.get('thought', '') if action_info else '',
-                    observation=processed_obs,
-                    misc={
-                        "step_idx": step_idx,
-                        "action_dict": action_dict,
-                        "miniwob_action": str(miniwob_action),
-                        "step_info": step_info,
-                        "action_info": action_info,
-                        "step_time": time.time() - step_start_time,
-                        "reward": reward,
-                        "terminated": terminated,
-                        "truncated": truncated
-                    }
-                )
-                trajectory_steps.append(traj_step)
-                
-                total_reward += reward
-                step_count += 1
-                
-                # Check if episode is done
-                if terminated or truncated:
-                    episode_info["terminated"] = terminated
-                    episode_info["truncated"] = truncated
-                    episode_info["success"] = terminated and reward > 0
-                    break
-                
-                # Update observation for next step
-                processed_obs = agent.obs_preprocessor(next_obs)
-                
-            except Exception as e:
-                logger.error(f"Error in step {step_idx} of episode {episode_idx} for {env_name}: {str(e)}")
-                episode_info["step_error"] = str(e)
-                episode_info["step_error_traceback"] = traceback.format_exc()
+        
+            # Get action from agent
+            raw_action, action_info = agent.get_action(processed_obs)
+            def parse_action(raw_action_str):
+                # Remove markdown code block markers if present
+                raw_action_str = raw_action_str.strip()
+                if raw_action_str.startswith("```json"):
+                    raw_action_str = raw_action_str[len("```json"):].strip()
+                if raw_action_str.startswith("```"):
+                    raw_action_str = raw_action_str[len("```"):].strip()
+                if raw_action_str.endswith("```"):
+                    raw_action_str = raw_action_str[:-3].strip()
+                # Parse JSON
+                action_obj = json.loads(raw_action_str)
+                action_str = action_obj["action"]
+                # Accepts click(4), click('4'), or click("4")
+                match = re.match(r"(\w+)\(['\"]?(\d+)['\"]?\)", action_str)
+                if match:
+                    return {"action_type": match.group(1), "ref": int(match.group(2))}
+                raise ValueError(f"Invalid action format: {action_str}")
+
+
+
+            # Usage:
+        
+            miniwob_action = parse_action(raw_action)
+            # Execute action
+            next_obs, reward, terminated, truncated, step_info = env.step(miniwob_action)
+            
+            # Create trajectory step
+            traj_step = TrajectoryStep(
+                action=raw_action,
+                parsed_action=str(action_dict),
+                thought=action_info.get('thought', '') if action_info else '',
+                observation=processed_obs,
+                misc={
+                    "step_idx": step_idx,
+                    "action_dict": action_dict,
+                    "miniwob_action": str(miniwob_action),
+                    "step_info": step_info,
+                    "action_info": action_info,
+                    "step_time": time.time() - step_start_time,
+                    "reward": reward,
+                    "terminated": terminated,
+                    "truncated": truncated
+                }
+            )
+            trajectory_steps.append(traj_step)
+            
+            total_reward += reward
+            step_count += 1
+            
+            # Check if episode is done
+            if terminated or truncated:
+                episode_info["terminated"] = terminated
+                episode_info["truncated"] = truncated
+                episode_info["success"] = terminated and reward > 0
                 break
+            
+            # Update observation for next step
+            processed_obs = agent.obs_preprocessor(next_obs)
+                
+           
         
         # Finalize episode info
         episode_info["end_time"] = time.time()
@@ -205,7 +219,7 @@ def _convert_to_miniwob_action(env, action_dict):
     from miniwob.action import ActionTypes
     
     if not isinstance(action_dict, dict):
-        return {'type': ActionTypes.NONE}
+        return {'action_type': ActionTypes.NONE.value}
         
     action_type = action_dict.get('type', 'none')
     
@@ -216,14 +230,14 @@ def _convert_to_miniwob_action(env, action_dict):
             element_ref = action_dict['ref']
             try:
                 element_id = int(element_ref)
-                return {'action_type': ActionTypes.CLICK_ELEMENT, 'element': element_id}
+                return {'action_type': ActionTypes.CLICK_ELEMENT.value, 'element': element_id}
             except ValueError:
                 # If ref is not a number, treat as coordinate [0, 0]
-                return {'action_type': ActionTypes.CLICK_COORDS, 'coord': [0, 0]}
+                return {'action_type': ActionTypes.CLICK_COORDS.value, 'coord': [0, 0]}
         else:
             # Coordinate-based click
             coordinate = action_dict.get('coordinate', [0, 0])
-            return {'action_type': ActionTypes.CLICK_COORDS, 'coord': coordinate}
+            return {'action_type': ActionTypes.CLICK_COORDS.value, 'coord': coordinate}
     elif action_type == 'type':
         # Check if it's field-based or text-based
         if 'ref' in action_dict:
@@ -232,31 +246,31 @@ def _convert_to_miniwob_action(env, action_dict):
             text = action_dict.get('text', '')
             try:
                 element_id = int(element_ref)
-                return {'action_type': ActionTypes.TYPE_FIELD, 'element': element_id, 'text': text}
+                return {'action_type': ActionTypes.TYPE_FIELD.value, 'element': element_id, 'text': text}
             except ValueError:
                 # If ref is not a number, use text-based type
-                return {'action_type': ActionTypes.TYPE_TEXT, 'text': text}
+                return {'action_type': ActionTypes.TYPE_TEXT.value, 'text': text}
         else:
             # Text-based type
             text = action_dict.get('text', '')
-            return {'action_type': ActionTypes.TYPE_TEXT, 'text': text}
+            return {'action_type': ActionTypes.TYPE_TEXT.value, 'text': text}
     elif action_type == 'key':
         key = action_dict.get('key', 'Enter')
-        return {'action_type': ActionTypes.PRESS_KEY, 'key': key}
+        return {'action_type': ActionTypes.PRESS_KEY.value, 'key': key}
     elif action_type == 'scroll':
         coordinate = action_dict.get('coordinate', [0, 0])
         direction = action_dict.get('direction', 'down')
         if direction == 'down':
-            return {'action_type': ActionTypes.SCROLL_DOWN_COORDS, 'coord': coordinate}
+            return {'action_type': ActionTypes.SCROLL_DOWN_COORDS.value, 'coord': coordinate}
         else:
-            return {'action_type': ActionTypes.SCROLL_UP_COORDS, 'coord': coordinate}
+            return {'action_type': ActionTypes.SCROLL_UP_COORDS.value, 'coord': coordinate}
     elif action_type == 'drag':
         start_coord = action_dict.get('startCoordinate', [0, 0])
         end_coord = action_dict.get('endCoordinate', [0, 0])
         # MiniWob++ doesn't have a direct drag action, use mousedown -> move -> mouseup
-        return {'action_type': ActionTypes.MOUSEDOWN_COORDS, 'coord': start_coord}
+        return {'action_type': ActionTypes.MOUSEDOWN_COORDS.value, 'coord': start_coord}
     else:
-        return {'action_type': ActionTypes.NONE}
+        return {'action_type': ActionTypes.NONE.value}
 
 def _save_episode_data(save_dir: str, trajectory: Trajectory, episode_info: Dict, config: Any):
     """Save episode data to disk."""
