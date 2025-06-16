@@ -142,8 +142,8 @@ python -m webexp.benchmark.run_miniwob -c configs/my_config.yaml
 ```sh
 export api_key_azure='your-azure-api-key'
 export api_base_azure_ai='https://your-resource.openai.azure.com/'
-cp configs/azure_gpt_miniwob.yaml configs/my_azure_config.yaml
-python -m webexp.benchmark.run_miniwob -c configs/my_azure_config.yaml
+python -m webexp.benchmark.run_miniwob -c configs/azure_gpt_miniwob.yaml
+
 ```
 
 #### Amazon Bedrock (Claude)
